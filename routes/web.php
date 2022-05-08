@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< Updated upstream
+
 Route::get('/header', function () {
     return view('layouts/header');
 });
@@ -22,7 +22,6 @@ Route::get('/footer', function () {
 Route::get('/landingpage', function () {
     return view('landingpage');
 });
-=======
->>>>>>> Stashed changes
+
 
 
