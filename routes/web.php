@@ -12,7 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+<<<<<<< Updated upstream
+Route::get('/header', function () {
+    return view('layouts/header');
 });
+Route::get('/footer', function () {
+    return view('layouts/footer');
+});
+Route::get('/landingpage', function () {
+    return view('landingpage');
+});
+=======
+>>>>>>> Stashed changes
+
+
