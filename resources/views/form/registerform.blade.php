@@ -3,24 +3,18 @@
 @section('header')
     @include('layouts.header')
 @endsection
+
 <!-- CSS -->
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 @endsection
+
 <!-- REGISTER-FORM -->
 @section('body')
 <div id="container">
         <div class="row">
-                <div class="col-xl-4 col-lg-8 col-sm-8" style="  padding-right: 0px;
-                                                        border-left: 1px solid #ccc;
-                                                        border-top: 1px solid #ccc;
-                                                        border-bottom: 1px solid #ccc; 
-                                                        padding-left: 0px;">
-                    <div class="img">
-                        <img src="{{asset('img/image-2.jpg')}}" alt="">
-                    </div>
-                </div>
-
+                <div id="img" class="col-xl-4 col-lg-8 col-sm-8"></div>
                 <div class="col-xl-4 col-lg-8 col-sm-8 " style="  border-right: 1px solid #ccc;
                                                         border-left: 1px solid #ccc;
                                                         border-top: 1px solid #ccc;

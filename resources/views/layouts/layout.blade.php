@@ -16,7 +16,6 @@
             @yield('landingnav')
         </div>
         <div class="row">
-            @yield('landingpage')
             @yield('body')
             <div class="col">
                 @yield('menu')
@@ -32,5 +31,6 @@
 
 <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
 <script src="{{asset('js/bootstrap.js')}}"></script>
+@yield('javascript')
 </body>
 </html>

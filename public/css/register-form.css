@@ -1,9 +1,14 @@
-
-img{
-    min-height: auto;
-    width: auto;
-    background-size: contain;
+#img{
+    background-image: url(../img/grocerystore.jpg);
+    background-size:cover;
+    background-position-y: -100px;
+    padding-right: 0px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; 
+    padding-left: 0px;
 }
+
 #form-header{
     font-size: 35px;
     font-weight: 600;
