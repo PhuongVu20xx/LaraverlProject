@@ -1,7 +1,4 @@
 @extends('layouts.layout')
-@section('css')
-
-@endsection
 
 @section('header')
 @include('layouts.header')
@@ -12,9 +9,10 @@
 @endsection
 
 @section('content')
-Admin
+admin page
 @endsection
 
 @section('footer')
 @include('layouts.footer')
 @endsection
+

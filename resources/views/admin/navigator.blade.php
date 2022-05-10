@@ -1,14 +1,14 @@
 <div>
     <div>
-        Products
+        <a href="/controler">Products</a>
     </div>
     <div>
-        Customer
+        <a href="/customer">Customer</a>
     </div>
     <div>
-        Feedback
+        <a href="/feedback">Feedback</a>
     </div>
     <div>
-        Lastest Order
+        <a href="/lastestorder">Lastest Order</a>
     </div>
 </div>
