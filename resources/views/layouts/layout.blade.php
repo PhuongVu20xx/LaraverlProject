@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div id="container">
+    <div class="container.d-none">
         <div id="header">
             @yield('header')
             @yield('landingnav')
