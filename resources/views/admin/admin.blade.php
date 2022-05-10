@@ -1,7 +1,4 @@
 @extends('layouts.layout')
-@section('title')
-    AdminPage
-@endsection
 @section('css')
 
 @endsection
@@ -11,11 +8,11 @@
 @endsection
 
 @section('menu')
-
+@include('admin.navigator')
 @endsection
 
 @section('content')
-
+Admin
 @endsection
 
 @section('footer')
