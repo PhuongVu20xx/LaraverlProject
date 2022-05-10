@@ -15,13 +15,13 @@
             @yield('header')
             @yield('landingnav')
         </div>
-        <div id="body">
+        <div class="row">
             @yield('landingpage')
             @yield('body')
-            <div id="menu">
+            <div class="col">
                 @yield('menu')
             </div>
-            <div id="content">
+            <div class="col-10">
                 @yield('content')
             </div>
         </div>
