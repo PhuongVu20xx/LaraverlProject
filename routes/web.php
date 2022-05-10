@@ -22,6 +22,8 @@ Route::get('/footer', function () {
 Route::get('/landingpage', function () {
     return view('landingpage');
 });
-
+Route::get('/cart', function () {
+    return view('shoppingcart');
+});
 
 
