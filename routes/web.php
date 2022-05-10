@@ -31,5 +31,6 @@ Route::get('/register', function () {
     return view('form.registerform');
 });
 
-Route::get('/admin/{email?}',[AdminControler::class,'LoginSuccess']);
+Route::get('/admin',[AdminControler::class,'LoginSuccess']);
+
 
