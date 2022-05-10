@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminControler;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,5 @@ Route::get('/landingpage', function () {
 Route::get('/cart', function () {
     return view('shoppingcart');
 });
-
+Route::get('/admin/{email?}',[AdminControler::class,'LoginSuccess']);
 
