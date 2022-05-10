@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{asset('css/footer.css')}}">
 <footer class="section-footer">
     <section class="footer-container1">
         <div>

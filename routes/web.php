@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminControler;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,9 @@ Route::get('/footer', function () {
 Route::get('/landingpage', function () {
     return view('landingpage');
 });
-
+Route::get('/register', function(){
+    return view('form.registerform');
+});
+Route::get('/admin/{email?}',[AdminControler::class,'LoginSuccess']);
 
 
