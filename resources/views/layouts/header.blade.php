@@ -12,5 +12,5 @@
             <a href="header/login.php">Login |</a>
             <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
         </div>       
-    </div>
+    </div> 
 </div>
