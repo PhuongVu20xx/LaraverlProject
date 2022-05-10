@@ -17,8 +17,8 @@
         <div class="content">
             <h1>VNPH'S GROCERY STORE</h1>
             <p>We care about your family, come and join with us.</p>
-            <button><b>Shopping</b></button>
-            <button><b>Feedback</b></button>
+            <a href="shopping.php"><b>Shopping</b></a>
+            <a href="feedback.php"><b>Feedback</b></a>
         </div>
         <img src="{{asset('img/thumbnail.jpg')}}" alt="logo">
     </div>

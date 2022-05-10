@@ -51,12 +51,13 @@ img{
 }
 .content>p{
     line-height: 30px;
+    margin-bottom: 30px;
 }
-.content>button{
-    margin-top: 30px;
-    padding: 10px;
+.content>a{
+    padding: 8px;
     background: rgb(140, 230, 255) ;
     color: black;
+    border-radius: 5px;
 }
 .nav-container{
     grid-column-start: 2;
