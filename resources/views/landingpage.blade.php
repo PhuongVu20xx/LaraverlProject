@@ -13,7 +13,7 @@
     </div>
 @endsection
 
-@section('landingpage')
+@section('body')
     <link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
     <div class="landingpage">
         <div class="category">

@@ -16,7 +16,6 @@
             @yield('landingnav')
         </div>
         <div class="row">
-            @yield('landingpage')
             @yield('body')
             <div class="col">
                 @yield('menu')
