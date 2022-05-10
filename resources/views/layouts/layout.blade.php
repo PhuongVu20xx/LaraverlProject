@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @yield('css')
+    <link rel="stylesheet" href="{{asset('css\bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+
 </head>
 <body>
     <div id="container">
@@ -28,8 +30,8 @@
             @yield('footer')
         </div>
     </div>
-    
-    <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
-    <script src="{{asset('js/bootstrap.js')}}"></script>
+
+<script src="{{asset('js/jquery-3.6.0.js')}}"></script>
+<script src="{{asset('js/bootstrap.js')}}"></script>
 </body>
 </html>
