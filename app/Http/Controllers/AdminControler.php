@@ -11,12 +11,11 @@ class AdminControler extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         
-        return redirect()->action([AdminControler::class,'Loginsuccess'],['email'=>$email]);
-
+        return redirect()->action([AdminControler::class,'Loginsuccess']);
     }
 
-    public function LoginSuccess($email)
+    public function LoginSuccess()
     {
-        return view('admin.admin',['email'=>$email]);
+        return view('admin.admin');
     }
 }
