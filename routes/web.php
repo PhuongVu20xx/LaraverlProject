@@ -27,5 +27,9 @@ Route::get('/landingpage', function () {
 Route::get('/cart', function () {
     return view('shoppingcart');
 });
+Route::get('/register', function () {
+    return view('form.registerform');
+});
+
 Route::get('/admin/{email?}',[AdminControler::class,'LoginSuccess']);
 
