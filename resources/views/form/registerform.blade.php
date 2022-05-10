@@ -4,7 +4,11 @@
     @include('layouts.header')
 @endsection
 
-<!-- CSS -->
+@section('landingnav')
+    @include('admin.navigator')
+@endsection
+
+<!-- CSS -->    
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
@@ -62,6 +66,7 @@
         </div>
     </div>
 @endsection
+
 <!-- FOOTER -->
 @section('footer')
     @include('layouts.footer')
