@@ -1,64 +1,56 @@
 <link rel="stylesheet" href="{{asset('css/footer.css')}}">
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
 
-<footer class="section-footer">
-    <section class="footer-container1">
-        <div>
-            <ul>
-                <li><a href="#" id="footer-container1-title">ONLINE ORDERS</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Shipping Information</a></li>
-                <li><a href="#">Returns and Exchanges</a></li>
-                <li><a href="#">International Orders</a></li>
+<!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">VNHPGrocery.com was established in 2022 with a team of 4 Developers: Mr.Nhan - Mr.Phuong - Mrs.Van - Mrs.Hanh.
+                 We are the founders of VNHP Grocery. We want to give our customers the best experience and moment</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="#">Online Orders</a></li>
+              <li><a href="#">24/7 Customer Service</a></li>
+              <li><a href="#">VNHP's Grocery Stores</a></li>
+              <li><a href="#">About VNHP's Grocery</a></li>
+              <li><a href="#">Payment</a></li>
             </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#" id="footer-container1-title">24/7 CUSTOMER SERVICE</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Help and FAQs</a></li>
-                <li><a href="#">Size Information</a></li>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Contribute</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Sitemap</a></li>
             </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#" id="footer-container1-title">GRANDE'S BRIDAL STORES</a></li>
-                <li><a href="#">Find Grande's Bridal Shops</a></li>
-                <li><a href="#">Browse Store List</a></li>
-                <li><a href="#">Book Appointment</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#" id="footer-container1-title">ABOUT GRANDE'S BRIDAL</a></li>
-                <li><a href="#">Quality & Craftsmanship</a></li>
-                <li><a href="#">Company Info</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-        </div>
-    </section>    
-    <section class="footer-container2">
-        <div class="getconnected">
-            <p>GET CONNECTED</p>
-        </div>
-        <div class="icon">
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-facebook fa-2x" ></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram-square fa-2x"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
-            </ul>
+          </div>
         </div>
         <hr>
-        <div class="copyright">
-            <ul>
-                <li>&copy 2022 GRANDE'S BRIDAL. All Rights Reserved. | </li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#"> Order Status</a></li>
-                <li><a href="#">Site Map</a></li>
-                <li><a href="#">Change Region  </a></li>
-                <li><a href="#"></a></li>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+         <a href="#">Aptech Education</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
             </ul>
+          </div>
         </div>
-    </section>
-    </footer>
+      </div>
+</footer>
