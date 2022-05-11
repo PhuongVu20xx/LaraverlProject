@@ -1,7 +1,7 @@
 #img{
     background-image: url(../img/grocerystore.jpg);
     background-size:cover;
-    background-position-y: -100px;
+    background-position-y: -280px;
     padding-right: 0px;
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
@@ -17,6 +17,9 @@
 }
 .row{
     justify-content:center;
+}
+.col-2{
+    background-color: #f7efed;
 }
 #form-group{
     padding: 15px 20px;

@@ -4,9 +4,6 @@
     @include('layouts.header')
 @endsection
 
-@section('landingnav')
-    @include('admin.navigator')
-@endsection
 
 <!-- CSS -->    
 @section('css')
@@ -18,8 +15,9 @@
 @section('body')
 <div id="container">
         <div class="row">
-                <div id="img" class="col-xl-4 col-lg-8 col-sm-8"></div>
-                <div class="col-xl-4 col-lg-8 col-sm-8 " style="  border-right: 1px solid #ccc;
+            <div class="col-2"></div>
+                <div id="img" class="col-lg-4 col-md-8 col-xs-8"></div>
+                <div class="col-lg-4 col-md-8 col-xs-8 " style="  border-right: 1px solid #ccc;
                                                         border-left: 1px solid #ccc;
                                                         border-top: 1px solid #ccc;
                                                         border-bottom: 1px solid #ccc;"> 
@@ -62,7 +60,8 @@
                             <input type="submit" name="register" id="register" value="SUBMIT">
                         </div>
                     </form>
-                </div>      
+                </div>  
+            <div class="col-2"></div>
         </div>
     </div>
 @endsection
