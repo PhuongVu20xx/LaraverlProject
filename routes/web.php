@@ -30,8 +30,6 @@ Route::get('/cart', function () {
 Route::get('/register', function () {
     return view('form.registerform');
 });
-<<<<<<< HEAD
-
 Route::get('/header2',function(){
     return view('layouts/header2');
 });
@@ -44,8 +42,6 @@ Route::get('/about',function(){
 Route::get('/login', function () {
     return view('form.loginform');
 });
-=======
->>>>>>> parent of f4048e8 (create header2+footer2, update landingpage, load more img)
 
 Route::get('/admin',[AdminControler::class,'LoginSuccess']);
 Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
