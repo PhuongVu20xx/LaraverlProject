@@ -30,6 +30,7 @@ Route::get('/cart', function () {
 Route::get('/register', function () {
     return view('form.registerform');
 });
+<<<<<<< HEAD
 Route::get('/header2',function(){
     return view('layouts/header2');
 });
@@ -38,6 +39,10 @@ Route::get('/footer2',function(){
 });
 Route::get('/about',function(){
     return view('about');
+=======
+Route::get('/login', function () {
+    return view('form.loginform');
+>>>>>>> 710ee32256285930edc5fcb3cd286878cf32a21a
 });
 
 Route::get('/admin',[AdminControler::class,'LoginSuccess']);
