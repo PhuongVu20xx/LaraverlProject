@@ -13,6 +13,7 @@
     <div class="container.d-none">
         <div id="header">
             @yield('header')
+            @yield('landingnav')
         </div>
         <div class="row">
             @yield('body')

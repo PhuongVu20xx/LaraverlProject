@@ -10,7 +10,7 @@
 @endsection
 
 <!-- BODY -->
-@section('body')
+@section('landingpage')
 <div id="app">
   <div id="product">
     <item v-for="item in items" v-bind:item_data="item"></item>
