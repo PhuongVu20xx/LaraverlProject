@@ -30,6 +30,15 @@ Route::get('/cart', function () {
 Route::get('/register', function () {
     return view('form.registerform');
 });
+Route::get('/header2',function(){
+    return view('layouts/header2');
+});
+Route::get('/footer2',function(){
+    return view('layouts/footer2');
+});
+Route::get('/about',function(){
+    return view('about');
+});
 
 Route::get('/admin',[AdminControler::class,'LoginSuccess']);
 Route::get('/feedback',[AdminControler::class,'FeedbackPage']);

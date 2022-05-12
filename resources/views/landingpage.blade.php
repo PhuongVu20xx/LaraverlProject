@@ -1,49 +1,99 @@
 @extends('layouts.layout')
 
 @section('header')
-@include('layouts.header')
-<div class="thumbnail">
-        <div class="content">
-            <h1>VNPH'S GROCERY STORE</h1>
-            <p>We care about your family, come and join with us.</p>
-            <a href="shopping.php"><b>Shopping</b></a>
-            <a href="feedback.php"><b>Feedback</b></a>
-        </div>
-        <img src="{{asset('img/thumbnail.jpg')}}" alt="logo">
+@include('layouts.header2')
+<link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
+<script src="{{asset('js/landingpage.js')}}" defer></script>
+<body>
+    <div aria-label="Newest Photos" data-carousel>
+        <div class="carousel">
+            <button class="carousel-btn prev" data-carousel-btn="prev">&#8678;</button>
+            <button class="carousel-btn next" data-carousel-btn="next">&#8680;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="{{asset('img/landingpage1.jpg')}}" alt="Vegetables">
+                    <div class="info">
+                        <h1>WELCOME TO VNHP'S GROCERY</h1>
+                        <p>We care about your health. Come and join with us.</p>
+                        <a href="#">Shopping</a>
+                    </div>
+                </li>
+                <li class="slide">
+                    <img src="{{asset('img/landingpage2.jpg')}}" alt="Garlic">
+                    <div class="info">
+                        <h1>WELCOME TO VNHP'S GROCERY</h1>
+                        <p>We care about your health. Come and join with us.</p>
+                        <a href="#">Shopping</a>
+                    </div>
+                </li>
+                <li class="slide">
+                    <img src="{{asset('img/landingpage3.jpg')}}" alt="Spicies">
+                    <div class="info">
+                        <h1>WELCOME TO VNHP'S GROCERY</h1>
+                        <p>We care about your health. Come and join with us.</p>
+                        <a href="#">Shopping</a>
+                    </div>
+                </li>
+            </ul>   
+        </div> 
     </div>
+</body>
 @endsection
 
 @section('body')
-    <link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
-    <div class="landingpage">
-        <div class="category">
-            <h1>CATEGORIES</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi culpa esse voluptate ipsum, facere beatae?</p>
-            <a href="shopping.php"><b>Shopping</b></a>
-            <a href="shopping.php"><b>On Sale</b></a>
-            <div class="gallery1">
-                <img src="{{asset('img/image-1.jpg')}}" class="gallery1__img1">
-                <img src="{{asset('img/image-2.jpg')}}" class="gallery1__img2">
-                <img src="{{asset('img/image-3.jpg')}}" class="gallery1__img3">
-                <img src="{{asset('img/image-4.jpg')}}" class="gallery1__img4">
-                <img src="{{asset('img/image-5.jpg')}}" class="gallery1__img5">
-                <img src="{{asset('img/image-6.jpg')}}" class="gallery1__img6">
+<section>
+    <div class="about">
+        <div class="about-content">
+            <i id="title">VNHP's Grocery Store</i>
+            <p id="welcome">WELCOME</p>
+            <p id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At rerum accusamus voluptas facilis delectus sequi ad veritatis ut illo temporibus, ab fuga culpa quaerat nemo debitis atque sed repellat voluptatem.</p>
+            <br>
+            <a href="#">OUR STORY</a>
+        </div>
+        <div class="about-img">
+            <img src="{{asset('img/landingpage5.jpg')}}" alt="Grocery Store's Corner">
+        </div>
+    </div>
+</section>          
+<section>
+    <div class="shopping">
+        <div class="shopping-img">
+            <div class="shopping-content1">
+                <i>Discover</i> 
+                <p>VNHP's Grocery Store</p>
             </div>
         </div>
-        
-        <div class="blog">
-            <h1>FROM OUR BLOG</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et inventore mollitia accusamus architecto ducimus ratione eos adipisci ipsum. Cumque possimus labore autem ullam cum.</p>
-            <div class="gallery2">
-                <img src="{{asset('img/image-2.jpg')}}" class="gallery2__img1">
-                <img src="{{asset('img/image-2.jpg')}}" class="gallery2__img2">
-                <img src="{{asset('img/image-2.jpg')}}" class="gallery2__img3">
+        <div class="shopping-category">
+            <div class="veggies">
+                <img src="{{asset('img/landingpage7.jpg')}}" alt="Veggies Category">
+                <div class="desc"><a href="#">Veggies</a></div>
+            </div>
+            <div class="fruits">
+                <img src="{{asset('img/landingpage10.jpg')}}" alt="Fruits Category">
+                <div class="desc"><a href="#">Fruits</a></div>
+            </div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
+            </div>
+            <div class="spicies">
+                <img src="{{asset('img/landingpage3.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Spicies</a></div>
+            </div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
+            </div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
             </div>
         </div>
     </div>
+</section>
 @endsection
 
 @section('footer')
-@include('layouts.footer')
+@include('layouts.footer2')
 @endsection
 

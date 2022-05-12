@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
 
 <!-- Site footer -->
