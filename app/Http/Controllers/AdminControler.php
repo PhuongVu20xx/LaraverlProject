@@ -20,9 +20,9 @@ class AdminControler extends Controller
     {
         return view('admin.lastestorder');
     }
-    public function ControlerPage()
+    public function ControllerPage()
     {
-        return view('admin.controler');
+        return view('admin.controller');
     }
 
     public function LoginInput(Request $request)

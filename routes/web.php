@@ -50,5 +50,5 @@ Route::get('/admin',[AdminControler::class,'LoginSuccess']);
 Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
 Route::get('/customer',[AdminControler::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminControler::class,'LatestOrderPage']);
-Route::get('/controler',[AdminControler::class,'ControlerPage']);
+Route::get('/controller',[AdminControler::class,'ControllerPage']);
 
