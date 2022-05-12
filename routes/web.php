@@ -42,6 +42,9 @@ Route::get('/about',function(){
 Route::get('/login', function () {
     return view('form.loginform');
 });
+route::get('/product', function(){
+    return view('product');
+});
 
 Route::get('/admin',[AdminControler::class,'LoginSuccess']);
 Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
