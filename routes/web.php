@@ -51,5 +51,4 @@ Route::get('/customer',[AdminControler::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminControler::class,'LatestOrderPage']);
 Route::get('/controler',[AdminControler::class,'ControlerPage']);
 
-
-
+}
