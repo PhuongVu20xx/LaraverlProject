@@ -1,12 +1,13 @@
 @extends('layouts.layout')
 
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.jqueryui.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/scroller/2.0.5/css/scroller.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchbuilder/1.3.2/css/searchBuilder.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/respose-table.css')}}">
+</head>
+
 @endsection
 
 @section('header')
@@ -18,48 +19,58 @@
 @endsection
 
 @section('content')
-<div>
-    <h3>Feed Back</h3>
-</div>
-<div class="container mb-5 mt-3">
-    <table id="myTable" class="table table-sm table-striped" style="width:100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Content</th>
-                <th>Time</th>
-            </tr>
-        </thead>
 
-        <tbody>
-            @for ($i = 0; $i <= 100; $i++) <tr>
-                <th>{{ $i }} </th>
-                <td>{{ $i }} </td>
-                <td>{{ $i }} </td>
-                <td>{{ $i }} </td>
-                </tr>
-                @endfor
-        </tbody>
+<body>
+    <div>
+        <h3>Feed Back</h3>
+    </div>
 
-    </table>
-</div>
-@endsection
+    <section class="bg-white p-5">
+        <div id="no-more-tables" class="content">
+            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
 
-@section('footer')
-@include('layouts.footer')
-@endsection
-@section('javascript')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/poper.js/1.14.7/umd/poper.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.jqueryui.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://cdn.datatables.net/scroller/2.0.5/js/dataTables.scroller.min.js"></script>
-<script src="https://cdn.datatables.net/searchbuilder/1.3.2/js/dataTables.searchBuilder.min.js"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/feedback.js')}}"></script>
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="table-responsive ">
+                        <table id="myTable" class="table bg-white">
+                            <thead class="bg-dark">
+                                <tr>
+                                    <th class="text-light">ID</th>
+                                    <th class="text-light">Name</th>
+                                    <th class="text-light">Content</th>
+                                    <th class="text-light">Time</th>
+                                </tr>
+                            </thead>
 
-<script>
-$('.feedbacktable').DataTable({});
-</script>
-@endsection
+                            <tbody>
+                                @for ($i = 0; $i <= 100; $i++)<tr>
+                                    <th data-title="ID">ID {{$i}}</th>
+                                    <td data-title="Name">Name {{$i}}</td>
+                                    <td data-title="Content">Content {{$i}} </td>
+                                    <td data-title="Time">Time {{$i}}</td>
+                                    </tr>
+                                    @endfor
+                            </tbody>
+                    </div>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @endsection
+
+    @section('footer')
+    @include('layouts.footer')
+    @endsection
+
+    @section('scripts')
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js">
+    </script>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('js/feedback.js')}}"></script>
+    @endsection

@@ -30,15 +30,25 @@ Route::get('/cart', function () {
 Route::get('/register', function () {
     return view('form.registerform');
 });
+Route::get('/header2',function(){
+    return view('layouts/header2');
+});
+Route::get('/footer2',function(){
+    return view('layouts/footer2');
+});
+Route::get('/about',function(){
+    return view('about');
+});
 Route::get('/login', function () {
     return view('form.loginform');
+});
+route::get('/product', function(){
+    return view('product');
 });
 
 Route::get('/admin',[AdminControler::class,'LoginSuccess']);
 Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
 Route::get('/customer',[AdminControler::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminControler::class,'LatestOrderPage']);
-Route::get('/controler',[AdminControler::class,'ControlerPage']);
-
-
+Route::get('/controller',[AdminControler::class,'ControllerPage']);
 
