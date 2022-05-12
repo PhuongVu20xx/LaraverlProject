@@ -6,7 +6,7 @@
     <input type="checkbox" name="" id="chk1">
     <img src="{{asset('img/logo.jpg')}}" class="logo">
     <ul>
-        <li><a href="#">About</a></li>
+        <li><a href="../about">About</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Cart</a></li>
