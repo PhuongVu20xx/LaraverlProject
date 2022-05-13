@@ -12,7 +12,7 @@
 <!-- LOGIN-FORM -->
 @section('body')
     <div class="row" id="row-login">
-        <div class="col-8">
+        <div class="col-lg-8 col-md-10 col-sm-12">
             <form action="" class="form-group">
                 <div class="form-header">Login</div>
 
