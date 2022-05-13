@@ -13,7 +13,18 @@
 @section('body')
     <div class="row" id="row-login">
         <div class="col-lg-8 col-md-10 col-sm-12">
-            <form action="" class="form-group">
+                @if(count($errors) > 0)
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $err)
+                            {{$err}} <br>
+                        @endforeach
+                    </div>
+                @endif
+                @if(session('thongbao'))
+                    {{session('thongbao')}}
+                @endif
+            <form action="/login" method="POST" class="form-group">
+                {{csrf_field()}}
                 <div class="form-header">Login</div>
 
                 <div class="form-element">
@@ -23,7 +34,7 @@
 
                 <div class="form-element">
                     <p class="content">* Password</p>
-                    <input type="text" name="password" class="input-form">
+                    <input type="password" name="password" class="input-form">
                 </div>
                 <div id="submit">
                     <input type="submit" class="form-submit" value="LOGIN">
