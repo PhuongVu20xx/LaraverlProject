@@ -40,8 +40,8 @@ Route::get('/about',function(){
     return view('about');
 });
 
-Route::get('/login',[LoginControler::class, 'getLoginform']);
-Route::post('/login',[LoginControler::class, 'postLoginform']);
+Route::get('/login',[LoginController::class, 'getLoginform']);
+Route::post('/login',[LoginController::class, 'postLoginform']);
 
 route::get('/product', function(){
     return view('product');
