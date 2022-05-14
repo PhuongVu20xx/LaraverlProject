@@ -8,7 +8,7 @@
     <ul>
         <li><a href="../about">About</a></li>
         <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="../contact">Contact</a></li>
         <li><a href="#">Cart</a></li>
         <li><a href="#">Shipping</a></li>
         <li><a href="#">Need help?</a></li>

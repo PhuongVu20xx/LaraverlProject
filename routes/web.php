@@ -39,6 +39,9 @@ Route::get('/footer2',function(){
 Route::get('/about',function(){
     return view('about');
 });
+Route::get('/contact',function(){
+    return view('contact');
+});
 
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);

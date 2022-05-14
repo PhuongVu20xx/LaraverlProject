@@ -1,0 +1,17 @@
+.contact-thumbnail img{
+    z-index: 1;
+    width: 100%;
+    height: 350px;
+    object-position: center;
+    object-fit: cover;
+}
+.contact-thumbnail>.desc{
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
