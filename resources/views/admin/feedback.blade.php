@@ -36,18 +36,16 @@
                         <table id="myTable" class="table bg-white">
                             <thead class="bg-dark">
                                 <tr>
-                                    <th class="text-light">ID</th>
-                                    <th class="text-light">Name</th>
                                     <th class="text-light">Content</th>
+                                    <th class="text-light">Name</th>
                                     <th class="text-light">Time</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 @for ($i = 0; $i <= 100; $i++)<tr>
-                                    <th data-title="ID">ID {{$i}}</th>
-                                    <td data-title="Name">Name {{$i}}</td>
                                     <td data-title="Content">Content {{$i}} </td>
+                                    <td data-title="Name">Name {{$i}}</td>
                                     <td data-title="Time">Time {{$i}}</td>
                                     </tr>
                                     @endfor
@@ -67,7 +65,8 @@
     @endsection
 
     @section('scripts')
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js">
+    </script>
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script src="{{asset('js/tableadminfeedback.js')}}"></script>

@@ -1,5 +1,15 @@
 @extends('layouts.layout')
 
+@section('css')
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/respose-tableadminfeedback.css')}}">
+</head>
+
+@endsection
+
 @section('header')
 @include('layouts.header')
 @endsection
@@ -9,29 +19,55 @@
 @endsection
 
 @section('content')
-<div>
-    <h3>Customer</h3>
-</div>
-<div>
-    <table class="table">
-        <tr scope="col">
-            <th>ID</th>
-            <th>Name</th>
-            <th>Content</th>
-            <th>Time</th>
-        </tr>
-        @for ($i = 0; $i <= 10; $i++) 
-        <tr scope="row">
-            <td>{{ $i }} </td>
-            <td>{{ $i }} </td>
-            <td>{{ $i }} </td>
-            <td>{{ $i }} </td>
-        </tr>
-        @endfor
-    </table>
-</div>
-@endsection
 
-@section('footer')
-@include('layouts.footer')
-@endsection
+<body>
+    <div>
+        <h3>Customer Infomation</h3>
+    </div>
+
+    <section class="bg-white p-5">
+        <div id="no-more-tables" class="content">
+            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
+
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="table-responsive ">
+                        <table id="myTable" class="table bg-white">
+                            <thead class="bg-dark">
+                                <tr>
+                                    <th class="text-light">Content</th>
+                                    <th class="text-light">Name</th>
+                                    <th class="text-light">Time</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @for ($i = 0; $i <= 100; $i++)<tr>
+                                    <td data-title="Content">Content {{$i}} </td>
+                                    <td data-title="Name">Name {{$i}}</td>
+                                    <td data-title="Time">Time {{$i}}</td>
+                                    </tr>
+                                    @endfor
+                            </tbody>
+                    </div>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @endsection
+
+    @section('footer')
+    @include('layouts.footer')
+    @endsection
+
+    @section('scripts')
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js">
+    </script>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('js/tableadminfeedback.js')}}"></script>
+    @endsection
