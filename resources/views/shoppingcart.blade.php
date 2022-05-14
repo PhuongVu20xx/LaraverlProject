@@ -10,45 +10,107 @@
 @endsection
 
 <!-- BODY -->
-@section('landingpage')
-<div id="app">
-  <div id="product">
-    <item v-for="item in items" v-bind:item_data="item"></item>
-  </div>
-  <div id="cart">
-    <div id="head">
-      <h3>Shopping Cart</h3>
-      <div id="price">Price</div>
-      <div id="quantity">Quantity</div>
-      <div id="total">Total</div>
-    </div>
-    <buyitem v-for="buyitem in buyitems" v-bind:buy_data="buyitem"></buyitem>
-    <h5 v-if="total()">Sum: $ 55</h5>
-  </div>
+@section('body')
+
+<section>
+        <div class="cart-container">
+            <h1 class="font-weight-bold"><b>VNHP &ensp;|&ensp;Cart</b></h1>
+            <input style="width: 400px;" type="text" name="seach" placeholder="MEMBERSHIP GIFT 5 MILLION ">
+        </div>
+</section>
+<div class="click">
+  &ensp;<i class="fa-solid fa-truck-fast"></i>
+  &ensp;<p>Click on the Coupon Code section at the bottom of the page to enjoy free shipping!</p>
+</div>
+
+<!-- cart -->
+<section class="cart">
+  <form action="">
+    <table>
+      <thead>
+        <tr>
+          <th><b>Product</b></th>
+          <th><b>Unit Price</b></th>
+          <th><b>Quantity</b></th>
+          <th><b>Choose</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic">delicious cake</td>
+          <td><p><span>$20.000</span></p></td>
+          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
+          <td style="cursor: pointer;">Delete</td>
+        </tr>
+        <tr>
+          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-2.jpg')}}" alt="Garlic">delicious cake</td>
+          <td><p><span>$20.000</span></p></td>
+          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
+          <td style="cursor: pointer;">Delete</td>
+        </tr>
+        <tr>
+          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-3.jpg')}}" alt="Garlic">delicious cake</td>
+          <td><p><span>$20.000</span></p></td>
+          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
+          <td style="cursor: pointer;">Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</section>
+
+<!-- voucher -->
+<div class="gift">
+  &emsp;<i class="fa-solid fa-gifts"></i>
+  &emsp;<p>VNHP Voucher up to 15$ <b style="color: red;">New</b> &emsp;&emsp;<a href="#">View more voucher</a> </p>
 </div>
 
 
-<template id="product-box">
-  <div class="box">
-    <img :src="item_data.img"/>
-    <i class="fa fa-plus" v-on:click="addItem(item_data)"></i>
-    <h2>55</h2>
-    <p>$55</p>
-  </div>
-</template>
+<!-- image -->
+<section>
+    <div class="cart1">
+      <div class="cart2">
+        <div class="cart3">
+          <img src="{{asset('img/image-1.jpg')}}" alt="Garlic">
+            <div class="cart-item">
+              <p><span>$20.00</span></p>
+              <h1 style="font-weight: bold; font-size:18px;">delicious cake</h1>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div class="cart3">
+          <img src="{{asset('img/image-2.jpg')}}" alt="Garlic">
+            <div class="cart-item">
+              <p><span>$20.00</span></p>
+              <h1 style="font-weight: bold; font-size:18px;">delicious cake</h1>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+        <div class="cart3">
+          <img src="{{asset('img/image-3.jpg')}}" alt="Garlic">
+            <div class="cart-item">
+              <p><span>$20.00</span></p>
+              <h1 style="font-weight: bold; font-size:18px;">delicious cake</h1>
+            </div>
+            <button>Add To Cart</button>
+        </div>
+      </div>
+    </div>
+</section>
 
-<template id="buy-box">
-  <div class="row">
-    <img :src="buy_data.img"/>
-    <h4>55</h4>
-    <p>55</p>
-    <div class="qty-minus" v-on:click="minusQty(buy_data)">-</div>
-    <div class="qty">55</div>
-    <div class="qty-plus" v-on:click="plusQty(buy_data)">+</div>
-    <div class="del" v-on:click="removeItem(buy_data)">Remove</div>
-    <div class="totalprice">55</div>
-  </div>
-</template>
+<!-- checkpayment -->
+<div>
+        <div class="checkout">
+            <ul>
+                <li class="subtotal"><b>VNHP Voucher</b>
+                    <span><a href="#">Select Or Enter A Code</a></span>
+                </li>
+                <li class="cart-total"><b>Total Payment </b>
+                <span>$20.00</span></li>
+            </ul>
+            <a href="#"class="proceed-btn">Proceed to Payment</a>
+        </div>
+    </div>
 @endsection
 
 <!-- FOOTER -->
