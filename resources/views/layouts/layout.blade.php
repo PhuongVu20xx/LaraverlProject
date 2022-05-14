@@ -21,7 +21,9 @@
                 @yield('menu')
             </div>
             <div class="col-10">
-                @yield('content')
+                <div>@yield('bodyheader')</div>
+                <div>@yield('bodynav')</div>
+                <div>@yield('bodycontent')</div>
             </div>
         </div>
         <div id="footer">
