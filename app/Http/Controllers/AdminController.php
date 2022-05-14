@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminControler extends Controller
+class AdminController extends Controller
 {  
     public function FeedbackPage()
     {
@@ -30,7 +30,7 @@ class AdminControler extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         
-        return redirect()->action([AdminControler::class,'Loginsuccess']);
+        return redirect()->action([AdminController::class,'Loginsuccess']);
     }
     public function LoginSuccess()
     {
