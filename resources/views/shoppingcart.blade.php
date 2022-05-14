@@ -11,52 +11,35 @@
 
 <!-- BODY -->
 @section('body')
-
+<div>
 <section>
         <div class="cart-container">
-            <h1 class="font-weight-bold"><b>VNHP &ensp;|&ensp;Cart</b></h1>
-            <input style="width: 400px;" type="text" name="seach" placeholder="MEMBERSHIP GIFT 5 MILLION ">
+            <a href="#"><h1 class="font-weight-bold"><b>VNHP &ensp;|&ensp;Cart</b></h1></a>
         </div>
 </section>
+<!-- click -->
 <div class="click">
   &ensp;<i class="fa-solid fa-truck-fast"></i>
-  &ensp;<p>Click on the Coupon Code section at the bottom of the page to enjoy free shipping!</p>
+  &ensp;<div>Click on the Coupon Code section at the bottom of the page to enjoy free shipping!</div>
 </div>
 
 <!-- cart -->
-<section class="cart">
-  <form action="">
-    <table>
-      <thead>
-        <tr>
-          <th><b>Product</b></th>
-          <th><b>Unit Price</b></th>
-          <th><b>Quantity</b></th>
-          <th><b>Choose</b></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic">delicious cake</td>
-          <td><p><span>$20.000</span></p></td>
-          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
-          <td style="cursor: pointer;">Delete</td>
-        </tr>
-        <tr>
-          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-2.jpg')}}" alt="Garlic">delicious cake</td>
-          <td><p><span>$20.000</span></p></td>
-          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
-          <td style="cursor: pointer;">Delete</td>
-        </tr>
-        <tr>
-          <td style="display: flex;align-items:center;"><img src="{{asset('img/image-3.jpg')}}" alt="Garlic">delicious cake</td>
-          <td><p><span>$20.000</span></p></td>
-          <td><input style="width: 40px;outline:none;" type="number" value="1" min="1"></td>
-          <td style="cursor: pointer;">Delete</td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
+<section class="cart-product">
+  <div>
+    <div class="cart-product1">
+      <div><h5><b>Product</b></h5></div>
+      <div><h5><b>Unit Price</b></h5></div>
+      <div><h5><b>Quantity</b></h5></div>
+      <div><h5><b>Choose</b></h5></div>
+    </div>
+    <div class="cart-product2">
+      <div><img src="{{asset('img/image-1.jpg')}}" alt="Garlic">&emsp; delicious cake</div>
+      <div>$20.000</div>
+      <div><input style="width: 40px;outline:none;" type="number" value="1" min="1"></div>
+      <div>Delete</div>
+    </div>
+  </div>
+    
 </section>
 
 <!-- voucher -->
@@ -103,7 +86,7 @@
         <div class="checkout">
             <ul>
                 <li class="subtotal"><b>VNHP Voucher</b>
-                    <span><a href="#">Select Or Enter A Code</a></span>
+                    <span><a style="text-decoration: none;" href="#">Select Or Enter A Code</a></span>
                 </li>
                 <li class="cart-total"><b>Total Payment </b>
                 <span>$20.00</span></li>
@@ -112,7 +95,7 @@
         </div>
     </div>
 @endsection
-
+</div>
 <!-- FOOTER -->
 @section('footer')
     @include('layouts.footer')
