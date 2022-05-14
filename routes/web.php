@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminControler;
-
+use App\Http\Controllers\LoginControler;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +39,10 @@ Route::get('/footer2',function(){
 Route::get('/about',function(){
     return view('about');
 });
-Route::get('/login', function () {
-    return view('form.loginform');
-});
+
+Route::get('/login',[LoginControler::class, 'getLoginform']);
+Route::post('/login',[LoginControler::class, 'postLoginform']);
+
 route::get('/product', function(){
     return view('product');
 });

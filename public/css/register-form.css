@@ -8,7 +8,12 @@
     border-bottom: 1px solid #ccc; 
     padding-left: 0px;
 }
-
+#regisform{
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
 #form-header{
     font-size: 35px;
     font-weight: 600;
@@ -17,9 +22,6 @@
 }
 .row{
     justify-content:center;
-}
-.col-2{
-    background-color: #f7efed;
 }
 #form-group{
     padding: 15px 20px;

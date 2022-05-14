@@ -4,29 +4,39 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminControler;
+use Illuminate\Support\Facades\Auth;
 
 class LoginControler extends Controller
 {
-    public function LoginInput(Request $request)
-    {
-        $email = $request->input('email');
-        $password = $request->input('password');
-        
-        // switch (CheckEmail($email))
-        // {
-        //     case 0:
-        //         return redirect()->action([UserControler::class,'LoginSuccess'],['email'=>$email,'password'=>$password]);
-        //         break;
-        //     case 1:
-        //         return redirect()->action([AdminControler::class,'Loginsuccess'],['email'=>$email,'password'=>$password]);
-        //         break;
-        // }
+
+    public function getLoginform(){
+        return view('form.loginform');
     }
-    
-    public function CheckEmail($email)
-    {
-        //kết nối DB
-        // check email xem là của user hay admin -> return 1 admin return 0 user
-        return 0;
+
+    public function postLoginform(Request $request){
+
+        $this->validate($request,[
+            'email'=>'required',
+            'password'=>'required|min:8|max:16'
+        ],[
+            'email.required' => 'Bạn chưa nhập email !!!',
+            'password.required' => 'Bạn chưa nhập password !!!',
+            'password.min' => 'Password không được nhỏ hơn 8 ký tự',
+            'password.max' => 'Password không được lớn hơn 16 ký tự'
+        ]);
+        $email['info'] = $request->email;
+        $password = $request->password;
+
+        if(Auth::attempt(['email'=>$email, 'password'=>$password])){
+            if($email == 'user' && $password == '123456789'){
+                return redirect('langdingpage', $email);
+
+            }elseif($email == 'admin' && $password == '123456789'){
+                return redirect('admin.controller');
+
+            }else{
+                return redirect('form.loginform')->with('thongbao', 'Login Fail !!!');
+            }     
+        }
     }
 }
