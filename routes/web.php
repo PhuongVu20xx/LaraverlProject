@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminControler;
-use App\Http\Controllers\LoginControler;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +47,9 @@ route::get('/product', function(){
     return view('product');
 });
 
-Route::get('/admin',[AdminControler::class,'LoginSuccess']);
-Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
-Route::get('/customer',[AdminControler::class,'CustomerPage']);
-Route::get('/lastestorder',[AdminControler::class,'LatestOrderPage']);
-Route::get('/controller',[AdminControler::class,'ControllerPage']);
+Route::get('/admin',[AdminController::class,'LoginSuccess']);
+Route::get('/feedback',[AdminController::class,'FeedbackPage']);
+Route::get('/customer',[AdminController::class,'CustomerPage']);
+Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
+Route::get('/controller',[AdminController::class,'ControllerPage']);
 
