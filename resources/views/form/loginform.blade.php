@@ -23,13 +23,18 @@
                 @if(session('thongbao'))
                     {{session('thongbao')}}
                 @endif
+                @if(session('msg'))
+                    <div class="alert alert-primary">
+                        {{session('msg')}}
+                    </div>
+                @endif
             <form action="/login" method="POST" class="form-group">
                 {{csrf_field()}}
                 <div class="form-header">Login</div>
 
                 <div class="form-element">
                     <p class="content">* Email</p>
-                    <input type="text" name="user" class="input-form">
+                    <input type="text" name="email" class="input-form">
                 </div>
 
                 <div class="form-element">

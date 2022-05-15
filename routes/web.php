@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,6 @@ Route::get('/landingpage', function () {
 Route::get('/cart', function () {
     return view('shoppingcart');
 });
-Route::get('/register', function () {
-    return view('form.registerform');
-});
 Route::get('/header2',function(){
     return view('layouts/header2');
 });
@@ -45,9 +43,13 @@ Route::get('/contact',function(){
 Route::get('/blog',function(){
     return view('blog');
 });
-
+// Login
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
+// Register
+Route::get('/register',[RegisterController::class, 'getRegisterform']);
+Route::get('/register',[RegisterController::class, 'postRegisterform']);
+
 
 route::get('/product', function(){
     return view('product');

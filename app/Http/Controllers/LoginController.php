@@ -18,23 +18,38 @@ class LoginController extends Controller
     public function postLoginform(Request $request){
 
         $this->validate($request,[
-            'user'=>'required',
-            'password'=>'required|min:8|max:16'
+            'email'=>'required',
+            'password'=>'required|min:3|max:16'
         ],[
-            'user.required' => 'Bạn chưa nhập username !!!',
+            'email.required' => 'Bạn chưa nhập email !!!',
             'password.required' => 'Bạn chưa nhập password !!!',
-            'password.min' => 'Password không được nhỏ hơn 8 ký tự',
+            'password.min' => 'Password không được nhỏ hơn 3 ký tự',
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
-        $user['info'] = $request->user;
+        $email['info'] = $request->email;
         $password = $request->password;
+        
+        $SQLuser = DB::table('user')->where('email',$email)->get()->toArray();
 
-        if(Auth::attempt(['user'=>$user, 'password'=>$password])){
+        foreach($SQLuser as $customer){
+            if($customer->password = $password){
+                if($customer->idtype==2){   
+                    return redirect('landingpage');
+                }else{
+                    return redirect('controller');
+                }
+            }else{
+                return redirect('login')->with('thongbao', 'Login Fail !!!');
+            }
+        }
 
-                return view('langdingpage', $user);
-                // return redirect('admin.controller');
-        }else{
-                return view('form.loginform')->with('thongbao', 'Login Fail !!!');
-        }     
-    }
-}
+        
+        // if(Auth::attempt(['user'=>$user, 'password'=>$password])){
+
+        //         return view('langdingpage', $user);
+        //         // return redirect('admin.controller');
+        // }else{
+        //         return view('form.loginform')->with('thongbao', 'Login Fail !!!');
+        // }     
+}}
+
