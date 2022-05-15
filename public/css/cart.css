@@ -118,6 +118,9 @@
   border-bottom:1px solid #fff;
   padding-bottom: 14px;
 }
+.checkout ul li.subtotal {
+  text-transform: uppercase;
+}
 .checkout ul li.subtotal span{
   font-weight: bold;
 }
