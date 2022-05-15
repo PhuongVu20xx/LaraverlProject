@@ -25,33 +25,21 @@ class AdminController extends Controller
         return view('admin.controller');
     }
 
-    
-
-    public function LoginInput(Request $request)
-    {
-        $email = $request->input('email');
-        $password = $request->input('password');
-        
-        return redirect()->action([AdminController::class,'Loginsuccess']);
-    }
-    
-    public function LoginSuccess()
-    {
-        return view('admin.controller');
-    }
-
     public function EditProduct()
     {
         return view('admin.controllers.editproduct');
     }
+
     public function AddCategory()
     {
         return view('admin.controllers.addproduct');
     }
+
     public function AllProduct()
     {
         return view('admin.controllers.allproduct');
     }
+    
     public function AddProduct()
     {
         return view('admin.controllers.addcategory');
