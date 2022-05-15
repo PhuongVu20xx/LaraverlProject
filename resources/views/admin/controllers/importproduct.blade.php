@@ -31,14 +31,52 @@
 @section('bodycontent')
     <div>
         <form action="/importproduct" method="post">
-            <div class="importproduct" id="importproduct">
-                <div>
-                    Name: <input type="text" id="name" class="name">
-                    Producer: <input type="text" id="producer" class="producer">
-                    Price: <input type="text" id="price" class="price">
-                    Quantity: <input type="text" id="quantity" class="quantity">
-                    Import day: <input type="text" id="importday" class="importday">
-                    <input type="submit" id="submit" class="submit" value="Import">
+            <div class="p-3" id="importproduct">
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Name:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="name" class="name">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Producer:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="producer" class="producer">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Price:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="price" class="price">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Quantity:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="quantity" class="quantity">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <span class="w-50">Import day: </span>
+                    <div class="w-50">
+                        <input type="text" id="importday" class="importday">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                    </div>
+                    <div class="w-50">
+                        <input type="submit" id="submit" class="submit" value="Import">
+                    </div>
+                
                 </div>
             </div>
         </form>
