@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminControler;
-use App\Http\Controllers\LoginControler;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ReisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,6 @@ Route::get('/landingpage', function () {
 Route::get('/cart', function () {
     return view('shoppingcart');
 });
-Route::get('/register', function () {
-    return view('form.registerform');
-});
 Route::get('/header2',function(){
     return view('layouts/header2');
 });
@@ -39,17 +37,33 @@ Route::get('/footer2',function(){
 Route::get('/about',function(){
     return view('about');
 });
+Route::get('/contact',function(){
+    return view('contact');
+});
+Route::get('/blog',function(){
+    return view('blog');
+});
+// Login
+Route::get('/login',[LoginController::class, 'getLoginform']);
+Route::post('/login',[LoginController::class, 'postLoginform']);
+// Register
+Route::get('/register',[RegisterController::class, 'getRegisterform']);
+Route::get('/register',[RegisterController::class, 'postRegisterform']);
 
-Route::get('/login',[LoginControler::class, 'getLoginform']);
-Route::post('/login',[LoginControler::class, 'postLoginform']);
 
 route::get('/product', function(){
     return view('product');
 });
 
-Route::get('/admin',[AdminControler::class,'LoginSuccess']);
-Route::get('/feedback',[AdminControler::class,'FeedbackPage']);
-Route::get('/customer',[AdminControler::class,'CustomerPage']);
-Route::get('/lastestorder',[AdminControler::class,'LatestOrderPage']);
-Route::get('/controller',[AdminControler::class,'ControllerPage']);
+Route::get('/admin',[AdminController::class,'LoginSuccess']);
+Route::get('/feedback',[AdminController::class,'FeedbackPage']);
+Route::get('/customer',[AdminController::class,'CustomerPage']);
+Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
+Route::get('/controller',[AdminController::class,'ControllerPage']);
+Route::get('/editproduct',[AdminController::class,'EditProduct']);
+Route::get('/addproduct',[AdminController::class,'AddCategory']);
+Route::get('/allproduct',[AdminController::class,'AllProduct']);
+Route::get('/addcategory',[AdminController::class,'AddProduct']);
+Route::get('/importproduct',[AdminController::class,'ImportProduct']);
+
 

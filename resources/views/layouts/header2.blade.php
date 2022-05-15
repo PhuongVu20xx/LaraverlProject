@@ -7,9 +7,9 @@
     <img src="{{asset('img/logo.jpg')}}" class="logo">
     <ul>
         <li><a href="../about">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Cart</a></li>
+        <li><a href="../blog">Blog</a></li>
+        <li><a href="../contact">Contact</a></li>
+        <li><a href="../cart">Cart</a></li>
         <li><a href="#">Shipping</a></li>
         <li><a href="#">Need help?</a></li>
         <li><a href="../register">Sign Up </a></li>

@@ -23,6 +23,11 @@
                 @if(session('thongbao'))
                     {{session('thongbao')}}
                 @endif
+                @if(session('msg'))
+                    <div class="alert alert-primary">
+                        {{session('msg')}}
+                    </div>
+                @endif
             <form action="/login" method="POST" class="form-group">
                 {{csrf_field()}}
                 <div class="form-header">Login</div>

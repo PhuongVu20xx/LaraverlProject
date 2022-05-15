@@ -16,23 +16,24 @@
         <div class="col-lg-2 col-md-1"></div>
             <div class="col-lg-4 col-md-9 col-sm-10" id="img"></div>
             <div class="col-lg-4 col-md-8 col-sm-10" id="regisform"> 
-                <form action="" id="form-group">
+                <form action="/register" method="POST" id="form-group">
                     <p id="form-header">SIGN UP</p>
+                    {{csrf_field()}}
                     <div>
                         <p class="title">* First Name</p>
-                        <input type="text" name="fname-input" class="form-input">
+                        <input type="text" name="firstname" class="form-input">
                     </div>
                     <div>
                         <p class="title">* Last Name</p>
-                        <input type="text" name="lname-input" class="form-input">
+                        <input type="text" name="lastname" class="form-input">
                     </div>
                     <div>
                         <p class="title">* Email</p>
-                        <input type="text" name="email-input" class="form-input">
+                        <input type="text" name="email" class="form-input">
                     </div>
                     <div>
                         <p class="title">* Password</p>
-                        <input type="password" name="pass-input" class="form-input" >
+                        <input type="password" name="password" class="form-input" >
                     </div>
 
                     <div>

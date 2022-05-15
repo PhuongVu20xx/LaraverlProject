@@ -1,0 +1,26 @@
+.nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: black;
+    border:0px;
+    color: #FFFFFF;
+    cursor: default;
+    margin-right:0;
+    margin-left:0;
+  }
+  
+  .nav-tabs  li  a {
+    padding: 5px;
+  }
+
+  .nav{
+    background: #40403E;
+    padding: 5px;
+    width: 50%;
+  }
+
+  #table{
+    text-align: right;
+  }
