@@ -49,4 +49,16 @@ class AdminController extends Controller
     {
         return view('admin.controllers.importproduct');
     }
+
+    public function ImportProductInput(Request $request){
+        $data = [
+            'name'=> $request->name,
+            'producer'=> $request->producer,
+            'price'=> $request->price,
+            'quantity'=> $request->quantity,
+            'importday'=> $request->importday,
+        ];
+        DB::table('importproduct')->insert($data);
+        return redirect()->action()->with('msg', 'Đăng ký thành công !');
+    }
 }
