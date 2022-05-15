@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
-class LoginControler extends Controller
+
+class LoginController extends Controller
 {
 
     public function getLoginform(){
@@ -16,27 +18,23 @@ class LoginControler extends Controller
     public function postLoginform(Request $request){
 
         $this->validate($request,[
-            'email'=>'required',
+            'user'=>'required',
             'password'=>'required|min:8|max:16'
         ],[
-            'email.required' => 'Bạn chưa nhập email !!!',
+            'user.required' => 'Bạn chưa nhập username !!!',
             'password.required' => 'Bạn chưa nhập password !!!',
             'password.min' => 'Password không được nhỏ hơn 8 ký tự',
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
-        $email['info'] = $request->email;
+        $user['info'] = $request->user;
         $password = $request->password;
 
-        if(Auth::attempt(['email'=>$email, 'password'=>$password])){
-            if($email == 'user' && $password == '123456789'){
-                return redirect('langdingpage', $email);
+        if(Auth::attempt(['user'=>$user, 'password'=>$password])){
 
-            }elseif($email == 'admin' && $password == '123456789'){
-                return redirect('admin.controller');
-
-            }else{
-                return redirect('form.loginform')->with('thongbao', 'Login Fail !!!');
-            }     
-        }
+                return view('langdingpage', $user);
+                // return redirect('admin.controller');
+        }else{
+                return view('form.loginform')->with('thongbao', 'Login Fail !!!');
+        }     
     }
 }

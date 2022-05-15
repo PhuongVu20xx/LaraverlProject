@@ -29,7 +29,7 @@
 
                 <div class="form-element">
                     <p class="content">* Email</p>
-                    <input type="text" name="email" class="input-form">
+                    <input type="text" name="user" class="input-form">
                 </div>
 
                 <div class="form-element">
