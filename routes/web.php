@@ -42,6 +42,9 @@ Route::get('/about',function(){
 Route::get('/contact',function(){
     return view('contact');
 });
+Route::get('/blog',function(){
+    return view('blog');
+});
 
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
@@ -59,4 +62,6 @@ Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[AdminController::class,'AddCategory']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);
 Route::get('/addcategory',[AdminController::class,'AddProduct']);
+Route::get('/importproduct',[AdminController::class,'ImportProduct']);
+
 

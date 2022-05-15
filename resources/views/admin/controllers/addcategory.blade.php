@@ -14,7 +14,7 @@
 
 @section('bodyheader')
     <div>
-        <h3>Controller</h3>
+        <h3>Add Category</h3>
         <hr>
     </div>
 @endsection
@@ -24,7 +24,14 @@
 @endsection
 
 @section('bodycontent')
-    
+    <div>
+        <form action="/addcategory" method="post">
+            <div>
+                Name category: <input type="text" id="name" class="name">
+                <input type="submit" id="submit" class="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 @endsection
 
 @section('footer')
