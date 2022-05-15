@@ -26,7 +26,7 @@ Route::get('/landingpage', function () {
     return view('landingpage');
 });
 Route::get('/cart', function () {
-    return view('shoppingcart');
+    return view('cart');
 });
 Route::get('/about',function(){
     return view('about');
@@ -37,6 +37,11 @@ Route::get('/contact',function(){
 Route::get('/blog',function(){
     return view('blog');
 });
+Route::get('/product', function(){
+    return view('product');
+});
+
+
 // Login
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
@@ -44,10 +49,6 @@ Route::post('/login',[LoginController::class, 'postLoginform']);
 Route::get('/register',[RegisterController::class, 'getRegisterform']);
 Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
-
-route::get('/product', function(){
-    return view('product');
-});
 
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
