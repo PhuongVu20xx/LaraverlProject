@@ -28,12 +28,6 @@ Route::get('/landingpage', function () {
 Route::get('/cart', function () {
     return view('shoppingcart');
 });
-Route::get('/header2',function(){
-    return view('layouts/header2');
-});
-Route::get('/footer2',function(){
-    return view('layouts/footer2');
-});
 Route::get('/about',function(){
     return view('about');
 });
