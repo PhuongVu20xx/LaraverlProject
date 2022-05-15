@@ -1,0 +1,29 @@
+.blog-thumbnail img{
+    z-index: 1;
+    width: 100%;
+    height: 350px;
+    object-position: center;
+    object-fit: cover;
+}
+.blog-thumbnail>.desc{
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.blog-items {
+    padding: 10px 10px 0 200px;
+}
+.blog-item h1 {
+    font-weight: lighter;
+}
+.blog-item ul {
+    display: flex;
+    font-size: 15px;
+    list-style-type: none;
+   
+}

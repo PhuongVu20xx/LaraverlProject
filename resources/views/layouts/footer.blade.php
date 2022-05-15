@@ -1,56 +1,76 @@
 <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
-
-<!-- Site footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify">VNHPGrocery.com was established in 2022 with a team of 4 Developers: Mr.Nhan - Mr.Phuong - Mrs.Van - Mrs.Hanh.
-                 We are the founders of VNHP Grocery. We want to give our customers the best experience and moment</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Categories</h6>
-            <ul class="footer-links">
-              <li><a href="#">Online Orders</a></li>
-              <li><a href="#">24/7 Customer Service</a></li>
-              <li><a href="#">VNHP's Grocery Stores</a></li>
-              <li><a href="#">About VNHP's Grocery</a></li>
-              <li><a href="#">Payment</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Contribute</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Sitemap</a></li>
-            </ul>
-          </div>
+    <div class="footer-container1">
+        <div class="footer-container1-col1">
+            <div class="contact">
+                <h4>CONTACT US</h4>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    7th floor-35/6 D5 Str-Binh Thanh Dist-HCM city
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    (+84) 99 999 9999
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i> 
+                    team1thebest@gmail.com
+                </p>
+            </div>
+            <div class="openingtimes">
+                <h4>OPENING TIMES</h4>
+                <p>
+                    <b>Weekdays</b> 07:30 - 22:30
+                    <br>
+                    <b>Weekends</b> 07:00 - 22:30
+                </p>
+            </div>
         </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
-         <a href="#">Aptech Education</a>.
+        <div class="footer-container1-col2">
+            <h4>LATEST BLOG</h4>
+            <p>
+                <i class="fa-brands fa-facebook-square"></i>
+                <a href="#">@VNHP</a> 
+                <br>
+                <p id="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, est labore deleniti eligendi officiis facere.</p> 
+                <a href="#" id="link">https://buff.ly/2zaSfAQ</a>
+                <br>
+                <p id="date">12 May 2022</p>
             </p>
-          </div>
-
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div>
+            <p>
+                <i class="fa-brands fa-facebook-square"></i>
+                <a href="#">@VNHP</a>
+                <br>
+                <p id="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, est labore deleniti eligendi officiis facere.</p> 
+                <a href="#" id="link">https://buff.ly/2zaSfAQ</a>
+                <br>
+                <p id="date">12 May 2022</p> 
+            </p>
         </div>
-      </div>
-</footer>
+        <div class="footer-container1-col3">
+            <h4>GALLERY</h4>
+            <div class="gallery1">
+                <img src="{{asset('img/image-1.jpg')}}" class="gallery1__img1">
+                <img src="{{asset('img/image-2.jpg')}}" class="gallery1__img2">
+                <img src="{{asset('img/image-3.jpg')}}" class="gallery1__img3">
+                <img src="{{asset('img/image-7.jpg')}}" class="gallery1__img4">
+                <img src="{{asset('img/image-5.jpg')}}" class="gallery1__img5">
+                <img src="{{asset('img/image-9.jpg')}}" class="gallery1__img6">
+                <img src="{{asset('img/image-3.jpg')}}" class="gallery1__img7">
+                <img src="{{asset('img/image-8.jpg')}}" class="gallery1__img8">
+                <img src="{{asset('img/image-6.jpg')}}" class="gallery1__img9">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-containter2">
+        <div class="footer-icon">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+        </div>
+        <div id="sentence">
+            @ 2017 Colorlib. <a href="#">Get The Theme</a>
+        </div>
+    </div>

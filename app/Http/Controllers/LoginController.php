@@ -34,7 +34,7 @@ class LoginController extends Controller
         foreach($SQLuser as $customer){
             if($customer->password = $password){
                 if($customer->idtype==2){   
-                    return redirect('landingpage');
+                    return redirect('landingpage', $email);
                 }else{
                     return redirect('controller');
                 }

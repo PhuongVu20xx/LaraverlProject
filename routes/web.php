@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ReisterController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,13 +26,7 @@ Route::get('/landingpage', function () {
     return view('landingpage');
 });
 Route::get('/cart', function () {
-    return view('shoppingcart');
-});
-Route::get('/header2',function(){
-    return view('layouts/header2');
-});
-Route::get('/footer2',function(){
-    return view('layouts/footer2');
+    return view('cart');
 });
 Route::get('/about',function(){
     return view('about');
@@ -43,17 +37,18 @@ Route::get('/contact',function(){
 Route::get('/blog',function(){
     return view('blog');
 });
+Route::get('/product', function(){
+    return view('product');
+});
+
+
 // Login
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
 // Register
 Route::get('/register',[RegisterController::class, 'getRegisterform']);
-Route::get('/register',[RegisterController::class, 'postRegisterform']);
+Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
-
-route::get('/product', function(){
-    return view('product');
-});
 
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
@@ -66,4 +61,5 @@ Route::get('/allproduct',[AdminController::class,'AllProduct']);
 Route::get('/addcategory',[AdminController::class,'AddProduct']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
+Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 
