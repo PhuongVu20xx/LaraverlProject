@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('header')
-@include('layouts.header2')
+@include('layouts.header')
 <link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
 <script src="{{asset('js/landingpage.js')}}" defer></script>
 <body>
@@ -94,6 +94,6 @@
 @endsection
 
 @section('footer')
-@include('layouts.footer2')
+@include('layouts.footer')
 @endsection
 
