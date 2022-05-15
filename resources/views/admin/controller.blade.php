@@ -1,26 +1,32 @@
 @extends('layouts.layout')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+@endsection
+
 @section('header')
-@include('layouts.header')
+    @include('layouts.header')
 @endsection
 
 @section('menu')
-@include('admin.navigator')
+    @include('admin.navigator')
 @endsection
 
-@section('content')
-<div>
-    <h3>Controler</h3>
-</div>
-<div>
-    <button>Add Product</button>
-    <button>Add category</button>
-    <button>Delete Product</button>
-    <button>Check bill</button>
-</div>
+@section('bodyheader')
+    <div>
+        <h3>Controller</h3>
+        <hr>
+    </div>
+@endsection
+
+@section('bodynav')
+    @include('admin.controllers.navigator')
+@endsection
+
+@section('bodycontent')
+    
 @endsection
 
 @section('footer')
-@include('layouts.footer')
+    @include('layouts.footer')
 @endsection
-
