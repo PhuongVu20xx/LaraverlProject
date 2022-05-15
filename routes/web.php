@@ -42,6 +42,9 @@ Route::get('/about',function(){
 Route::get('/contact',function(){
     return view('contact');
 });
+Route::get('/blog',function(){
+    return view('blog');
+});
 
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
