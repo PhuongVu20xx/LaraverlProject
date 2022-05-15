@@ -48,7 +48,7 @@ Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
 // Register
 Route::get('/register',[RegisterController::class, 'getRegisterform']);
-Route::get('/register',[RegisterController::class, 'postRegisterform']);
+Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
 
 route::get('/product', function(){
