@@ -11,7 +11,7 @@
 
 <!-- BODY -->
 @section('body')
-<div>
+<div class="shoppingcart">
 <section>
         <div class="cart-container">
             <a href="#"><h1 class="font-weight-bold"><b>VNHP &ensp;|&ensp;Cart</b></h1></a>
@@ -30,13 +30,15 @@
       <div><h5><b>Product</b></h5></div>
       <div><h5><b>Unit Price</b></h5></div>
       <div><h5><b>Quantity</b></h5></div>
-      <div><h5><b>Choose</b></h5></div>
+      <div><h5><b>Total Money</b></h5></div>
+      <div><h5><b></b></h5></div>
     </div>
     <div class="cart-product2">
       <div><img src="{{asset('img/image-1.jpg')}}" alt="Garlic">&emsp; delicious cake</div>
       <div>$20.000</div>
       <div><input style="width: 40px;outline:none;" type="number" value="1" min="1"></div>
-      <div>Delete</div>
+      <div><input style="width: 80px;" type="text" value="$20.000"></div>
+      <div><a href="#">x</a></div>
     </div>
   </div>
     
@@ -94,8 +96,8 @@
             <a href="#"class="proceed-btn">Proceed to Payment</a>
         </div>
     </div>
-@endsection
 </div>
+@endsection
 <!-- FOOTER -->
 @section('footer')
     @include('layouts.footer')

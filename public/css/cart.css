@@ -1,7 +1,11 @@
+.shoppingcart {
+  
+}
+
 .cart-container {
   display: grid;
   background-color: #f3f3f3;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr);
 }
 .cart-container>a {
   padding-left: 25px;
@@ -29,17 +33,22 @@
 }
 .cart-product1 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .cart-product2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 .cart-product2>div>img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   object-position: center;
+}
+.cart-product2>div>a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
 }
 /* gift */  
 .gift {
