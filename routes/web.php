@@ -56,9 +56,9 @@ Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 Route::get('/controller',[AdminController::class,'ControllerPage']);
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
-Route::get('/addproduct',[AdminController::class,'AddCategory']);
+Route::get('/addproduct',[AdminController::class,'AddProduct']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);
-Route::get('/addcategory',[AdminController::class,'AddProduct']);
+Route::get('/addcategory',[AdminController::class,'AddCategory']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
