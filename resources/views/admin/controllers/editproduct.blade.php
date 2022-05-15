@@ -9,6 +9,7 @@
 
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 @section('menu')

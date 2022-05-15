@@ -9,7 +9,9 @@
 
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
+
 
 @section('menu')
     @include('admin.navigator')
@@ -36,11 +38,13 @@
                     <input type="submit" id="submit" class="submit" value="Search">
                 </div>
             </div>
-            <div class="editproduct" id="editproduct">
+            <div class="addproduct" id="addproduct">
                 <div>
-                    ID: <input type="text" id="id" class="id">
                     Name: <input type="text" id="name" class="name">
-                    <input type="submit" id="submit" class="submit" value="Update">
+                    Producer: <input type="text" id="producer" class="producer">
+                    Unit: <input type="text" id="unit" class="unit">
+                    Infomation: <input type="text" id="infomation" class="information">
+                    <input type="submit" id="submit" class="submit" value="Add">
                 </div>
             </div>
         </form>
@@ -57,8 +61,9 @@
                                 <th class="text-light">Name Product</th>
                                 <th class="text-light">Producer</th>
                                 <th class="text-light">Price</th>
+                                <th class="text-light">Unit</th>
                                 <th class="text-light">Total Quantity</th>
-
+                                <th class="text-light">Information</th>
                             </tr>
                         </thead>
 
@@ -69,7 +74,9 @@
                                     <td data-title="Name">Name Product {{ $i }}</td>
                                     <td data-title="Producer">Producer {{ $i }}</td>
                                     <td data-title="Price">Price {{ $i }}</td>
+                                    <td data-title="Unit">Unit {{ $i }}</td>
                                     <td data-title="TotalQuantity">Total Quantity {{ $i }}</td>
+                                    <td data-title="Information">Information {{ $i }}</td>
                                 </tr>
                             @endfor
                         </tbody>

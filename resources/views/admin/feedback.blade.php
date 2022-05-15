@@ -4,10 +4,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/respose-tableadminfeedback.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/header2.css') }}">
 @endsection
 
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 @section('menu')
