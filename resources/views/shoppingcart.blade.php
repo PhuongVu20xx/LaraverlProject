@@ -30,7 +30,7 @@
       <div><h5><b>Product</b></h5></div>
       <div><h5><b>Unit Price</b></h5></div>
       <div><h5><b>Quantity</b></h5></div>
-      <div><h5><b>Total Money</b></h5></div>
+      <div><h5><b>Total</b></h5></div>
       <div><h5><b></b></h5></div>
     </div>
     <div class="cart-product2">
@@ -84,18 +84,20 @@
 </section>
 
 <!-- checkpayment -->
-<div>
+    <div>
         <div class="checkout">
             <ul>
-                <li class="subtotal"><b>VNHP Voucher</b>
-                    <span><a style="text-decoration: none;" href="#">Select Or Enter A Code</a></span>
-                </li>
+                  <li class="subtotal"><b>Subtotal</b>
+                    <span>$20.00</span>
+                  </li>
                 <li class="cart-total"><b>Total Payment </b>
-                <span>$20.00</span></li>
+                  <span>$20.00</span>
+                </li>
             </ul>
             <a href="#"class="proceed-btn">Proceed to Payment</a>
         </div>
     </div>
+
 </div>
 @endsection
 <!-- FOOTER -->
