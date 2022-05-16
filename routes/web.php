@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,9 +38,7 @@ Route::get('/contact',function(){
 Route::get('/blog',function(){
     return view('blog');
 });
-Route::get('/product', function(){
-    return view('product');
-});
+Route::get('/product', [SearchController::class,'index']);
 
 
 // Login
