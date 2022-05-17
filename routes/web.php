@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-
+// use App\Http\Controllers\SearchController;
+// use App\Http\Controllers\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,23 +24,32 @@ Route::get('/footer', function () {
     return view('layouts/footer');
 });
 Route::get('/landingpage', function () {
-    return view('landingpage');
+    return view('pages/landingpage');
 });
 Route::get('/cart', function () {
-    return view('cart');
+    return view('pages/cart');
 });
 Route::get('/about',function(){
-    return view('about');
+    return view('pages/about');
 });
 Route::get('/contact',function(){
-    return view('contact');
+    return view('pages/contact');
+});
+Route::get('/needhelp',function(){
+    return view('pages/needhelp');
+});
+Route::get('/shipping',function(){
+    return view('pages/shipping');
 });
 Route::get('/blog',function(){
-    return view('blog');
+    return view('pages/blog');
 });
-Route::get('/product', function(){
-    return view('product');
+
+
+Route::get('/product',function(){
+    return view('pages.product');
 });
+Route::post('/product', [SearchController::class,'index']);
 
 
 // Login
