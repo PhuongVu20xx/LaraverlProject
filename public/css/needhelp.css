@@ -1,5 +1,5 @@
 /* needhelp-menu */
-.needhelp-menu{
+.needhelp{
     box-sizing: border-box;
     width: 90%;
     padding: auto;
@@ -121,11 +121,11 @@
     font-size: 50px;
     letter-spacing: 2px;
 }
-#services, #loyalty-program, #payment-methods{
+#services, #loyalty-program, #payment-methods, #return-refund, #delivery, #faq, #terms-conditions, #privacy{
     background: white;
     margin: 0 100px 0 400px;
 }
-#services>.title, #loyalty-program>.title, #payment-methods>.title{
+#services>.title, #loyalty-program>.title, #payment-methods>.title, #return-refund>.title, #delivery>.title, #faq>.title, #terms-conditions>.title, #privacy>.title{
     border-bottom: 0.5px solid rgba(0,0,0,0.15);
     font-size: 25px;
     font-weight: bold;
@@ -134,24 +134,21 @@
     padding-top: 7px;
     height: 50px;
 }
-#services>div>ul{
-    margin: 20px auto 20px auto;
+#services>div>ul, #loyalty-program>div>ul, #payment-methods>div>ul, #return-refund>div>ul, #delivery>div>ul, #faq>div>ul, #terms-conditions>div>ul, #privacy>div>ul{
+    padding: 20px auto auto;
 }
 #services>div>ul>li:first-child{
     list-style: none;
 }
-#services>div>ul>li{
+#services>div>ul>li,#loyalty-program>div>ul>li, #payment-methods>div>ul>li, #return-refund>div>ul>li, #delivery>div>ul>li, #faq>div>ul>li, #terms-conditions>div>ul>li, #privacy>div>ul>li{
     list-style: square;
+    line-height: 20px;
 }
 
-#loyalty-program{
+#loyalty-program, #payment-methods, #return-refund, #delivery, #faq, #terms-conditions, #privacy{
     margin-bottom: 20px;
 }
 
-#payment-methods>div>ul>li{
-    list-style: square;
-    line-height: 10px;
-}
 #payment-methods>div>ul{
     margin: 20px auto 20px auto; 
 }

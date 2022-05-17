@@ -47,7 +47,7 @@ Route::get('/blog',function(){
 
 
 Route::get('/product',function(){
-    return view('product');
+    return view('pages.product');
 });
 Route::post('/product', [SearchController::class,'index']);
 

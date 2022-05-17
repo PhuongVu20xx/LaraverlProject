@@ -8,7 +8,7 @@
 @section('body')
 <link rel="stylesheet" href="{{asset('css/needhelp.css')}}">
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
-<section class="needhelp-menu">
+<section class="needhelp">
     <div class="menu-container">
         <ul>
             <li id="service-policy">
@@ -64,6 +64,76 @@
 
         <div id="payment-methods">
             <div class="title">Payment Methods</div>
+            <div>
+                <ul>
+                    <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
+                    <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
+                    <li><p>- Step 3: Fulfill necessary information of order form.</p></li>
+                    <li><p>- Step 4: Choose the “Shipping method”. Then we offer you  the following payment methods:</p></li>
+                    <li><p>a. Credit card on delivery: pay directly to the shipper when you receive the product.</p></li>
+                    <li><p>b. Transfer by bank/ATM before your order is shipped.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="return-refund">
+            <div class="title">Return & Refund Policy</div>
+            <div>
+                <ul>
+                    <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
+                    <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
+                    <li><p>- Step 3: Fulfill necessary information of order form.</p></li>
+                    <li><p>- Step 4: Choose the “Shipping method”. Then we offer you  the following payment methods:</p></li>
+                    <li><p>a. Credit card on delivery: pay directly to the shipper when you receive the product.</p></li>
+                    <li><p>b. Transfer by bank/ATM before your order is shipped.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="delivery">
+            <div class="title">Delivery Policy</div>
+            <div>
+                <ul>
+                    <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
+                    <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
+                    <li><p>- Step 3: Fulfill necessary information of order form.</p></li>
+                    <li><p>- Step 4: Choose the “Shipping method”. Then we offer you  the following payment methods:</p></li>
+                    <li><p>a. Credit card on delivery: pay directly to the shipper when you receive the product.</p></li>
+                    <li><p>b. Transfer by bank/ATM before your order is shipped.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="faq">
+            <div class="title">FAQ</div>
+            <div>
+                <ul>
+                    <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
+                    <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
+                    <li><p>- Step 3: Fulfill necessary information of order form.</p></li>
+                    <li><p>- Step 4: Choose the “Shipping method”. Then we offer you  the following payment methods:</p></li>
+                    <li><p>a. Credit card on delivery: pay directly to the shipper when you receive the product.</p></li>
+                    <li><p>b. Transfer by bank/ATM before your order is shipped.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="terms-conditions">
+            <div class="title">Terms & Conditions</div>
+            <div>
+                <ul>
+                    <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
+                    <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
+                    <li><p>- Step 3: Fulfill necessary information of order form.</p></li>
+                    <li><p>- Step 4: Choose the “Shipping method”. Then we offer you  the following payment methods:</p></li>
+                    <li><p>a. Credit card on delivery: pay directly to the shipper when you receive the product.</p></li>
+                    <li><p>b. Transfer by bank/ATM before your order is shipped.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="privacy">
+            <div class="title">Privacy Policy</div>
             <div>
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>

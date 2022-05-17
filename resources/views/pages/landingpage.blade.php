@@ -15,7 +15,7 @@
                     <div class="info">
                         <h1>WELCOME TO VNHP'S GROCERY</h1>
                         <p>We care about your health. Come and join with us.</p>
-                        <a href="#">Shopping</a>
+                        <a href="../product">Shopping</a>
                     </div>
                 </li>
                 <li class="slide">
@@ -23,7 +23,7 @@
                     <div class="info">
                         <h1>WELCOME TO VNHP'S GROCERY</h1>
                         <p>We care about your health. Come and join with us.</p>
-                        <a href="#">Shopping</a>
+                        <a href="../product">Shopping</a>
                     </div>
                 </li>
                 <li class="slide">
@@ -31,7 +31,7 @@
                     <div class="info">
                         <h1>WELCOME TO VNHP'S GROCERY</h1>
                         <p>We care about your health. Come and join with us.</p>
-                        <a href="#">Shopping</a>
+                        <a href="../product">Shopping</a>
                     </div>
                 </li>
             </ul>   
