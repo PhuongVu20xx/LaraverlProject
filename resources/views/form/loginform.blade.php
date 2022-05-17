@@ -2,10 +2,12 @@
 <!-- HEADER -->
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection 
 
 <!-- CSS -->
 @section('css')
+    <link rel="stylesheet" href="{{asset('css/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{asset('css/login-form.css')}}">
 @endsection
 

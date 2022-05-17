@@ -27,19 +27,20 @@ class LoginController extends Controller
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
         $email['info'] = $request->email;
-        $password = $request->password;
+        $password = bcrypt($request->password);
         
         $SQLuser = DB::table('user')->where('email',$email)->get()->toArray();
 
         foreach($SQLuser as $customer){
-            if($customer->password = $password){
+            if($customer->password=$password){
                 if($customer->idtype==2){   
-                    return redirect('landingpage', $email);
-                }else{
-                    return redirect('controller');
+                    return redirect('landingpage');
+                }else{  
+                    return redirect('controller');  
                 }
             }else{
                 return redirect('login')->with('thongbao', 'Login Fail !!!');
+
             }
         }
 

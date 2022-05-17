@@ -2,12 +2,14 @@
 <!-- HEADER -->
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 
 <!-- CSS -->    
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
+    <link rel="stylesheet" href="{{asset('css/adminnavigatortab.css')}}">
     <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"> -->
 @endsection
 
