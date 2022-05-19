@@ -26,7 +26,7 @@ class LoginController extends Controller
             'password.min' => 'Password không được nhỏ hơn 3 ký tự',
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
-        $email['info'] = $request->email;
+        $email = $request->email;
         $password = bcrypt($request->password);
         
         $SQLuser = DB::table('user')->where('email',$email)->get()->toArray();
@@ -34,9 +34,9 @@ class LoginController extends Controller
         foreach($SQLuser as $customer){
             if($customer->password=$password){
                 if($customer->idtype==2){   
-                    return redirect('landingpage');
+                    return view('landingpage');
                 }else{  
-                    return redirect('controller');  
+                    return view('controller');  
                 }
             }else{
                 return redirect('login')->with('thongbao', 'Login Fail !!!');
