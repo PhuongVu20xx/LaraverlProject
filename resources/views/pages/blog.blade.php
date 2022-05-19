@@ -3,6 +3,7 @@
 @section('header')
 @include('layouts.header')
 @endsection
+
 <!-- css -->
 @section('css')
     <link rel="stylesheet" href="{{asset('css/blog.css')}}">
@@ -104,17 +105,49 @@
                 <ul>
                     <li>
                         <div class="imh">
-                           <div class="img1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
-                            <div class="img2">
+                           <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+                            <div class="imh2">
                                 <a href="#">BEST PLACES FOR WINE</a>
                                 <p>3 days ago</p>
                             </div>
                         </div>
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                    <div class="imh">
+                           <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+                            <div class="imh2">
+                                <a href="#">BEST PLACES FOR WINE</a>
+                                <p>3 days ago</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="imh">
+                           <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+                            <div class="imh2">
+                                <a href="#">BEST PLACES FOR WINE</a>
+                                <p>3 days ago</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="imh">
+                           <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+                            <div class="imh2">
+                                <a href="#">BEST PLACES FOR WINE</a>
+                                <p>3 days ago</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="imh">
+                           <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+                            <div class="imh2">
+                                <a href="#">BEST PLACES FOR WINE</a>
+                                <p>3 days ago</p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <!-- Archive -->

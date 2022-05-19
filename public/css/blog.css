@@ -160,9 +160,17 @@
    right: 100%;
 } */
 .imh {
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
+    display:flex;
+    float: left;
+   padding-top: 10px;
+}
+.imh2 {
+    padding-top: 15px;
+    padding-left: 50px;
     
+}
+.imh2 p {
+    padding-top: 5px;
 }
 /* archive */
 .archive h4 {
