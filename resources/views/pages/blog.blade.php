@@ -86,8 +86,8 @@
         <div class="col-md-4">
 
             <div class="search">
-                <input type="text" name="search" placeholder="Search">
-                <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                <input type="text" name="search" placeholder="Search"  >
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="categori">
                 <h4>categories</h4>
