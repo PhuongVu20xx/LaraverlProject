@@ -12,6 +12,7 @@ class NameController
  static $ADMIN = "admin";
  //B
  //C
+ static $CATEGORY = "category";
  static $CONTROLLER = "controller";
  static $CONTROLLERS = "controllers";
  static $CUSTOMMER = "custommer";
