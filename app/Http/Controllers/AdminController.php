@@ -33,7 +33,8 @@ class AdminController extends Controller
 
     public function AddCategory()
     {
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY);
+        $categories = DB::table(NameController::$CATEGORY)->get();
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories]);
     }
 
     public function AllProduct()
@@ -78,5 +79,25 @@ class AdminController extends Controller
     private function ImportArlet($arlet)
     {
         return redirect()->action([AdminController::class,NameController::$IMPORT_PROCUCT])->with('msg', $arlet);;
+    }
+
+    public function AddNewCategory(request $request)
+    {
+        $name = $request->category;
+
+        if(CheckAvaiableCategory($name))
+        {
+            $data = [
+                NameController::$NAME=>$name,
+            ];
+            DB::insert("INSERT into category(name) values (?)",[$name]);
+            return ImportArlet(NameController::$IMPORT_SUCCESS);
+        }
+        else return ImportArlet(NameController::$IMPORT_FAIL);;
+    }
+
+    public function CheckAvaiableCategory($name)
+    {
+        return DB::table(NameController::$CATEGORY)->select(NameController::$NAME)->where(NameController::$NAME,$name)->exists();
     }
 }
