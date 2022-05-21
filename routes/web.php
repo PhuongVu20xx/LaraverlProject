@@ -74,6 +74,6 @@ Route::get('/addcategory',[AdminController::class,'AddCategory']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
-Route::post('/addcategory',[RegisterController::class, 'ImportProductInput']);
+Route::post('/addcategory',[AdminController::class, 'AddNewCategory']);
 
 
