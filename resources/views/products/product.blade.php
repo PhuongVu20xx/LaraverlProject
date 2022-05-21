@@ -180,6 +180,7 @@
                 
             <div class="col-lg-9 col-md-8 order-2 col-right-main">
                 <div class="product-content-container">
+                    <!-- toolbar-top -->
                     <div class="wrap-shop-control">
                         <h1 class="shop-title">FEATURED PRODUCT</h1>
 
@@ -203,6 +204,7 @@
                         
                     </div>
 
+                    <!-- product-list -->
                     <div class="row">
                         <ul class="product-list grid-products equal-container">
 
@@ -400,6 +402,7 @@
                         </ul>
                     </div>
 
+                    <!-- wrap-pagination -->
                     <div class="wrap-pagination-info">
                         <ul class="page-numbers">
                             <li><span class="page-number-item current" >1</span></li>
