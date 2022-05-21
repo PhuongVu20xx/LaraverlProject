@@ -246,6 +246,7 @@
  }
  .widget .widget-content{
     display: inline-block;
+    position: relative;
     width: 100%;
     padding-left: 20px;
 }
@@ -261,6 +262,12 @@
     border-bottom: 1px solid #e6e6e6;
     padding: 10px 0 10px 5px;
     float: left;
+}
+.widget ul li a span{
+    /* padding-left: 170px; */
+    color: #7d7d7d;
+    position: absolute;
+    right: 10px;
 }
 .widget ul li a{
     text-decoration: none;

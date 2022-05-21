@@ -29,14 +29,53 @@
 						<h2 class="widget-title">CATEGORY</h2>
 						<div class="widget-content">
 							<ul class="list-style vertical-list list-limited" data-show="6">
-								<li class="list-item"><a class="filter-link active" href="#">Breakfast</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Biscuits & Cakes</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Chocolate & Confectionery</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Hot Drinks</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Spread</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Baking Ingredients</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Condensed Milk / Nut Milk</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Fruit Can / Snack</a></li>
+								<li class="list-item">
+                                    <a class="filter-link active" href="#">Breakfast
+                                        <span class="count">(155)</span>
+                                    </a>
+                                </li>
+                                
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Biscuits & Cakes
+                                        <span class="count">(337)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Chocolate & Confectionery
+                                        <span class="count">(462)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Hot Drinks
+                                        <span class="count">(312)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Spread
+                                        <span class="count">(207)</span>
+                                    </a>
+                                </li>
+                                
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Baking Ingredients
+                                        <span class="count">(275)</span>
+                                    </a>
+                                </li>
+                                
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Condensed Milk / Nut Milk
+                                        <span class="count">(30)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Fruit Can / Snack
+                                        <span class="count">(13)</span>
+                                    </a>
+                                </li>
 							</ul>
 						</div>
 					</div>
@@ -63,13 +102,48 @@
 						<h2 class="widget-title">SPECIAL DIET</h2>
 						<div class="widget-content">
 							<ul class="list-style vertical-list list-limited" data-show="6">
-								<li class="list-item"><a class="filter-link active" href="#">Non GMO</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Diabetic friendly</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Dairy free</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Organic</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Gluten free</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Vegan</a></li>
-								<li class="list-item"><a class="filter-link " href="#">Fair trade</a></li>
+
+								<li class="list-item">
+                                    <a class="filter-link active" href="#">Non GMO
+                                        <span class="count">(40)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Diabetic friendly
+                                        <span class="count">(5)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Dairy free
+                                        <span class="count">(1)</span>
+                                    </a>
+                                </li>
+                                
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Organic
+                                        <span class="count">(75)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Gluten free
+                                        <span class="count">(32)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Vegan
+                                        <span class="count">(11)</span>
+                                    </a>
+                                </li>
+
+								<li class="list-item">
+                                    <a class="filter-link " href="#">Fair trade
+                                        <span class="count">(3)</span>
+                                    </a>
+                                </li>
 							</ul>
 						</div>
 					</div>
@@ -79,7 +153,11 @@
 						<h2 class="widget-title">SPECIFICATION</h2>
 						<div class="widget-content">
 							<ul class="list-style vertical-list list-limited" data-show="6">
-								<li class="list-item"><a class="filter-link active" href="#">IPG</a></li>
+								<li class="list-item">
+                                    <a class="filter-link active" href="#">IPG
+                                        <span class="count">(3)</span>
+                                    </a>
+                                </li>
 							</ul>
 						</div>
 					</div>
