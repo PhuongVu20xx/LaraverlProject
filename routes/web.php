@@ -48,9 +48,11 @@ Route::get('/blog',function(){
 
 
 Route::get('/product',function(){
-    return view('pages.product');
+    return view('products/product');
 });
-Route::post('/product', [SearchController::class,'index']);
+Route::get('/product/sweet-grocery',function(){
+    return view('products/sweetgrocery');
+});
 
 
 // Login
@@ -73,4 +75,6 @@ Route::get('/addcategory',[AdminController::class,'AddCategory']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
+Route::post('/addcategory',[AdminController::class, 'AddNewCategory']);
+
 
