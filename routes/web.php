@@ -25,7 +25,8 @@ Route::get('/footer', function () {
 });
 Route::get('/landingpage', function () {
     return view('pages/landingpage');
-});
+})->name('landingpage');
+
 Route::get('/cart', function () {
     return view('pages/cart');
 });
@@ -51,9 +52,11 @@ Route::get('/blogmin', function(){
 
 
 Route::get('/product',function(){
-    return view('pages.product');
+    return view('products/product');
 });
-Route::post('/product', [SearchController::class,'index']);
+Route::get('/product/sweet-grocery',function(){
+    return view('products/sweetgrocery');
+});
 
 
 // Login
@@ -68,7 +71,7 @@ Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
-Route::get('/controller',[AdminController::class,'ControllerPage']);
+Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[AdminController::class,'AddProduct']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);
@@ -76,6 +79,6 @@ Route::get('/addcategory',[AdminController::class,'AddCategory']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
-Route::post('/addcategory',[RegisterController::class, 'ImportProductInput']);
+Route::post('/addcategory',[AdminController::class, 'AddNewCategory']);
 
 

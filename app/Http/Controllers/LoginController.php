@@ -27,30 +27,24 @@ class LoginController extends Controller
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
         $email = $request->email;
-        $password = bcrypt($request->password);
+        $password = md5($request->password);
         
-        $SQLuser = DB::table('user')->where('email',$email)->get()->toArray();
+        $SQLuser = DB::table('user')->where('password',$password)
+                                    ->where('email',$email)
+                                    ->where('idtype',2)
+                                    ->get();
+        $SQLadmin = DB::table('user')->where('password',$password)
+                                    ->where('email',$email)
+                                    ->where('idtype',1)
+                                    ->get();     
+                                    
 
-        foreach($SQLuser as $customer){
-            if($customer->password=$password){
-                if($customer->idtype==2){   
-                    return view('landingpage');
-                }else{  
-                    return view('controller');  
-                }
-            }else{
-                return redirect('login')->with('thongbao', 'Login Fail !!!');
-
-            }
+        if(count($SQLuser)>0){ 
+            return redirect()->route('landingpage',['SQLuser'=>$SQLuser]);
+        }elseif(count($SQLadmin)>0){ 
+            return redirect()->route('controller');
+        }else{  
+            return redirect()->back()->withInput()->with('thongbao','Sai email hoặc mật khẩu !');  
         }
-
-        
-        // if(Auth::attempt(['user'=>$user, 'password'=>$password])){
-
-        //         return view('langdingpage', $user);
-        //         // return redirect('admin.controller');
-        // }else{
-        //         return view('form.loginform')->with('thongbao', 'Login Fail !!!');
-        // }     
-}}
-
+    }
+}

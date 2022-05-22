@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\NameController;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {  
@@ -83,17 +84,22 @@ class AdminController extends Controller
 
     public function AddNewCategory(request $request)
     {
-        $name = $request->category;
+        $name = $request->name_category;
 
-        if(CheckAvaiableCategory($name))
-        {
-            $data = [
-                NameController::$NAME=>$name,
-            ];
-            DB::insert("INSERT into category(name) values (?)",[$name]);
-            return ImportArlet(NameController::$IMPORT_SUCCESS);
-        }
-        else return ImportArlet(NameController::$IMPORT_FAIL);;
+        // if(CheckAvaiableCategory($name))
+        // {
+        //     return ImportArlet(NameController::$IMPORT_FAIL);
+        // }
+        // else 
+        // {
+            
+        // }
+        // $data = [
+        //     NameController::$NAME=>$name,
+        // ];
+        DB::table(NameController::$CATEGORY)->insert(['name'=> $name]);
+        //return ImportArlet(NameController::$IMPORT_SUCCESS);
+        return redirect()->action([AdminController::class,'AddCategory']);
     }
 
     public function CheckAvaiableCategory($name)
