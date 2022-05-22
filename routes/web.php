@@ -25,7 +25,8 @@ Route::get('/footer', function () {
 });
 Route::get('/landingpage', function () {
     return view('pages/landingpage');
-});
+})->name('landingpage');
+
 Route::get('/cart', function () {
     return view('pages/cart');
 });
@@ -64,7 +65,7 @@ Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
-Route::get('/controller',[AdminController::class,'ControllerPage']);
+Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[AdminController::class,'AddProduct']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);

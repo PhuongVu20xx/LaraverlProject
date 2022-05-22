@@ -13,7 +13,7 @@ class RegisterController extends Controller
         $data = [
             'fullname'=> $request->firstname.' '.$request->lastname,
             'email'=> $request->email,
-            'password'=> bcrypt($request->password),
+            'password'=> md5($request->password),
             'phonenumber'=> $request->phonenumber,
             'idtype'=>2
         ];
