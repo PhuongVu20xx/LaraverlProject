@@ -44,6 +44,12 @@ Route::get('/shipping',function(){
 Route::get('/blog',function(){
     return view('pages/blog');
 });
+Route::get('/blogmin', function(){
+    return view(('pages/blogmin'));
+});
+Route::get('/sidebar', function(){
+    return view('layouts/sidebar');
+});
 
 
 Route::get('/product',function(){

@@ -1,0 +1,18 @@
+.blogmin2 input {
+  padding: 5px 0 5px 15px;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 400;
+  
+}
+.blogmin2>.input1>input {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+}
+.blogmin2>.input2 {
+    padding-top: 20px;
+}
+
+
+
