@@ -38,26 +38,13 @@ class LoginController extends Controller
                                     ->where('idtype',1)
                                     ->get();     
                                     
-        // USER
+
         if(count($SQLuser)>0){ 
-            return redirect()->route('landingpage');
-        }else{  
-            return redirect()->back()->withInput();  
-        }
-        // ADMIN 
-        if(count($SQLadmin)>0){ 
+            return redirect()->route('landingpage',['SQLuser'=>$SQLuser]);
+        }elseif(count($SQLadmin)>0){ 
             return redirect()->route('controller');
         }else{  
-            return redirect()->back()->withInput();  
+            return redirect()->back()->withInput()->with('thongbao','Sai email hoặc mật khẩu !');  
         }
-  
-
-        
-        // if(Auth::attempt(['user'=>$user, 'password'=>$password])){
-
-        //         return view('langdingpage', $user);
-        //         // return redirect('admin.controller');
-        // }else{
-        //         return view('form.loginform')->with('thongbao', 'Login Fail !!!');
-        // }     
-}}
+    }
+}

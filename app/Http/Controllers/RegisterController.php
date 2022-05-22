@@ -10,6 +10,25 @@ class RegisterController extends Controller
         return view('form.registerform');
     }
     public function postRegisterform(Request $request){
+        $this->validate($request,[
+            'firstname'=>'required',
+            'lastname'=>'required',
+            'email'=>'required|email',
+            'password'=>'required|min:3|max:16',
+            'phonenumber'=>'required|min:10|max:12'
+
+        ],[
+            'firstname.required'=>'Họ & Tên không được để trống',
+            'lastname.required'=>'Họ & Tên không được để trống',
+            'email.email'=>'Email không hợp lệ',
+            'email.required' => 'Bạn chưa nhập email !!!',
+            'password.required' => 'Bạn chưa nhập password !!!',
+            'password.min' => 'Password không được nhỏ hơn 3 ký tự',
+            'password.max' => 'Password không được lớn hơn 16 ký tự',
+            'phonenumber.min'=>'Số điện thoại không hợp lệ',
+            'phonenumber.max'=>'Số điện thoại không hợp lệ'
+        ]);
+
         $data = [
             'fullname'=> $request->firstname.' '.$request->lastname,
             'email'=> $request->email,
