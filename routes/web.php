@@ -48,8 +48,9 @@ Route::get('/blog',function(){
 Route::get('/blogmin', function(){
     return view(('pages/blogmin'));
 });
-
-
+Route::get('/profile',function(){
+    return view('user.profile');
+});
 
 Route::get('/product',function(){
     return view('products/product');
