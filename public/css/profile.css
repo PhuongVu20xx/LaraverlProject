@@ -16,7 +16,7 @@ body{margin-top:20px;
     .card {
         box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
     }
-    .card .card-header {
+    .card .card-header{
         font-weight: 500;
     }
     .card-header:first-child {
@@ -27,6 +27,10 @@ body{margin-top:20px;
         margin-bottom: 0;
         background-color: rgba(33, 40, 50, 0.03);
         border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+    }
+    #close{
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .form-control, .dataTable-input {
         display: block;
