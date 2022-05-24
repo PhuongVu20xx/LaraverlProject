@@ -24,20 +24,18 @@
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                     <!-- Profile picture upload button-->
-                    <button class="btn btn-primary" type="button">Upload new image</button>
+                    <button class="btn btn-primary">Upload new image</button>
                 </div>
             </div>
             <div class="card mt-2">
-                <button aria-expanded="false" class="btn btn-primary" 
-                data-toggle="collapse" data-target="#changepwd">
-                    Change Password
-                </button>
+                <span class="btn btn-primary" id="changepwd">Change Password</span>
             </div>
         </div>
+
         <!-- CHANGE PASSWORD -->
-        <div class="collapse col-xl-8" id="changepwd">
+        <div class="col-xl-8" id="changepwdform" style="display:none">
             <div class="card mb-4">
-                <div class="card-header">Change Password</div>
+                <div class="card-header">Change Password <span class="btn" style="float: right;">x</span></div>
                 <div class="card-body">
                     <form action="">
                         <div class="mb-3">
@@ -129,4 +127,18 @@
 <!-- FOOTER -->
 @section('footer')
     @include('layouts.footer')
+@endsection
+
+<!-- JAVASCRIPT -->
+@section('scripts')
+<script>
+$(document).ready(()=>{
+    $('#changepwd').click(function(){
+        $('#account-detail').hide(300);
+        $('#changepwdform').show(300);
+    })
+
+}); 
+
+</script>
 @endsection

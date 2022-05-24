@@ -41,8 +41,8 @@ class LoginController extends Controller
 
         if(count($SQLuser)>0){ 
             return redirect()->route('landingpage',['SQLuser'=>$SQLuser]);
-        }elseif(count($SQLadmin)>0){ 
-            return redirect()->route('controller');
+        }elseif(count($SQLadmin)>0){
+            return redirect()->route('controller',['SQLadmin'=>$SQLadmin]);
         }else{  
             return redirect()->back()->withInput()->with('thongbao','Sai email hoặc mật khẩu !');  
         }
