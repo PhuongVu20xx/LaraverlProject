@@ -8,7 +8,6 @@
 <!-- CSS -->
 @section('css')
     <link rel="stylesheet" href="{{asset('css/profile.css')}}">
-
 @endsection
 <!-- BODY -->
 @section('body')
@@ -29,11 +28,14 @@
                 </div>
             </div>
             <div class="card mt-2">
-                <a href="#change-pwd" class="change-pwd">Change Password</a>
+                <button aria-expanded="false" class="btn btn-primary" 
+                data-toggle="collapse" data-target="#changepwd">
+                    Change Password
+                </button>
             </div>
-        <!-- CHANGE PASSWORD -->
         </div>
-        <div class="col-xl-8" id="change-pwd">
+        <!-- CHANGE PASSWORD -->
+        <div class="collapse col-xl-8" id="changepwd">
             <div class="card mb-4">
                 <div class="card-header">Change Password</div>
                 <div class="card-body">
