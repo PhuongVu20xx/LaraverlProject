@@ -35,7 +35,7 @@
         <!-- CHANGE PASSWORD -->
         <div class="col-xl-8" id="changepwdform" style="display:none">
             <div class="card mb-4">
-                <div class="card-header">Change Password <span class="btn" style="float: right;">x</span></div>
+                <div class="card-header">Change Password <span class="btn" id="close" style="float: right;">x</span></div>
                 <div class="card-body">
                     <form action="">
                         <div class="mb-3">
@@ -138,7 +138,10 @@ $(document).ready(()=>{
         $('#changepwdform').show(300);
     })
 
+    $('#close').click(function(){
+        $('#account-detail').show(300);
+        $('#changepwdform').hide(300);
+    })
 }); 
-
 </script>
 @endsection
