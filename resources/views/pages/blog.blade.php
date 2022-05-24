@@ -31,7 +31,7 @@
                 </div>
                 <!-- <div>
                          <p>28</p>
-                         <p>Dec,2022</p>
+                         <p>Dec,2022</p>2
                 </div> -->
                 <div class="blog-item">
                     <h4><a href="#"> COOKING RECIPE DELICIOUS</a></h4>
