@@ -4,9 +4,10 @@
   background-color: #f3f3f3;
   grid-template-columns: repeat(1fr);
 }
-.cart-container>a {
+.cart-container a {
   padding-left: 25px;
   text-decoration: none;
+  color: tomato;
 }
 
 
@@ -20,6 +21,10 @@
 .click>p {
   align-content: center;
 }
+.click i {
+  color: #252525;
+}
+
 .cart-product{
   width: 100%;
   margin: auto;
@@ -50,9 +55,16 @@
 /* gift */  
 .gift {
   display: flex;
-
 }
-
+.gift i {
+  color: #252525;
+}
+.gift a {
+  color: tomato;
+}
+.gift b {
+  color: tomato;
+}
 
 /* IMAGE */
 
@@ -136,8 +148,8 @@
 .checkout .proceed-btn{
   font-size:15px;
   font-weight: bold;
-  color:#fff;
-  background:#252525;
+  color:black;
+  background:#f3f3f3;
   text-transform: uppercase;
   padding:15px 25px 14px 25px;
   display: block;
