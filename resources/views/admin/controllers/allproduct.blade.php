@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.adminlayout')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
