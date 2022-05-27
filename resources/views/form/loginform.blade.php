@@ -1,11 +1,9 @@
 @extends('layouts.layout')
-<!-- HEADER -->
-@section('header')
-    @include('layouts.header')
-@endsection 
+
 
 <!-- CSS -->
 @section('css')
+    <link rel="stylesheet" href="{{asset('css/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{asset('css/login-form.css')}}">
 @endsection
 
@@ -21,10 +19,12 @@
                     </div>
                 @endif
                 @if(session('thongbao'))
-                    {{session('thongbao')}}
+                    <div class="alert alert-danger">
+                        {{session('thongbao')}}
+                    </div>
                 @endif
                 @if(session('msg'))
-                    <div class="alert alert-primary">
+                    <div class="alert alert-success">
                         {{session('msg')}}
                     </div>
                 @endif

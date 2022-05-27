@@ -2,12 +2,14 @@
 <!-- HEADER -->
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 
 <!-- CSS -->    
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
+    <link rel="stylesheet" href="{{asset('css/adminnavigatortab.css')}}">
     <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"> -->
 @endsection
 
@@ -17,6 +19,13 @@
             <div class="col-lg-4 col-md-9 col-sm-10" id="img"></div>
             <div class="col-lg-4 col-md-8 col-sm-10" id="regisform"> 
                 <form action="/register" method="POST" id="form-group">
+                    @if(count($errors) > 0)
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $err)
+                                {{$err}} <br>
+                            @endforeach
+                        </div>
+                    @endif
                     <p id="form-header">SIGN UP</p>
                     {{csrf_field()}}
                     <div>

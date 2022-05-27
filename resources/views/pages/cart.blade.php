@@ -2,6 +2,7 @@
 <!-- HEADER -->
 @section('header')
     @include('layouts.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 <!-- CSS -->
@@ -47,7 +48,7 @@
 <!-- voucher -->
 <div class="gift">
   &emsp;<i class="fa-solid fa-gifts"></i>
-  &emsp;<p>VNHP Voucher up to 15$ <b style="color: red;">New</b> &emsp;&emsp;<a href="#">View more voucher</a> </p>
+  &emsp;<p>VNHP Voucher up to 15$ <b>New</b> &emsp;&emsp;<a href="#">View more voucher</a> </p>
 </div>
 
 
