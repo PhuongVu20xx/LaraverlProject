@@ -11,10 +11,12 @@
     <div class="desc">Contact Us</div>
 </div>
 
+{{-- map  --}}
 <div class="contact-map">
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.0532559868143!2d106.7077105!3d10.8072332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ed00409f09%3A0x11f7708a5c77d777!2zQXB0ZWNoIENvbXB1dGVyIEVkdWNhdGlvbiAtIEjhu4cgVGjhu5FuZyDEkMOgbyB04bqhbyBM4bqtcCBUcsOsbmggVmnDqm4gUXXhu5FjIHThur8gQXB0ZWNo!5e0!3m2!1svi!2s!4v1654060986126!5m2!1svi!2s" width="1000px" height="800px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
+{{-- send-massage  --}}
 <div class="send-massage">
     <div class="message">SEND US A MESSAGE</div>
     <form action="" class="form">
