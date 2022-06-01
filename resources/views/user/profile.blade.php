@@ -20,11 +20,11 @@
                 <div class="card-header">Profile Picture</div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2" src="{{asset('img/founder2.jpg')}}" alt="">
+                    <img class="img-account-profile rounded-circle mb-2" src="{{asset('upload/default-profile.jpg')}}" alt="">
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                     <!-- Profile picture upload button-->
-                    <button class="btn btn-primary">Upload new image</button>
+                    <input type="file">
                 </div>
             </div>
             <div class="card mt-2">
@@ -32,38 +32,15 @@
             </div>
         </div>
 
-        <!-- CHANGE PASSWORD -->
-        <div class="col-xl-8" id="changepwdform" style="display:none">
-            <div class="card mb-4">
-                <div class="card-header">Change Password <span class="btn" id="close" style="float: right;">x</span></div>
-                <div class="card-body">
-                    <form action="">
-                        <div class="mb-3">
-                            <label class="small mb-1" for="currentpwd">Current Password</label>
-                            <input class="form-control" id="currentpwd" type="password">
-                        </div>
-                        <div class="mb-3">
-                            <label class="small mb-1" for="newpwd">New Password</label>
-                            <input class="form-control" id="newpwd" type="password">
-                        </div>
-                        <div class=" mb-3">
-                            <label class="small mb-1" for="confirmnewpwd">Confirm New Password</label>
-                            <input class="form-control" id="confirmnewpwd" type="password">
-                        </div>
-                        <div>
-                            <button class="btn btn-primary" type="submit">Change Password</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+ 
         <!-- ACCOUNT DETAIL -->
         <div class="col-xl-8" id="account-detail">
             <!-- Account details card-->
             <div class="card mb-4">
                 <div class="card-header">Account Details</div>
                 <div class="card-body">
-                    <form>
+                    <form action="profile" method="POST" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <!-- Form Group (username)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputUsername">Rank</label>
@@ -98,7 +75,7 @@
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com" disabled>
+                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="xuanphuong@gmail.com" disabled>
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
@@ -119,6 +96,46 @@
                 </div>
             </div>
         </div>
+        <!-- CHANGE PASSWORD -->
+        <div class="col-xl-8" id="changepwdform" style="display:none">
+            <div class="card mb-4">
+                <div class="card-header">Change Password <span class="btn" id="close" style="float: right;">x</span></div>
+                <div class="card-body">
+                    @if(session('thongbao'))
+                        <div class="alert alert-success">
+                            {{session('thongbao')}}
+                        </div>
+                    @endif
+                    <form action="/changepwd" method="POST">
+                        {{csrf_field()}}
+                        <div class="mb-3" hidden>
+                            <label class="small mb-1" for="hiddenemail">Email</label>
+                            <input class="form-control" id="hiddenemail" name="hiddenemail" type="email" value="xuanphuong@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="small mb-1" for="currentpwd">Current Password</label>
+                            <input class="form-control" id="currentpwd" name="currentpwd" type="password">
+                        </div>
+                        <div class="mb-3">
+                            <label class="small mb-1" for="newpwd">New Password</label>
+                            <input class="form-control" id="newpwd" name="newpwd" type="password">
+                        </div>
+                        <div class=" mb-3">
+                            <label class="small mb-1" for="confirmnewpwd">Confirm New Password</label>
+                            <input class="form-control" id="confirmpwd" name="confirmpwd" onkeyup="checkpwd()" type="password">
+                        </div>
+                        @if(session('alert'))
+                            <div class="mb-3 alert alert-danger" id="alert">
+                                {{session('alert')}}
+                            </div>
+                        @endif
+                        <div>
+                            <button class="btn btn-primary" type="submit">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
@@ -131,17 +148,5 @@
 
 <!-- JAVASCRIPT -->
 @section('scripts')
-<script>
-$(document).ready(()=>{
-    $('#changepwd').click(function(){
-        $('#account-detail').hide(300);
-        $('#changepwdform').show(300);
-    })
-
-    $('#close').click(function(){
-        $('#account-detail').show(300);
-        $('#changepwdform').hide(300);
-    })
-}); 
-</script>
+    <script src="{{asset('js/profile.js')}}"></script>
 @endsection

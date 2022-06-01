@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfileController;
+
 // use App\Http\Controllers\SearchController;
 // use App\Http\Controllers\DB;
 /*
@@ -48,9 +50,10 @@ Route::get('/blog',function(){
 Route::get('/blogmin', function(){
     return view(('pages/blogmin'));
 });
-Route::get('/profile',function(){
-    return view('user.profile');
-});
+// PROFILE
+Route::get('/profile',[ProfileController::class, 'getProfileForm']);
+Route::post('/profile',[ProfileController::class, 'postProfileForm']);
+Route::post('/changepwd',[ProfileController::class, 'postNewPassword']);
 
 Route::get('/product',function(){
     return view('products/product');
