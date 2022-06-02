@@ -1,0 +1,12 @@
+.form-title{
+    margin-top: 50px;
+}
+form{
+    margin-top: 30px;
+    line-height: 50px;
+}
+.category-name>input{
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+}

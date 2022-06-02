@@ -2,19 +2,20 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/addcategory-form.css') }}">
 @endsection
 
-{{-- @section('header')
+@section('header')
     @include('layouts.header')
     <div class="backgroundheader"></div>
-@endsection --}}
+@endsection
 
 @section('menu')
     @include('admin.navigator')
 @endsection
 
 @section('bodyheader')
-    <div>
+    <div class="form-title">
         <h3>Add Category</h3>
         <hr>
     </div>
@@ -29,18 +30,23 @@
         <form action="/addcategory" method="post">
             {{ csrf_field() }}
             <div>
-                <h3>Add Category</h3>
-                Category name: <input type="text" id="name" class="name" name="category_name"
-                    placeholder="category"> <br>
-                Category root :
-                <select name="category_root" id="category">
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
-                        </option>
-                    @endforeach
-                </select><br>
-                Status category : <input type="checkbox" class="checkbox" id="checkbox" name="status">
-                <input type="submit" id="submit" class="submit" value="Submit">
+                <div class="category-name">
+                    Category name: 
+                    <input type="text" id="name" class="name" name="category_name" placeholder="category"> <br>
+                </div>
+                <div class="category-root">
+                    Category root :
+                    <select name="category_root" id="category">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
+                            </option>
+                        @endforeach
+                    </select><br>
+                </div>
+                <div class="category-status">
+                    Status category : <input type="checkbox" class="checkbox" id="checkbox" name="status">
+                    <input type="submit" id="submit" class="submit" value="Submit">
+                </div>
             </div>
         </form>
 
