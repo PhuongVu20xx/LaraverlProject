@@ -7,8 +7,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController as Home;
 use App\Http\Controllers\ProductController as Product;
-// use App\Http\Controllers\SearchController;
-// use App\Http\Controllers\DB;
+use App\Http\Controllers\AddCategory;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,10 +70,11 @@ Route::get('/controller',[AdminController::class,'ControllerPage'])->name('contr
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[AdminController::class,'AddProduct']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);
-Route::get('/addcategory',[AdminController::class,'AddCategory']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
-Route::post('/addcategory',[AdminController::class, 'AddNewCategory']);
 
+
+Route::post('/addcategory',[AddCategory::class, 'AddNewCategory']);
+Route::get('/addcategory',[AddCategory::class,'ShowCategory']);
 
