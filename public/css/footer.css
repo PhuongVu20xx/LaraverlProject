@@ -134,6 +134,10 @@
     width: 100%;
     height: 100%;
     object-position: center;
+    transition-duration: 0.1s;
+}
+.gallery1>img:hover {
+    transform: scale(1.1);
 }
 .gallery1__img1{
     grid-column-start: 1;
