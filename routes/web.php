@@ -7,7 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController as Home;
 use App\Http\Controllers\ProductController as Product;
-use App\Http\Controllers\AddCategory;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +75,7 @@ Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 
 
-Route::post('/addcategory',[AddCategory::class, 'AddNewCategory']);
-Route::get('/addcategory',[AddCategory::class,'ShowCategory']);
+Route::post('/addcategory',[CategoryController::class, 'AddNewCategory']);
+Route::post('/category_status',[CategoryController::class, 'ChangeCategoryStatus']);
+Route::get('/addcategory',[CategoryController::class,'ShowCategory']);
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\NameController;
 
-class AddCategory extends Controller
+class CategoryController extends Controller
 {
     public function ShowCategory($note='')
     {
@@ -26,6 +26,14 @@ class AddCategory extends Controller
         
         DB::insert("exec sp_insert_category'$category_name','$category_root',$st,'$note'");
 
-        return redirect()->action([AddCategory::class,'ShowCategory'],['note' =>$note]);
+        return redirect()->action([CategoryController::class,'ShowCategory'],['note' =>$note]);
     }
+
+    public function ChangeCategoryStatus(request $request)
+    {
+        $category_id = $request->category_id;
+        $category_status = $request->category_status;
+        DB::update("exec sp_update_category_status'$category_id','$category_status'");
+    }
+    
 }
