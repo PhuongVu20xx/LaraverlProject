@@ -5,7 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\HomeController as Home;
+use App\Http\Controllers\ProductController as Product;
 // use App\Http\Controllers\SearchController;
 // use App\Http\Controllers\DB;
 /*
@@ -18,59 +19,49 @@ use App\Http\Controllers\ProfileController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// LANDINGPAGE
 Route::get('/header', function () {
     return view('layouts/header');
 });
 Route::get('/footer', function () {
     return view('layouts/footer');
 });
-Route::get('/landingpage', function () {
-    return view('pages/landingpage');
-})->name('landingpage');
+Route::get('/', [Home::class,'landingpage'])->name('landingpage');
+Route::get('/about',[Home::class,'about']);
+Route::get('/contact',[Home::class,'contact']);
+Route::get('/shipping',[Home::class,'shipping']);
+Route::get('/needhelp',[Home::class,'needhelp']);
 
+// PRODUCT
+Route::get('/product',[Product::class,'product']);
+Route::get('/product/sweet-grocery',[Product::class,'product_sweetgrocery']);
+
+// CART
 Route::get('/cart', function () {
     return view('pages/cart');
 });
-Route::get('/about',function(){
-    return view('pages/about');
-});
-Route::get('/contact',function(){
-    return view('pages/contact');
-});
-Route::get('/needhelp',function(){
-    return view('pages/needhelp');
-});
-Route::get('/shipping',function(){
-    return view('pages/shipping');
-});
-Route::get('/blog',function(){
-    return view('pages/blog');
-});
+
+// BLOG
+Route::get('/blog',[Home::class,'blog']);
 Route::get('/blogmin', function(){
     return view(('pages/blogmin'));
 });
+
+
 // PROFILE
 Route::get('/profile',[ProfileController::class, 'getProfileForm']);
 Route::post('/profile',[ProfileController::class, 'postProfileForm']);
 Route::post('/changepwd',[ProfileController::class, 'postNewPassword']);
 
-Route::get('/product',function(){
-    return view('products/product');
-});
-Route::get('/product/sweet-grocery',function(){
-    return view('products/sweetgrocery');
-});
 
-
-// Login
+// LOGIN
 Route::get('/login',[LoginController::class, 'getLoginform']);
 Route::post('/login',[LoginController::class, 'postLoginform']);
-// Register
+// REGISTER
 Route::get('/register',[RegisterController::class, 'getRegisterform']);
 Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
-
+// ADMIN
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
