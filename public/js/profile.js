@@ -12,9 +12,13 @@ $(document).ready(()=>{
 
 
 function checkpwd() {
-    var conpwd = document.getElementById("confirmpwd").value;
-    var pwd = document.getElementById("newpwd").value;
-    if(conpwd != pwd){
-        document.getElementById("alert").innerHTML = 'Wrong Confirm Password';
+    var password = $("#newpwd").val();
+    var confirmPassword = $("#confirmpwd").val();
+ 
+    if (password == confirmPassword){
+        $("#alert").html("Passwords match.").addClass('text-success').removeClass('text-danger');
+        $("#changepwd-btn").prop('disabled', false); 
+    }else{
+        $("#alert").html("Passwords do not match!").addClass('text-danger').removeClass('text-success');
     }
 }
