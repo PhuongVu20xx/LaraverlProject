@@ -1,4 +1,5 @@
-body{margin-top:20px;
+    body{
+    margin-top:20px;
     background-color:#f2f6fc;
     color:#69707a;
     }
@@ -31,6 +32,9 @@ body{margin-top:20px;
     #close{
         padding-top: 0px;
         padding-bottom: 0px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 20%);
     }
     .form-control, .dataTable-input {
         display: block;
@@ -49,4 +53,3 @@ body{margin-top:20px;
         border-radius: 0.35rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
-    
