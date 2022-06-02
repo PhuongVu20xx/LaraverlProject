@@ -31,14 +31,14 @@
             <div>
                 <h3>Add Category</h3>
                 Category name: <input type="text" id="name" class="name" name="category_name"
-                    placeholder="category">
+                    placeholder="category"> <br>
                 Category root :
                 <select name="category_root" id="category">
                     @foreach ($categories as $category)
                         <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
                         </option>
                     @endforeach
-                </select>
+                </select><br>
                 Status category : <input type="checkbox" class="checkbox" id="checkbox" name="status">
                 <input type="submit" id="submit" class="submit" value="Submit">
             </div>
@@ -48,7 +48,7 @@
             <div id="no-more-tables" class="content">
                 <div class="clearfix"> </div>
                 <div class="clearfix"></div>
-                @if (count($categories) > 0)
+                @if (count($allCategories) > 0)
                     <span hidden> {{ $i = 1 }}</span>
                     <div class="table-responsive ">
                         <table id="myTable" class="table bg-white">
@@ -62,17 +62,16 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($categories as $category)
+                                <p>{{$note}}</p>
+                                @foreach ($allCategories as $category)
                                     <tr>
                                         <th>{{ $i++ }}</th>
                                         <td>{{ $category->category_name }}</td>
-                                        <td>{{ $category->category_root }}</td>
-                                        @if ($category->category_status == 1)
-                                            <td data-title="Status"><input type="checkbox" class="category_status"
-                                                    name="category_status" checked></td>
+                                        <td>{{ $category->category_root_name }}</td>
+                                        @if ($category->category_status == 0)
+                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status" ></td>
                                         @else
-                                            <td data-title="Status"><input type="checkbox" class="category_status"
-                                                    name="category_status" checked></td>
+                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status"checked></td>
                                         @endif
                                     </tr>
                                 @endforeach

@@ -3,10 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\NameController;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
    
+    public function AllProduct()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_ALL_PRODUCT);
+    }
+
+    public function AddProduct()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_PRODUCT);
+    }
+
     public function product()
     {
         return view('products/product');

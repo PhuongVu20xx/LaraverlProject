@@ -32,12 +32,7 @@ class AdminController extends Controller
         return view(NameController::$ADMIN_CONTROLLERS_EDIT_PRODUCT);
     }
 
-    public function AddCategory()
-    {
-        // $categories = DB::table(NameController::$CATEGORY)->get();
-        $categories = DB::select('exec sp_select_root_category_name');
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories]);
-    }
+    
 
     public function AllProduct()
     {
@@ -83,21 +78,7 @@ class AdminController extends Controller
         return redirect()->action([AdminController::class,NameController::$IMPORT_PROCUCT])->with('msg', $arlet);;
     }
 
-    public function AddNewCategory(request $request)
-    {
-        $category_name = $request->category_name;
-        $category_root = $request->category_root;
-        $status = $request->status;
-        $st=$status=='on'?1:0;
-        $note='';
 
-        DB::update("exec sp_insert_category '$category_name','$category_root','$st','$note'");
-        print $note;
-        return redirect()->action([AdminController::class,'AddCategory']);
-    }
 
-    public function CheckAvaiableCategory($name)
-    {
-        return DB::table(NameController::$CATEGORY)->select(NameController::$NAME)->where(NameController::$NAME,$name)->exists();
-    }
+    
 }

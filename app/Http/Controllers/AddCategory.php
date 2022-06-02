@@ -4,29 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\NameController;
 
 class AddCategory extends Controller
 {
-    public function index(){
-        return view('controller.addcategory');   
-    }
-
-    public function AddCategory()
+    public function ShowCategory($note='')
     {
-        // $categories = DB::table(NameController::$CATEGORY)->get();
-        $categories = DB::select('exec sp_select_root_category_name');
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories]);
+        $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
+        $allCategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories,'note' => $note]);
     }
 
     public function AddNewCategory(request $request)
     {
         $category_name = $request->category_name;
         $category_root = $request->category_root;
-        $status = $request->check_box;
-        $st = $status=='on'?1:0;
-        DB::select("call sp_insert_category $category_name,$category_root,$st");
+        $status = $request->status;
+        $st=$status=='on'?1:0;
+    
+        $note = '';
+        
+        DB::insert("exec sp_insert_category'$category_name','$category_root',$st,'$note'");
 
-
-        return redirect()->action([AdminController::class,'AddCategory']);
+        return redirect()->action([AddCategory::class,'ShowCategory'],['note' =>$note]);
     }
 }
