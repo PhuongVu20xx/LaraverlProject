@@ -8,15 +8,20 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-   
     public function AllProduct()
     {
+        $allproduct = DB::select('exec sp_select_all_product');
         return view(NameController::$ADMIN_CONTROLLERS_ALL_PRODUCT);
     }
 
     public function AddProduct()
     {
         return view(NameController::$ADMIN_CONTROLLERS_ADD_PRODUCT);
+    }
+
+    public function EditProduct()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_EDIT_PRODUCT);
     }
 
     public function product()
