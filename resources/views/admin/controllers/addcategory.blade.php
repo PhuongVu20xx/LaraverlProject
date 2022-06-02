@@ -35,7 +35,7 @@
                 Category root :
                 <select name="category" id="category">
                     @foreach ($categories as $category)
-                        <option value="{{ $category->name }}" placeholder="Choose category">{{ $category->name }}
+                        <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
                         </option>
                     @endforeach
                 </select>
@@ -65,8 +65,8 @@
                                 @foreach ($categories as $category)
                                     <tr>
                                         <th>{{ $i++ }}</th>
-                                        <td>{{ $category->name }}</td>
-                                        <td>{{ $category->sub_category }}</td>
+                                        <td>{{ $category->category_name }}</td>
+                                        <td>{{ $category->category_root }}</td>
                                         @if ($category->status == 1)
                                             <td data-title="Status"><input type="checkbox" class="category_status"
                                                     name="category_status" checked></td>

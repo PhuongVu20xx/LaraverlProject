@@ -34,7 +34,8 @@ class AdminController extends Controller
 
     public function AddCategory()
     {
-        $categories = DB::table(NameController::$CATEGORY)->get();
+        // $categories = DB::table(NameController::$CATEGORY)->get();
+        $categories = DB::select('exec sp_select_root_category_name');
         return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories]);
     }
 
