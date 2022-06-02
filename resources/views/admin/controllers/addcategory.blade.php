@@ -67,7 +67,7 @@
                                         <th>{{ $i++ }}</th>
                                         <td>{{ $category->category_name }}</td>
                                         <td>{{ $category->category_root }}</td>
-                                        @if ($category->status == 1)
+                                        @if ($category->category_status == 1)
                                             <td data-title="Status"><input type="checkbox" class="category_status"
                                                     name="category_status" checked></td>
                                         @else
