@@ -11,11 +11,17 @@ class ProfileController extends Controller
     }
 
     public function postProfileForm(Request $request){
-        $email = $request->email;
-        $avatar = $request->file('avatar');
-        $avatarPath = $avatar->move('upload', $avatar->getClientOriginalName());
+        $email      = $request->email;
+        $avatar     = $request->file('avatar');
+        $extension  = $request->file('avatar')->extension(); // Cắt đuôi file img
+        $avatar_name= time().'-'.'avatar.'.$extension;       // Nối đuôi file img vào tên mới của img
+        $avatar->move(public_path('upload'), $avatar_name);  // Lưu image vào public/upload
+        // $request->merge(['image_name' => $avatar_name]);
+        // dd($request->all());
 
-        // DB::table('user')->where('email',$email)->update(['image_name' => $avatarPath]);
+        DB::table('user')->where('email', $email)
+                        ->update(['image_name' => $avatar_name]);
+        return redirect()->back()->withInput(); 
     }
 
     public function postNewPassword(Request $request){
