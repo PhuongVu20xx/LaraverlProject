@@ -69,9 +69,9 @@
                                         <td>{{ $category->category_name }}</td>
                                         <td>{{ $category->category_root_name }}</td>
                                         @if ($category->category_status == 0)
-                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status" ></td>
+                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status" data-id={{$category->category_status}}></td>
                                         @else
-                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status"checked></td>
+                                            <td data-title="Status"><input type="checkbox" class="category_status"name="category_status"data-id={{$category->category_status}}checked></td>
                                         @endif
                                     </tr>
                                 @endforeach
