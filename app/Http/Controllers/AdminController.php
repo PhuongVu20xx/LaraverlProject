@@ -85,20 +85,13 @@ class AdminController extends Controller
 
     public function AddNewCategory(request $request)
     {
-        $name = $request->name_category;
+        $category_name = $request->category_name;
+        $category_root = $request->category_root;
+        $status = $request->status;
 
-        // if(CheckAvaiableCategory($name))
-        // {
-        //     return ImportArlet(NameController::$IMPORT_FAIL);
-        // }
-        // else 
-        // {
-            
-        // }
-        // $data = [
-        //     NameController::$NAME=>$name,
-        // ];
-        DB::table(NameController::$CATEGORY)->insert(['name'=> $name]);
+        DB::select('exec sp_insert_category("$category_name","$category_root","$status")');
+
+        // DB::table(NameController::$CATEGORY)->insert(['name'=> $name]);
         //return ImportArlet(NameController::$IMPORT_SUCCESS);
         return redirect()->action([AdminController::class,'AddCategory']);
     }
