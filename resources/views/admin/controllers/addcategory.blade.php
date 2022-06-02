@@ -29,24 +29,34 @@
     <div>
         <form action="/addcategory" method="post">
             {{ csrf_field() }}
-            <div>
-                <div class="category-name">
-                    Category name: 
-                    <input type="text" id="name" class="name" name="category_name" placeholder="category"> <br>
-                </div>
-                <div class="category-root">
-                    Category root :
-                    <select name="category_root" id="category">
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
-                            </option>
-                        @endforeach
-                    </select><br>
-                </div>
-                <div class="category-status">
-                    Status category : <input type="checkbox" class="checkbox" id="checkbox" name="status">
-                    <input type="submit" id="submit" class="submit" value="Submit">
-                </div>
+            <table class="addcategory-form">
+
+                <tr class="category-name">
+                    <th><span>Category name </span></th>
+                    <th><input type="text" id="name" class="name" name="category_name" placeholder="Category"></th> 
+                </tr>
+
+                <tr class="category-root">
+                    <th><span>Category root</span></th>
+                    <th>
+                        <select name="category_root" id="category">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->category_name }}" placeholder="Choose category">
+                                    {{ $category->category_name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </th>
+                </tr>
+
+                <tr class="category-status">
+                    <th><span>Status category</span></th>
+                    <th><input type="checkbox" class="checkbox" id="checkbox" name="status"></th>
+                </tr>
+
+            </table>
+            <div class="submit-btn">
+                <input type="submit" id="submit" class="submit" value="Submit">
             </div>
         </form>
 
@@ -86,7 +96,7 @@
                     </div>
                 @endif
             </div>
-    </div>
+        </section>
 @endsection
 
 @section('footer')
