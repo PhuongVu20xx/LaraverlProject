@@ -88,11 +88,10 @@ class AdminController extends Controller
         $category_name = $request->category_name;
         $category_root = $request->category_root;
         $status = $request->status;
-
-        DB::select('exec sp_insert_category("$category_name","$category_root","$status")');
-
-        // DB::table(NameController::$CATEGORY)->insert(['name'=> $name]);
-        //return ImportArlet(NameController::$IMPORT_SUCCESS);
+        $st=$status=='on'?1:0;
+    
+        DB::select("exec sp_insert_category @name_category='$category_name',@category_root='$category_root',@status='$st'");
+        
         return redirect()->action([AdminController::class,'AddCategory']);
     }
 
