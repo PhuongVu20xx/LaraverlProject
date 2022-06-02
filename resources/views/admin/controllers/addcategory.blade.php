@@ -30,16 +30,16 @@
             {{ csrf_field() }}
             <div>
                 <h3>Add Category</h3>
-                Category name: <input type="text" id="name" class="name" name="name_category"
+                Category name: <input type="text" id="name" class="name" name="category_name"
                     placeholder="category">
                 Category root :
-                <select name="category" id="category">
+                <select name="category_root" id="category">
                     @foreach ($categories as $category)
                         <option value="{{ $category->category_name }}" placeholder="Choose category">{{ $category->category_name }}
                         </option>
                     @endforeach
                 </select>
-                Deactivate category : <input type="checkbox" class="checkbox" id="checkbox" name="check_box">
+                Status category : <input type="checkbox" class="checkbox" id="checkbox" name="status">
                 <input type="submit" id="submit" class="submit" value="Submit">
             </div>
         </form>
