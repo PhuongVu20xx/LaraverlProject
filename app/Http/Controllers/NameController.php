@@ -61,11 +61,11 @@ class NameController
 
  //Views
  static $ADMIN_CONTROLLER = "admin.controller";
- static $ADMIN_CONTROLLERS_ADD_CATEGORY = "admin.controllers.addcategory";
- static $ADMIN_CONTROLLERS_ADD_PRODUCT = "admin.controllers.addproduct";
- static $ADMIN_CONTROLLERS_ALL_PRODUCT = "admin.controllers.allproduct";
- static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "admin.controllers.editproduct";
- static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "admin.controllers.importproduct";
+ static $ADMIN_CONTROLLERS_ADD_CATEGORY = "form.addcategory";
+ static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
+ static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
+ static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
+ static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.importproduct";
  static $ADMIN_CUSTOMER = "admin.customer";
  static $ADMIN_FEEDBACK = "admin.feedback";
  static $ADMIN_LATEST_ORDER = "admin.lastestorder";
