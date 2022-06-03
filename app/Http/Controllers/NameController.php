@@ -69,6 +69,8 @@ class NameController
  static $ADMIN_CUSTOMER = "admin.customer";
  static $ADMIN_FEEDBACK = "admin.feedback";
  static $ADMIN_LATEST_ORDER = "admin.lastestorder";
+ static $ADMIN_CONTROLLERS_IMPORT_STOCK = "form.importstock";
+
 
 
  //Store producer
@@ -81,6 +83,13 @@ class NameController
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
  //Unit
  static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
+ //Stock
+ static $SP_SELECT_ALL_STOCK = "exec sp_select_stock";
+ static $SP_INSERT_STOCK = "exec sp_insert_stock";
+ //Suppliers
+static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
+
+
 
  
 

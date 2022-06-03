@@ -57,12 +57,16 @@ class ProductController extends Controller
         return view('products/sweetgrocery');
     }
 
-    public function ShowImportProduct()
+    public function ShowImportStock()
     {
-        return view('form/importproduct');
+        $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
+        $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
+       
+        return view(NameController::$ADMIN_CONTROLLERS_IMPORT_STOCK,['select_product'=>$select_product,'select_suppliers'=>$select_suppliers]);
+
     }
 
-    public function ImportProduct()
+    public function ImportStock()
     {
        
     }
