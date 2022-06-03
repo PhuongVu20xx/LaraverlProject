@@ -57,6 +57,16 @@ class ProductController extends Controller
         return view('products/sweetgrocery');
     }
 
+    public function ShowImportProduct()
+    {
+        return view('form/importproduct');
+    }
+
+    public function ImportProduct()
+    {
+       
+    }
+
     public function create()
     {
         //
