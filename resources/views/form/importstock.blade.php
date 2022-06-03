@@ -83,7 +83,7 @@
                             </div>
                             <!-- Save changes button-->
                             <div class="button">
-                                <button class="btn bg-dark" type="submit">Save</button>
+                                <button class="btn" type="submit">Save</button>
                             </div>
             </form>
         </div>
