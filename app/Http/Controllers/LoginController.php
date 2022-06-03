@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\DB;
 
 
-class LoginController extends Controller
+class LoginController extends AdminController
 {
 
     public function getLoginform(){

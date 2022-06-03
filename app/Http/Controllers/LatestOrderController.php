@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LatestOrderController extends Controller
+class LatestOrderController extends AdminController
 {
     public function LatestOrderPage()
     {

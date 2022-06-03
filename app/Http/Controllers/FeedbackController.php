@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FeedbackController extends Controller
+class FeedbackController extends AdminController
 {
     public function FeedbackPage()
     {

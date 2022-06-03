@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\NameController;
 use Illuminate\Support\Facades\DB;
 
-class ProductController extends Controller
+class ProductController extends AdminController
 {
     public function AllProduct()
     {

@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{ asset('css/form/allcategory.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">

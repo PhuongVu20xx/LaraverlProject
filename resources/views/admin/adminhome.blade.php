@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
 @endsection
 
 @section('header')
