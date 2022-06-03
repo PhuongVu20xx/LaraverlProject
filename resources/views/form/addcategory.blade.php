@@ -34,7 +34,7 @@
                         <div class="card-body">
                              <!-- Form Group-->
                              <div class="row gx-3 mb-3">
-                                 <div class="col-md-1"></div>
+                                <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="category-root">Category Root</label>
                                 <select class="col-md-6" name="category_root" id="category">
                                     @foreach ($categories as $category)
@@ -52,10 +52,14 @@
                             </div>
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
-                            <div class="col-md-1"></div>
+                                <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="status-category">Status Category</label>
-                                <input class="col-md-6 checkbox" id="status-category" name="status-category" type="checkbox">
+                                <div class="form-check form-switch col-md-6">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
                             </div>
+                            
                             <!-- Save changes button-->
                             <div class="button">
                                 <button class="btn" type="submit">Save</button>
