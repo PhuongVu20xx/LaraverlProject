@@ -7,7 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController as Home;
 use App\Http\Controllers\ProductController as Product;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryController as Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,23 +61,26 @@ Route::get('/register',[RegisterController::class, 'getRegisterform']);
 Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
 // ADMIN
+Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
-Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
+
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
+
 
 Route::get('/importstock',[Product::class,'ShowImportStock']);
 Route::post('/importstock',[Product::class,'ImportStock']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 
-
-Route::post('/addcategory',[CategoryController::class, 'AddNewCategory']);
-Route::post('/addcategory',[CategoryController::class, 'ChangeCategoryStatus']);
-Route::get('/addcategory',[CategoryController::class,'ShowCategory']);
+Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
+Route::get('/addcategory',[Category::class,'ShowCategory']);
+Route::post('/addcategory',[Category::class, 'AddNewCategory']);
+Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
+Route::get('/allcategory',[Category::class,'AllCategory']);
 

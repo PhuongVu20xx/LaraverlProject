@@ -15,17 +15,17 @@
 
 @section('bodyheader')
     <div>
-        <h3>Controller</h3>
+        <h3>Home Controller</h3>
         <hr>
     </div>
 @endsection
 
 @section('bodynav')
-    @include('admin.navigator')
+    
 @endsection
 
 @section('bodycontent')
-    
+    abcd xyz gì gì đó nha
 @endsection
 
 @section('footer')

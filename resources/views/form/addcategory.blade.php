@@ -1,7 +1,6 @@
 @extends('layouts.adminlayout')
 
 @section('css')
-
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{ asset('css/addcategory-form.css') }}">
 @endsection
@@ -16,11 +15,19 @@
 @endsection
 
 @section('bodyheader')
-
+    <div>
+        <h3>Controller / Category / Add Category</h3>
+        <hr>
+    </div>
 @endsection
 
 @section('bodynav')
-    @include('admin.navigator')
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li><a class="text-decoration-none" href="/addcategory" data-toggle="tab">Add Category</a></li>
+            <li><a class="text-decoration-none" href="/allproduct" data-toggle="tab">All Category</a></li>
+        </ul>
+    </div>
 @endsection
 
 @section('bodycontent')
