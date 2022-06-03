@@ -1,46 +1,61 @@
-.form-title{
-    margin-top: 50px;
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
 }
-form{
-    margin-top: 50px;
-    line-height: 50px;
-    position: relative;
+.card .card-header{
+    font-weight: 500;
 }
-form>table{
-    position: relative;
-    left: 5%;
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
 }
-span{
+.card-header {
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: right;
-    margin-right: 50px;
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
 }
-.category-root>th>select, .category-name>th>input{
-    width: 500px;
-    border-radius: 5px;
-    height: 30px;
-    padding-left: 10px;
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.submit-btn{
-    margin-top: 20px;
-    position: absolute;
-    left: 30%;
+#insertstock-form{
+    margin-top: 30px;
 }
-.submit-btn>input{
-    width: 200px;
-    padding: 0px 10px;
-    background-color: black;
+.button{
+    text-align: center;
+
+}
+.button > .btn{
     color: white;
     font-weight: bold;
-    border-radius: 5px;
-    border: none;
+    padding: 7px 25px;
+    background-color: black;
 }
-.submit-btn>input:hover{
-    background-color: #f33a3a;
+.button > .btn:hover{
+    color: white;
+    background-color: red;
 }
-section{
-    margin-top: 100px;
-    position: relative;
-    left: -5%;
+/* .gx-3{
+    text-align: center;
+} */
+.checkbox{
+    float: left;
+}
+#addcateform{
+    margin-top: 30px;
 }

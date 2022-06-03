@@ -1,6 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('css')
+
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{ asset('css/addcategory-form.css') }}">
 @endsection
@@ -15,10 +16,7 @@
 @endsection
 
 @section('bodyheader')
-    <div class="form-title">
-        <h3>Add Category</h3>
-        <hr>
-    </div>
+
 @endsection
 
 @section('bodynav')
@@ -26,33 +24,37 @@
 @endsection
 
 @section('bodycontent')
-    <div>
-        <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="addcateform">
             <div class="card mb-4">
                 <form action="/addcategory" method="post">
                     {{ csrf_field() }}
-                        <div class="cart-header"></div>
-                        <div class="cart-body">
-                            <!-- Form Group (email address)-->
-                            <div class="mb-3">
-                                <label class="small mb-1" for="category-name">Category Name</label>
-                                <input class="form-control" id="category-name" name="category-name" type="text">
-                            </div>
-                             <!-- Form Group (email address)-->
-                             <div class="mb-3">
-                                <label class="small mb-1" for="category-root">Category Root</label>
-                                <select name="category_root" id="category">
+                        <div class="card-header">Add Category</div>
+                        <div class="card-body">
+                             <!-- Form Group-->
+                             <div class="row gx-3 mb-3">
+                                 <div class="col-md-1"></div>
+                                <label class="col-md-3 small mb-1" for="category-root">Category Root</label>
+                                <select class="col-md-6" name="category_root" id="category">
                                     @foreach ($categories as $category)
-                                         <option value="{{ $category->category_name }}" placeholder="Choose category">
+                                        <option value="{{ $category->category_name }}" placeholder="Choose category">
                                             {{ $category->category_name }}
-                                         </option>
-                                     @endforeach
+                                        </option>
+                                    @endforeach
                                 </select>
                             </div>
-                            <!-- Form Group (email address)-->
-                            <div class="mb-3">
-                                <label class="small mb-1" for="status-category">Status Category</label>
-                                <input class="form-control" id="status-category" name="status-category" type="checkbox">
+                            <!-- Form Group-->
+                            <div class="row gx-3 mb-3">
+                            <div class="col-md-1"></div>
+                                <label class="col-md-3 small mb-1" for="category-name">Category Name</label>
+                                <input class="col-md-6" id="category-name" name="category-name" type="text">
+                            </div>
+                            <!-- Form Group-->
+                            <div class="row gx-3 mb-3">
+                            <div class="col-md-1"></div>
+                                <label class="col-md-3 small mb-1" for="status-category">Status Category</label>
+                                <input class="col-md-6 checkbox" id="status-category" name="status-category" type="checkbox">
                             </div>
                             <!-- Save changes button-->
                             <div class="button">
@@ -61,7 +63,9 @@
                         </div>
                 </form>
             </div>
-        </div>
+        <div class="col-md-2"></div>
+    </div>
+        
 
         <section class="bg-white p-5">
             <div id="no-more-tables" class="content">
