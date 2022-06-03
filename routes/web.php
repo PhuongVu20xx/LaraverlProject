@@ -30,7 +30,7 @@ Route::get('/', [Home::class,'landingpage'])->name('landingpage');
 Route::get('/about',[Home::class,'about']);
 Route::get('/contact',[Home::class,'contact']);
 Route::get('/shipping',[Home::class,'shipping']);
-Route::get('/needhelp',[Home::class,'needhelp']);
+Route::get('/neaoedhelp',[Home::class,'needhelp']);
 
 // PRODUCT
 Route::get('/product',[Product::class,'product']);
@@ -67,7 +67,7 @@ Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
 Route::get('/editproduct',[AdminController::class,'EditProduct']);
-Route::get('/addproduct',[AdminController::class,'AddProduct']);
+Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::get('/allproduct',[AdminController::class,'AllProduct']);
 Route::get('/importproduct',[AdminController::class,'ImportProduct']);
 

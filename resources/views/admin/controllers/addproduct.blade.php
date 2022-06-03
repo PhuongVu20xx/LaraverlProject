@@ -3,6 +3,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/addproduct-form.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/respose-tableadminfeedback.css') }}">
@@ -31,7 +32,7 @@
 
 @section('bodycontent')
     <div>
-        <form action="/addcategory" method="post">
+        <!-- <form action="/addcategory" method="post">
             <div class="searchproduct" id="searchproduct">
                 <div>
                     ID: <input type="text" id="id" class="id">
@@ -48,8 +49,61 @@
                     <input type="submit" id="submit" class="submit" value="Add">
                 </div>
             </div>
-        </form>
+        </form> -->
+        <div class="row">
+            <div class="col-4">
+                <h5>Add Product</h5>
+            </div>
+            <div class="col-8">
+                <form action="">  
+                    <div class="product">
+                        <div class="p1">
+                            <label for="choose">Choose Cate &emsp;&nbsp;</label> 
+                                    <select name="choose" id="choose">
+                                        <option value="choose1">choose1</option>
+                                        <option value="choose2">choose2</option>
+                                    </select>
+                            </div> 
 
+                            <div class="p2">
+                                <p>Product Name </p>
+                                <input type="text" name="choose" placeholder="Product Name ">
+                            </div> 
+
+                            <div class="p3">
+                                <p >Price </p><input type="text" name="status" placeholder="Price">
+                            </div>
+                            
+                            <div class="p4">
+                            <label for="unit">Unit &emsp; &emsp;&emsp; &emsp;</label>
+                                <select name="unit" id="unit" form="unit">
+                                    <option value="unit1">unit1</option>
+                                    <option value="unit2">unit2</option>   
+                                </select>
+                            </div>
+
+                            <div class="p5">
+                                <p >Information </p>
+                                <input type="text" name="status" placeholder="Information">
+                            </div>
+
+                            <div class="p6">
+                                <p >Img </p>
+                                <input type="file" name="img">
+                            </div>
+
+                            <div class="p7">
+                                <p > Status</p>
+                                <input type="text" name="status" placeholder="status">
+                            </div>
+
+                            <div class="submit">
+                                <button  type="submit" class="button1"> Save</button>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <section class="bg-white p-5">
             <div id="no-more-tables" class="content">
                 <div class="clearfix"> </div>
