@@ -42,7 +42,9 @@
 }
 .button > .btn{
     color: white;
+    font-weight: bold;
     padding: 7px 25px;
+    background-color: black;
 }
 .button > .btn:hover{
     color: white;
