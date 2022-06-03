@@ -2,6 +2,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form/allproduct.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/respose-tableadminfeedback.css') }}">
@@ -48,15 +49,16 @@
                     <tbody>
                         @if (count($allproduct) > 0)
                             <span hidden> {{ $i = 1 }}</span>
-                        @foreach($allproduct as $product)
-                            <tr>
-                                <td>{{ $i }} </td>
-                                <td>{{ $product->category_name }}</td>
-                                <td>{{ $product->product_name }}</td>
-                                <td>{{ $product->information }}</td>
-                                <td>{{ $product->img }}</td>
-                            </tr>
-                        @endforeach
+                            @foreach($allproduct as $product)
+                                <tr>
+                                    <td>{{ $i++ }} </td>
+                                    <td>{{ $product->category_id }}</td>
+                                    <td>{{ $product->product_name }}</td>
+                                    <td>{{ $product->infomation }}</td>
+                                    <td><img src="{{asset('upload.product')}}/{{ $product->img_name }}" id="img_product" alt=""></td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

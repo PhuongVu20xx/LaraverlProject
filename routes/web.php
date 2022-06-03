@@ -70,7 +70,7 @@ Route::get('/editproduct',[AdminController::class,'EditProduct']);
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
-Route::get('/importproduct',[AdminController::class,'ImportProduct']);
+Route::get('/importproduct',[Product::class,'ImportProduct']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 

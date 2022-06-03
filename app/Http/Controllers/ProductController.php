@@ -25,13 +25,13 @@ class ProductController extends Controller
 
     public function SubmitProduct(Request $request)
     {
-        $product_name=$request->category_root;
+        $product_name=$request->product_name;
         $category_name=$request->category_name;  
         $unit_name=$request->unit_name;
         $information=$request->information;
         $img     = $request->file('img');
         $extension  = $request->file('img')->extension(); // Cắt đuôi file img
-        $img_name= time().'-'.'img.'.$extension;       // Nối đuôi file img vào tên mới của img
+        $img_name= time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
         $img->move(public_path('upload.product'), $img_name);
         
         $note='abc';
