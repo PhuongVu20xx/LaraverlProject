@@ -24,6 +24,7 @@ class NameController
  static $FEEDBACK = "feedback";
  //G
  //H
+ static $HOME = "home";
  //I
  static $INFOMATION = "infomation";
  static $IMPORT_DAY = "importday";
@@ -60,7 +61,7 @@ class NameController
  static $IMPORT_SUCCESS = "Import Success!";
 
  //CONTROLLER
- static $ADMIN_CONTROLLERS_PAGE = "admin.controller";
+ static $ADMIN_CONTROLLERS_ADMIN_HOME_PAGE = "admin.adminhome";
  
  //CATEGORY
  static $ADMIN_CONTROLLERS_CATEGORY_PAGE = "admin.category";

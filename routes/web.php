@@ -61,7 +61,7 @@ Route::get('/register',[RegisterController::class, 'getRegisterform']);
 Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
 // ADMIN
-Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
+Route::get('/home',[AdminController::class,'AdminControllerPage'])->name('adminhome');
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);

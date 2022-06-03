@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\NameController;
 use Illuminate\Support\Facades\DB;
 
-class AdminController extends Controller
+class AdminController extends BaseController
 {  
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
     public function CustomerPage()
     {
        return view(NameController::$ADMIN_CUSTOMER);
     }
 
-    public function ControllerPage()
+    public function AdminControllerPage()
     {
-        return view(NameController::$ADMIN_CONTROLLERS_PAGE);
+        return view(NameController::$ADMIN_CONTROLLERS_ADMIN_HOME_PAGE);
     }
 
     public function CategoryPage()
