@@ -15,6 +15,11 @@ class AdminController extends Controller
 
     public function ControllerPage()
     {
-        return view(NameController::$ADMIN_CONTROLLER);
+        return view(NameController::$ADMIN_CONTROLLERS_PAGE);
+    }
+
+    public function CategoryPage()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_CATEGORY_PAGE);
     }
 }

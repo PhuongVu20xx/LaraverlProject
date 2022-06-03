@@ -37,5 +37,12 @@ class CategoryController extends Controller
 
             return redirect()->action([CategoryController::class,'ShowCategory']);
     }
+
+    public function ShowAllCategory()
+    {
+        $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
+        $allCategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        return view(NameController::$ADMIN_CONTROLLERS_ALL_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories]);
+    }
     
 }
