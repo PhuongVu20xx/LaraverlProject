@@ -71,6 +71,6 @@
             <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
         </div>
         <div id="sentence">
-            @ 2017 Colorlib. <a href="#">Get The Theme</a>
+            @ 2017 VNHP's Grocery. <a href="#">Get The Theme</a>
         </div>
     </div>

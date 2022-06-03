@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 
@@ -26,6 +25,7 @@ class LoginController extends Controller
             'password.min' => 'Password không được nhỏ hơn 3 ký tự',
             'password.max' => 'Password không được lớn hơn 16 ký tự'
         ]);
+
         $email = $request->email;
         $password = md5($request->password);
         
@@ -36,8 +36,7 @@ class LoginController extends Controller
         $SQLadmin = DB::table('user')->where('password',$password)
                                     ->where('email',$email)
                                     ->where('idtype',1)
-                                    ->get();     
-                                    
+                                    ->get();                    
 
         if(count($SQLuser)>0){ 
             return redirect()->route('landingpage',['SQLuser'=>$SQLuser]);
