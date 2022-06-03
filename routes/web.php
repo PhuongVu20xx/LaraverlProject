@@ -47,4 +47,34 @@ Route::get('/blogmin', function(){
     return view(('pages/blogmin'));
 });
 
+// PROFILE
+Route::get('/profile',[ProfileController::class, 'getProfileForm']);
+Route::post('/profile',[ProfileController::class, 'postProfileForm']);
+Route::post('/changepwd',[ProfileController::class, 'postNewPassword']);
+
+
+// LOGIN
+Route::get('/login',[LoginController::class, 'getLoginform']);
+Route::post('/login',[LoginController::class, 'postLoginform']);
+// REGISTER
+Route::get('/register',[RegisterController::class, 'getRegisterform']);
+Route::post('/register',[RegisterController::class, 'postRegisterform']);
+
+// ADMIN
+Route::get('/admin',[AdminController::class,'LoginSuccess']);
+Route::get('/feedback',[AdminController::class,'FeedbackPage']);
+Route::get('/customer',[AdminController::class,'CustomerPage']);
+Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
+Route::get('/controller',[AdminController::class,'ControllerPage'])->name('controller');
+Route::get('/editproduct',[AdminController::class,'EditProduct']);
+Route::get('/addproduct',[AdminController::class,'AddProduct']);
+Route::get('/allproduct',[AdminController::class,'AllProduct']);
+Route::get('/importproduct',[AdminController::class,'ImportProduct']);
+
+Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
+
+
+Route::post('/addcategory',[CategoryController::class, 'AddNewCategory']);
+Route::post('/category_status',[CategoryController::class, 'ChangeCategoryStatus']);
+Route::get('/addcategory',[CategoryController::class,'ShowCategory']);
 
