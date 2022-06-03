@@ -81,6 +81,7 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
 
  //PRODUCT
+ static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";

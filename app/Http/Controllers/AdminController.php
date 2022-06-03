@@ -22,4 +22,9 @@ class AdminController extends Controller
     {
         return view(NameController::$ADMIN_CONTROLLERS_CATEGORY_PAGE);
     }
+
+    public function ProductPage()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_PRODUCT_PAGE);
+    }
 }
