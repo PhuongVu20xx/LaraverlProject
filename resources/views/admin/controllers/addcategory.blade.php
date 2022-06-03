@@ -78,16 +78,15 @@
                             </thead>
 
                             <tbody>
-                                <p>{{$note}}</p>
                                 @foreach ($allCategories as $category)
                                     <tr>
                                         <th>{{ $i++ }}</th>
                                         <td>{{ $category->category_name }}</td>
                                         <td>{{ $category->category_root_name }}</td>
-                                        @if ($category->category_status == 0)
-                                            <td data-title="Status"><input type="checkbox" id="category_status"class="category_status"name="category_status" data-id={{$category->category_status}}></td>
+                                        @if ($category->category_status == 1)
+                                            <td><input type="checkbox" id="category_status"class="category_status"name="category_status" data-id={{$category->category_id}} checked></td>
                                         @else
-                                            <td data-title="Status"><input type="checkbox" id="category_status" class="category_status"name="category_status"data-id={{$category->category_status}}checked></td>
+                                            <td><input type="checkbox" id="category_status" class="category_status"name="category_status"data-id={{$category->category_id}}></td>
                                         @endif
                                     </tr>
                                 @endforeach
@@ -104,5 +103,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/addcategory.js') }}"></script>
+    <script src="{{ asset('js/admin/category_controller.js') }}"></script>
 @endsection

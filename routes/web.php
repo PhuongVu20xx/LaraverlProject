@@ -75,6 +75,6 @@ Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 
 
 Route::post('/addcategory',[CategoryController::class, 'AddNewCategory']);
-Route::post('/category_status',[CategoryController::class, 'ChangeCategoryStatus']);
+Route::post('/addcategory',[CategoryController::class, 'ChangeCategoryStatus']);
 Route::get('/addcategory',[CategoryController::class,'ShowCategory']);
 

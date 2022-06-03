@@ -8,11 +8,11 @@ use App\Http\Controllers\NameController;
 
 class CategoryController extends Controller
 {
-    public function ShowCategory($note='')
+    public function ShowCategory()
     {
         $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
         $allCategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories,'note' => $note]);
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories]);
     }
 
     public function AddNewCategory(request $request)
@@ -26,14 +26,16 @@ class CategoryController extends Controller
         
         DB::insert("exec sp_insert_category'$category_name','$category_root',$st,'$note'");
 
-        return redirect()->action([CategoryController::class,'ShowCategory'],['note' =>$note]);
+        return redirect()->action([CategoryController::class,'ShowCategory']);
     }
 
     public function ChangeCategoryStatus(request $request)
     {
-        $category_id = $request->category_id;
-        $category_status = $request->category_status;
-        DB::update("exec sp_update_category_status'$category_id','$category_status'");
+            $id = $request->id;
+            $status = $request->tatus;
+            DB::update("exec sp_update_category_status $id,$status");
+
+            return redirect()->action([CategoryController::class,'ShowCategory']);
     }
     
 }

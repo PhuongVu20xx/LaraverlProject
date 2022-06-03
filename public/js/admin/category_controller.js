@@ -1,17 +1,20 @@
 $(document).ready(() =>{
     $.ajaxSetup({
-        Headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
+        headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     }),
     $('#category_status').change(()=>{
         var category_id = $('#category_status').attr('data-id');
         var category_status = $('#category_status').prop('checked') == true ? 1:0;
         $.ajax({
             method: "POST",
-            url: "/category_status",
+            url: "/addcategory",
             data:{
-                category_id : category_id,
-                category_status : category_status
+                id : category_id,
+                status : category_status
             }
         })
+        .done(function(msg) {
+                  alert("Data saved");
+               })
     })
 })
