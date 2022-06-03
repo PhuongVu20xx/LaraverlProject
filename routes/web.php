@@ -58,7 +58,12 @@ Route::get('/product',function(){
 Route::get('/product/sweet-grocery',function(){
     return view('products/sweetgrocery');
 });
-
+Route::get('/category', function(){
+    return view(('form/category'));
+});
+Route::get('/product', function(){
+    return view(('form/product'));
+});
 
 // Login
 Route::get('/login',[LoginController::class, 'getLoginform']);
