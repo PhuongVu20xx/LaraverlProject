@@ -69,4 +69,17 @@ class NameController
  static $ADMIN_CUSTOMER = "admin.customer";
  static $ADMIN_FEEDBACK = "admin.feedback";
  static $ADMIN_LATEST_ORDER = "admin.lastestorder";
+
+
+ //Store producer
+
+ //category
+ static $SP_SELECT_ROOT_CATEGORY_NAME = "exec sp_select_root_category_name";
+ static $SP_SELECT_ALL_CATEGORY = "exec sp_select_all_category";
+ static $SP_UPDATE_CATEGORY_STATUS = "exec sp_update_category_status";
+ //Product
+ static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
+
+ 
+
 }

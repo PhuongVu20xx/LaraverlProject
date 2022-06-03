@@ -2,19 +2,20 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/addcategory-form.css') }}">
 @endsection
 
-{{-- @section('header')
+@section('header')
     @include('layouts.header')
     <div class="backgroundheader"></div>
-@endsection --}}
+@endsection
 
 @section('menu')
     @include('admin.navigator')
 @endsection
 
 @section('bodyheader')
-    <div>
+    <div class="form-title">
         <h3>Add Category</h3>
         <hr>
     </div>
@@ -28,18 +29,33 @@
     <div>
         <form action="/addcategory" method="post">
             {{ csrf_field() }}
-            <div>
-                <h3>Add Category</h3>
-                Category name: <input type="text" id="name" class="name" name="name_category"
-                    placeholder="category">
-                Category root :
-                <select name="category" id="category">
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->name }}" placeholder="Choose category">{{ $category->name }}
-                        </option>
-                    @endforeach
-                </select>
-                Deactivate category : <input type="checkbox" class="checkbox" id="checkbox" name="check_box">
+            <table class="addcategory-form">
+
+                <tr class="category-name">
+                    <th><span>Category name </span></th>
+                    <th><input type="text" id="name" class="name" name="category_name" placeholder="Category"></th> 
+                </tr>
+
+                <tr class="category-root">
+                    <th><span>Category root</span></th>
+                    <th>
+                        <select name="category_root" id="category">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->category_name }}" placeholder="Choose category">
+                                    {{ $category->category_name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </th>
+                </tr>
+
+                <tr class="category-status">
+                    <th><span>Status category</span></th>
+                    <th><input type="checkbox" class="checkbox" id="checkbox" name="status"></th>
+                </tr>
+
+            </table>
+            <div class="submit-btn">
                 <input type="submit" id="submit" class="submit" value="Submit">
             </div>
         </form>
@@ -48,7 +64,7 @@
             <div id="no-more-tables" class="content">
                 <div class="clearfix"> </div>
                 <div class="clearfix"></div>
-                @if (count($categories) > 0)
+                @if (count($allCategories) > 0)
                     <span hidden> {{ $i = 1 }}</span>
                     <div class="table-responsive ">
                         <table id="myTable" class="table bg-white">
@@ -62,17 +78,16 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($categories as $category)
+                                <p>{{$note}}</p>
+                                @foreach ($allCategories as $category)
                                     <tr>
                                         <th>{{ $i++ }}</th>
-                                        <td>{{ $category->name }}</td>
-                                        <td>{{ $category->sub_category }}</td>
-                                        @if ($category->status == 1)
-                                            <td data-title="Status"><input type="checkbox" class="category_status"
-                                                    name="category_status" checked></td>
+                                        <td>{{ $category->category_name }}</td>
+                                        <td>{{ $category->category_root_name }}</td>
+                                        @if ($category->category_status == 0)
+                                            <td data-title="Status"><input type="checkbox" id="category_status"class="category_status"name="category_status" data-id={{$category->category_status}}></td>
                                         @else
-                                            <td data-title="Status"><input type="checkbox" class="category_status"
-                                                    name="category_status" checked></td>
+                                            <td data-title="Status"><input type="checkbox" id="category_status" class="category_status"name="category_status"data-id={{$category->category_status}}checked></td>
                                         @endif
                                     </tr>
                                 @endforeach
@@ -81,7 +96,7 @@
                     </div>
                 @endif
             </div>
-    </div>
+        </section>
 @endsection
 
 @section('footer')
