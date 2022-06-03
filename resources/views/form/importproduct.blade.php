@@ -12,36 +12,71 @@
     <div class="backgroundheader"></div>
 @endsection
 
+
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')
     <div>
-        <h3>Edit Product</h3>
+        <h3>Add Product</h3>
         <hr>
     </div>
 @endsection
 
 @section('bodynav')
-    @include('admin.controllers.navigator')
+    @include('admin.navigator')
 @endsection
 
 @section('bodycontent')
     <div>
-        <form action="/editproduct" method="post">
-            <div class="searchproduct" id="searchproduct">
-                <div>
-                    ID: <input type="text" id="id" class="id"> 
-                    Name: <input type="text" id="name" class="name">
-                    <input type="submit" id="submit" class="submit" value="Search">
+        <form action="/importproduct" method="post">
+            <div class="p-3" id="importproduct">
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Name:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="name" class="name">
+                    </div>
                 </div>
-            </div>
-            <div class="editproduct" id="editproduct">
-                <div>
-                    ID: <input type="text" id="id" class="id">
-                    Name: <input type="text" id="name" class="name">
-                    <input type="submit" id="submit" class="submit" value="Update">
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Producer:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="producer" class="producer">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Price:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="price" class="price">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                        Quantity:
+                    </div>
+                    <div class="w-50">
+                        <input type="text" id="quantity" class="quantity">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <span class="w-50">Import day: </span>
+                    <div class="w-50">
+                        <input type="text" id="importday" class="importday">
+                    </div>
+                </div>
+                <div class="d-flex w-25 p-2">
+                    <div class="w-50">
+                    </div>
+                    <div class="w-50">
+                        <input type="submit" id="submit" class="submit" value="Import">
+                    </div>
+                
                 </div>
             </div>
         </form>
@@ -57,8 +92,8 @@
                                 <th class="text-light">ID</th>
                                 <th class="text-light">Name Product</th>
                                 <th class="text-light">Producer</th>
+                                <th class="text-light">Quantity</th>
                                 <th class="text-light">Price</th>
-                                <th class="text-light">Total Quantity</th>
 
                             </tr>
                         </thead>
@@ -69,8 +104,8 @@
                                     <td data-title="Id">ID {{ $i }} </td>
                                     <td data-title="Name">Name Product {{ $i }}</td>
                                     <td data-title="Producer">Producer {{ $i }}</td>
+                                    <td data-title="Quantity">Quantity {{ $i }}</td>
                                     <td data-title="Price">Price {{ $i }}</td>
-                                    <td data-title="TotalQuantity">Total Quantity {{ $i }}</td>
                                 </tr>
                             @endfor
                         </tbody>

@@ -11,7 +11,7 @@
 @endsection
 
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')
@@ -22,7 +22,7 @@
 @endsection
 
 @section('bodynav')
-    @include('admin.controllers.navigator')
+    @include('admin.navigator')
 @endsection
 
 @section('bodycontent')

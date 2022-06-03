@@ -1,15 +1,9 @@
-
-<div class="m-3 ps-5  border border-danger border-start-0 border-top-0 border-bottom-0">
-    <div class="m-1">
-        <a class="text-decoration-none" href="/controller">Controller</a>
-    </div>
-    <div class="m-1">
-        <a class="text-decoration-none" href="/customer">Customer</a>
-    </div>
-    <div class="m-1">
-        <a class="text-decoration-none" href="/feedback">Feedback</a>
-    </div>
-    <div class="m-1">
-        <a class="text-decoration-none" href="/lastestorder">Lastest Order</a>
-    </div>
+<div class="col-sm-12">
+    <ul class="nav nav-tabs">
+        <li><a class="text-decoration-none" href="/addcategory" data-toggle="tab">Add Category</a></li>
+        <li><a class="text-decoration-none" href="/addproduct" data-toggle="tab">Add Product</a></li>
+        <li><a class="text-decoration-none" href="/importproduct" data-toggle="tab">Import Product</a></li>
+        <li><a class="text-decoration-none" href="/editproduct" data-toggle="tab">Edit Product</a></li>
+        <li><a class="text-decoration-none" href="/allproduct" data-toggle="tab">All Product</a></li>
+    </ul>
 </div>
