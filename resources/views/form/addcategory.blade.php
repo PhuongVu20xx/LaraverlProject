@@ -27,38 +27,41 @@
 
 @section('bodycontent')
     <div>
-        <form action="/addcategory" method="post">
-            {{ csrf_field() }}
-            <table class="addcategory-form">
-
-                <tr class="category-name">
-                    <th><span>Category name </span></th>
-                    <th><input type="text" id="name" class="name" name="category_name" placeholder="Category"></th> 
-                </tr>
-
-                <tr class="category-root">
-                    <th><span>Category root</span></th>
-                    <th>
-                        <select name="category_root" id="category">
-                            @foreach ($categories as $category)
-                                <option value="{{ $category->category_name }}" placeholder="Choose category">
-                                    {{ $category->category_name }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </th>
-                </tr>
-
-                <tr class="category-status">
-                    <th><span>Status category</span></th>
-                    <th><input type="checkbox" class="checkbox" id="checkbox" name="status"></th>
-                </tr>
-
-            </table>
-            <div class="submit-btn">
-                <input type="submit" id="submit" class="submit" value="Submit">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <form action="/addcategory" method="post">
+                    {{ csrf_field() }}
+                        <div class="cart-header"></div>
+                        <div class="cart-body">
+                            <!-- Form Group (email address)-->
+                            <div class="mb-3">
+                                <label class="small mb-1" for="category-name">Category Name</label>
+                                <input class="form-control" id="category-name" name="category-name" type="text">
+                            </div>
+                             <!-- Form Group (email address)-->
+                             <div class="mb-3">
+                                <label class="small mb-1" for="category-root">Category Root</label>
+                                <select name="category_root" id="category">
+                                    @foreach ($categories as $category)
+                                         <option value="{{ $category->category_name }}" placeholder="Choose category">
+                                            {{ $category->category_name }}
+                                         </option>
+                                     @endforeach
+                                </select>
+                            </div>
+                            <!-- Form Group (email address)-->
+                            <div class="mb-3">
+                                <label class="small mb-1" for="status-category">Status Category</label>
+                                <input class="form-control" id="status-category" name="status-category" type="checkbox">
+                            </div>
+                            <!-- Save changes button-->
+                            <div class="button">
+                                <button class="btn" type="submit">Save</button>
+                            </div>
+                        </div>
+                </form>
             </div>
-        </form>
+        </div>
 
         <section class="bg-white p-5">
             <div id="no-more-tables" class="content">
