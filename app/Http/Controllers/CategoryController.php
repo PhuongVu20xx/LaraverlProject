@@ -11,8 +11,8 @@ class CategoryController extends AdminController
     public function ShowCategory()
     {
         $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
-        $allCategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories]);
+        $allcategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allcategories' => $allCategories]);
     }
 
     public function AddNewCategory(request $request)
@@ -41,8 +41,8 @@ class CategoryController extends AdminController
     public function ShowAllCategory()
     {
         $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
-        $allCategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
-        return view(NameController::$ADMIN_CONTROLLERS_ALL_CATEGORY,['categories'=>$categories,'allCategories' => $allCategories]);
+        $allcategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        return view(NameController::$ADMIN_CONTROLLERS_ALL_CATEGORY,['categories'=>$categories,'allcategories' => $allcategories]);
     }
     
 }

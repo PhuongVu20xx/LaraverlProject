@@ -96,7 +96,7 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($allCategories as $category)
+                                @foreach ($allcategories as $category)
                                     <tr>
                                         <th>{{ $i++ }}</th>
                                         <td>{{ $category->category_name }}</td>

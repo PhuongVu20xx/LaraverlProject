@@ -83,5 +83,5 @@ Route::get('/category',[AdminController::class,'CategoryPage'])->name('category'
 Route::get('/addcategory',[Category::class,'ShowCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
-Route::get('/allcategory',[Category::class,'AllCategory']);
+Route::get('/allcategory',[Category::class,'ShowAllCategory']);
 
