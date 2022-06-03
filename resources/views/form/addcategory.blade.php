@@ -82,7 +82,7 @@
             <div id="no-more-tables" class="content">
                 <div class="clearfix"> </div>
                 <div class="clearfix"></div>
-                @if (count($allCategories) > 0)
+                @if (count($allcategories) > 0)
                     <span hidden> {{ $i = 1 }}</span>
                     <div class="table-responsive ">
                         <table id="myTable" class="table bg-white">

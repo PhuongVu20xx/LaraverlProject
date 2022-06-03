@@ -12,7 +12,7 @@ class CategoryController extends AdminController
     {
         $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
         $allcategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allcategories' => $allCategories]);
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allcategories' => $allcategories]);
     }
 
     public function AddNewCategory(request $request)
