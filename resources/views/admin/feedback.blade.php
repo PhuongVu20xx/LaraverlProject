@@ -13,7 +13,7 @@
 @endsection
 
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')

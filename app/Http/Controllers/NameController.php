@@ -79,6 +79,8 @@ class NameController
  static $SP_UPDATE_CATEGORY_STATUS = "exec sp_update_category_status";
  //Product
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
+ //Unit
+ static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
 
  
 

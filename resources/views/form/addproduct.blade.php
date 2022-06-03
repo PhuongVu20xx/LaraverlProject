@@ -55,49 +55,59 @@
                 <h5>Add Product</h5>
             </div>
             <div class="col-8">
-                <form action="">  
+                <form action="/addproduct" method="post" enctype="multipart/form-data">  
+                    {{ csrf_field() }}
                     <div class="product">
-                        <div class="p1">
-                            <label for="choose">Choose Cate &emsp;&nbsp;</label> 
-                                    <select name="choose" id="choose">
-                                        <option value="choose1">choose1</option>
-                                        <option value="choose2">choose2</option>
+
+                            <div class="category-root">
+                                <span>Category Root</span>
+                                        <select name="category_root" id="category_root" class="category_root">
+                                            @foreach ($category_root as $category)
+                                                <option value="{{ $category->category_name }}" placeholder="Choose Category">
+                                                    {{$category-> category_name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                            </div> 
+
+                            <div class="category-name">
+                                <span>Category Name</span> 
+                                    <select name="category_name" id="category_name" class="category_name">
+                                        @foreach ($category_name as $category)
+                                                <option value="{{ $category->category_name }}" placeholder="Choose Category">
+                                                    {{$category-> category_name }}
+                                                </option>
+                                            @endforeach
+                                    </select>
+                            </div>                             
+
+                            <div class="p2">
+                                <span>Product Name</span>
+                                <input type="text" name="product_name" id="product_name" class="product_name" placeholder="Product Name ">
+                            </div> 
+
+                            <div class="unit-name">
+                                <span>Unit</span>
+                                    <select name="unit_name" id="unit_name" class="unit_name">
+                                        @foreach ($unit_name as $unit)
+                                                <option value="{{ $unit->unit_name }}" placeholder="Choose Unit">
+                                                    {{$unit-> unit_name }}
+                                                </option>
+                                            @endforeach
                                     </select>
                             </div> 
 
-                            <div class="p2">
-                                <p>Product Name </p>
-                                <input type="text" name="choose" placeholder="Product Name ">
-                            </div> 
-
-                            <div class="p3">
-                                <p >Price </p><input type="text" name="status" placeholder="Price">
-                            </div>
-                            
-                            <div class="p4">
-                            <label for="unit">Unit &emsp; &emsp;&emsp; &emsp;</label>
-                                <select name="unit" id="unit" form="unit">
-                                    <option value="unit1">unit1</option>
-                                    <option value="unit2">unit2</option>   
-                                </select>
-                            </div>
-
                             <div class="p5">
-                                <p >Information </p>
-                                <input type="text" name="status" placeholder="Information">
+                                <span>Information</span>
+                                <input type="text" name="information" id="information" class="informatino" placeholder="Information">
                             </div>
 
                             <div class="p6">
-                                <p >Img </p>
-                                <input type="file" name="img">
+                                <span>Image</span>
+                                <input type="file" name="img" id="img" class="img">
                             </div>
 
-                            <div class="p7">
-                                <p > Status</p>
-                                <input type="text" name="status" placeholder="status">
-                            </div>
-
-                            <div class="submit">
+                            <div class="submit-btn">
                                 <button  type="submit" class="button1"> Save</button>
                             </div>
                     </div>
@@ -123,17 +133,7 @@
                         </thead>
 
                         <tbody>
-                            @for ($i = 0; $i <= 100; $i++)
-                                <tr>
-                                    <td data-title="Id">ID {{ $i }} </td>
-                                    <td data-title="Name">Name Product {{ $i }}</td>
-                                    <td data-title="Producer">Producer {{ $i }}</td>
-                                    <td data-title="Price">Price {{ $i }}</td>
-                                    <td data-title="Unit">Unit {{ $i }}</td>
-                                    <td data-title="TotalQuantity">Total Quantity {{ $i }}</td>
-                                    <td data-title="Information">Information {{ $i }}</td>
-                                </tr>
-                            @endfor
+                            
                         </tbody>
                     </table>
                 </div>

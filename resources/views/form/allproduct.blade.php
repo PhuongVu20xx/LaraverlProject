@@ -38,24 +38,25 @@
                     <thead class="bg-dark">
                         <tr>
                             <th class="text-light">ID</th>
-                            <th class="text-light">Name Product</th>
-                            <th class="text-light">Producer</th>
-                            <th class="text-light">Price</th>
-                            <th class="text-light">Total Quantity</th>
-
+                            <th class="text-light">Category Name</th>
+                            <th class="text-light">Product Name</th>
+                            <th class="text-light">Information</th>
+                            <th class="text-light">Image</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @for ($i = 0; $i <= 100; $i++)
+                        @if (count($allproduct) > 0)
+                            <span hidden> {{ $i = 1 }}</span>
+                        @foreach($allproduct as $product)
                             <tr>
-                                <td data-title="Id">ID {{ $i }} </td>
-                                <td data-title="Name">Name Product {{ $i }}</td>
-                                <td data-title="Producer">Producer {{ $i }}</td>
-                                <td data-title="Price">Price {{ $i }}</td>
-                                <td data-title="TotalQuantity">Total Quantity {{ $i }}</td>
+                                <td>{{ $i }} </td>
+                                <td>{{ $product->category_name }}</td>
+                                <td>{{ $product->product_name }}</td>
+                                <td>{{ $product->information }}</td>
+                                <td>{{ $product->img }}</td>
                             </tr>
-                        @endfor
+                        @endforeach
                     </tbody>
                 </table>
             </div>
