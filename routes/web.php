@@ -92,6 +92,7 @@ Route::get('/category',[AdminController::class,'CategoryPage'])->name('category'
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 Route::get('/addcategory',[Category::class, 'ShowAddCategory']);
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
+Route::post('/allcategory',[Category::class,'EditCategory']);
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
