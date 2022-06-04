@@ -51,7 +51,7 @@
                                 <!-- Form Group (first name)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputFirstName">Product Name</label>
-                                    <select name="select_product" id="select_product" class="select_product">
+                                    <select name="select_product" id="select_product" class="form-control">
                                             @foreach ($select_product as $products)
                                                 <option value="{{$products->product_name}}" placeholder="Choose Category">
                                                     {{$products->product_name}}
@@ -62,7 +62,7 @@
                                 <!-- Form Group (last name)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputLastName">Supplier</label>
-                                    <select name="select_suppliers" id="select_suppliers" class="select_suppliers">
+                                    <select name="select_suppliers" id="select_suppliers" class="form-control">
                                         @foreach ($select_suppliers as $suppliers)
                                                 <option value="{{$suppliers->supplier_name }}" placeholder="Choose Category">
                                                     {{$suppliers->supplier_name }}
