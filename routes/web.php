@@ -89,12 +89,10 @@ Route::post('/editimportproduct',[Product::class, 'Editimportproduct']);
 
 // ADMIN CATEGORY
 Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
-Route::get('/addcategory',[Category::class, 'ShowAddCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
-
-// Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
+Route::get('/addcategory',[Category::class, 'ShowAddCategory']);
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
-// Route::post('/editcategory',[Category::class,'EditCategory']);
+Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
 Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
