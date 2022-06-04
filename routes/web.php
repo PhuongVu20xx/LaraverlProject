@@ -84,4 +84,6 @@ Route::get('/addcategory',[Category::class,'ShowCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
+Route::get('/editcategory',[Category::class,'EditCategory']);
+
 
