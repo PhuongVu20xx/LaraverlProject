@@ -44,16 +44,16 @@
             <!-- Account details card-->
             <div class="card mb-4">
                 <form action="">
-                    <div class="card-header">Insert Stock</div>
+                    <div class="card-header">Import Product</div>
                     <div class="card-body">
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Product Name</label>
+                                <label class="small mb-1" for="select_product">Product Name</label>
                                 <select name="select_product" id="select_product" class="form-control">
                                     @foreach ($select_product as $products)
-                                        <option value="{{ $products->product_name }}" placeholder="Choose Category">
+                                        <option value="{{ $products->product_name }}" >
                                             {{ $products->product_name }}
                                         </option>
                                     @endforeach
@@ -64,7 +64,7 @@
                                 <label class="small mb-1" for="inputLastName">Supplier</label>
                                 <select name="select_suppliers" id="select_suppliers" class="form-control">
                                     @foreach ($select_suppliers as $suppliers)
-                                        <option value="{{ $suppliers->supplier_name }}" placeholder="Choose Category">
+                                        <option value="{{ $suppliers->supplier_name }}" >
                                             {{ $suppliers->supplier_name }}
                                         </option>
                                     @endforeach
@@ -76,18 +76,57 @@
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="offersname">Offers Name</label>
-                                <input class="form-control" id="offersname" name="offersname" type="text" value="NULL">
+                                <select name="offersname" id="offersname" class="form-control">
+                                    @foreach ($select_offer as $offers)
+                                        <option value="{{ $offers->offer_name }}" >
+                                            {{ $offers->offer_name }}
+                                        </option>
+                                    @endforeach
+                                </select>                            
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="Status">Product Supplier Status</label>
-                                <input class="form-control" id="Status" type="text">
+                                <label class="small mb-1" for="quantity">Quantity</label>
+                                <input class="form-control" name="quantity" id="quantity" type="number" value="0" step="100">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="price">Price</label>
-                            <input class="form-control" id="price" name="price" type="email">
+                            <input class="form-control" id="price" name="price" type="text">
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (first name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="importdate">Import Date</label>
+                                <input class="form-control" id="importdate" name="importdate" type="date">
+
+                            </div>
+                            <!-- Form Group (last name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="employee">Employee</label>
+                                <select name="employee" id="employee" class="form-control">
+                                    @foreach ($select_manager as $manager)
+                                        <option value="{{ $manager->emp_name }}" >
+                                            {{ $manager->emp_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (first name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="totalpayment">Total Payment</label>
+                                <input class="form-control" id="totalpayment" name="totalpayment" type="text" disabled>
+                            </div>
+                            <!-- Form Group (last name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="note">Note</label>
+                                <input class="form-control" id="note" name="note" type="text" >
+                            </div>
                         </div>
                         <!-- Save changes button-->
                         <div class="button">

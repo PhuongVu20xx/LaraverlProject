@@ -73,11 +73,34 @@ class ProductController extends AdminController
 
     public function showImportProduct()
     {
+        $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
+        $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
+        $select_manager=DB::select(NameController::$SP_SELECT_ALL_MANAGERS);
+        $select_offer=DB::select(NameController::$SP_SELECT_ALL_OFFERS);
 
+        return view(NameController::$ADMIN_CONTROLLERS_IMPORT_PRODUCT,[
+            'select_product'=>$select_product,
+            'select_suppliers'=>$select_suppliers,
+            'select_manager'=>$select_manager,
+            'select_offer'=>$select_offer
+        ]);
     }
 
-    public function postImportProduct()
-    {
+    public function postImportProduct(Request $request)
+    {   
+        $productname    = $request->select_product;
+        $supplier       = $request->select_suppliers;
+        $offer          = $request->offersname;
+        $quantity       = $request->quantity;
+        $price          = $request->quantity;
+        $importdate     = $request->importdate;
+        $employee       = $request->employee;
+        $totalpayment   = $request->totalpayment;
+        $note           = $request->note;
+        $output = '';
+
+        DB::insert("exec sp_insert_import_product '$productname','$supplier','$quantity','$price',
+                                        '$importdate','$offer','$totalpayment','$employee','$note','','','0','$output'");
 
     }
 

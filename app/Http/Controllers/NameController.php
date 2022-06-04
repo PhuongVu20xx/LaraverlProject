@@ -88,7 +88,7 @@ static $ADMIN_FEEDBACK = "admin.feedback";
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
  static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
- static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.importproduct";
+ static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.addimportProduct";
 
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
@@ -102,6 +102,13 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
  //SUPPLIERS
 static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
+
+// EMPLOYEE
+static $SP_SELECT_ALL_MANAGERS = "exec sp_select_manager_name";
+
+// OFFER
+static $SP_SELECT_ALL_OFFERS = "exec sp_select_offers_details";
+
 
 
 
