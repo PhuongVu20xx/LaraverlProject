@@ -19,23 +19,23 @@ class ProductController extends AdminController
         $category_root=DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
         $category_name=DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
         $unit_name=DB::select(NameController::$SP_SELECT_ALL_UNIT);
-       
+
         return view(NameController::$ADMIN_CONTROLLERS_ADD_PRODUCT,['category_name'=>$category_name,'category_root'=>$category_root,'unit_name'=>$unit_name]);
     }
 
     public function SubmitProduct(Request $request)
     {
         $product_name=$request->product_name;
-        $category_name=$request->category_name;  
+        $category_name=$request->category_name;
         $unit_name=$request->unit_name;
         $information=$request->information;
         $img     = $request->file('img');
         $extension  = $request->file('img')->extension(); // Cắt đuôi file img
         $img_name= time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
         $img->move(public_path('upload.product'), $img_name);
-        
+
         $note='abc';
-    
+
 
         DB::insert("exec sp_insert_product '$product_name','$category_name','$unit_name','$information','$img_name','$note'");
 
@@ -47,28 +47,18 @@ class ProductController extends AdminController
         return view(NameController::$ADMIN_CONTROLLERS_EDIT_PRODUCT);
     }
 
-    public function product()
-    {
-        return view('products/product');
-    }
-
-    public function product_sweetgrocery()
-    {
-        return view('products/sweetgrocery');
-    }
-
     public function ShowImportStock()
     {
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
         $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
-       
+
         return view(NameController::$ADMIN_CONTROLLERS_IMPORT_STOCK,['select_product'=>$select_product,'select_suppliers'=>$select_suppliers]);
 
     }
 
     public function ImportStock()
     {
-       
+
     }
 
     public function create()

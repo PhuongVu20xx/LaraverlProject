@@ -56,7 +56,7 @@
                             <div class="row gx-3 mb-3">
                             <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="category-name" >Category Name</label>
-                                <input class="col-md-6" id="category-name" name="category-name" type="text" value="123">
+                                <input class="col-md-6" id="category-name" name="category-name" type="text" value={{ $name }}>
                             </div>
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
