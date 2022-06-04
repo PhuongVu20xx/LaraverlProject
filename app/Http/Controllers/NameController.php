@@ -62,11 +62,13 @@ class NameController
 
  //CONTROLLER
  static $ADMIN_CONTROLLERS_ADMIN_HOME_PAGE = "admin.adminhome";
- 
+
  //CATEGORY
  static $ADMIN_CONTROLLERS_CATEGORY_PAGE = "admin.category";
  static $ADMIN_CONTROLLERS_ADD_CATEGORY = "form.addcategory";
  static $ADMIN_CONTROLLERS_ALL_CATEGORY = "form.allcategory";
+ static $ADMIN_CONTROLLERS_Edit_CATEGORY = "form.editcategory";
+
  static $SP_SELECT_ROOT_CATEGORY_NAME = "exec sp_select_root_category_name";
  static $SP_SELECT_ALL_CATEGORY = "exec sp_select_all_category";
  static $SP_UPDATE_CATEGORY_STATUS = "exec sp_update_category_status";
@@ -83,11 +85,12 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
  //PRODUCT
  static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
- static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
  static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
  static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.importproduct";
+
+ static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
  //UNIT
  static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
@@ -102,6 +105,6 @@ static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
 
 
 
- 
+
 
 }
