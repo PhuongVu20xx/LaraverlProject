@@ -79,12 +79,13 @@ Route::post('/importstock',[Product::class,'ImportStock']);
 Route::post('/editstock',[Product::class,'EditStock']);
 Route::post('/allstock',[Product::class,'AllStock']);
 
-//  PRODUCT
+// ADMIN PRODUCT
 Route::get('/importproduct',[Product::class, 'showImportProduct']);
 Route::post('/importproduct',[Product::class, 'postImportProduct']);
 Route::post('/allimportproduct',[Product::class, 'Allimportproduct']);
 Route::post('/editimportproduct',[Product::class, 'Editimportproduct']);
 
+// ADMIN CATEGORY
 Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
 Route::get('/addcategory',[Category::class,'ShowCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
@@ -92,4 +93,5 @@ Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
-
+// ADMIN PAYMENT
+Route::get('/adminpayment',[AdminController::class,'PaymentPage'])->name('payment');

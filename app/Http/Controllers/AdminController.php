@@ -33,4 +33,9 @@ class AdminController extends BaseController
     {
         return view(NameController::$ADMIN_CONTROLLERS_PRODUCT_PAGE);
     }
+
+    public function PaymentPage()
+    {
+        return view(NameController::$ADMIN_CONTROLLERS_PRODUCT_PAGE);
+    }
 }

@@ -41,6 +41,7 @@ class NameController
  static $NAVIGATOR = "navigator";
  //O
  //P
+ static $PAYMENT = "payment";
  static $PRICE = "price";
  static $PRODUCER = "producer";
  static $PRODUCT = "product";
@@ -73,6 +74,21 @@ class NameController
  static $SP_SELECT_ALL_CATEGORY = "exec sp_select_all_category";
  static $SP_UPDATE_CATEGORY_STATUS = "exec sp_update_category_status";
 
+
+ //PRODUCT
+ static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
+ static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
+ static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
+ static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
+ static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.importproduct";
+
+ static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
+
+//PAYMENT
+static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "admin.payment";
+static $SP_SELECT_PAYMENT_MODE = "form.allpayment";
+
+
  //CUSTOMER
  static $ADMIN_CUSTOMER = "admin.customer";
 
@@ -81,16 +97,6 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
 //LATEST_ORDER
  static $ADMIN_LATEST_ORDER = "admin.lastestorder";
-
-
- //PRODUCT
- static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
- static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
- static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
- static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
- static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.addimportProduct";
-
- static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
  //UNIT
  static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
@@ -102,16 +108,5 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
  //SUPPLIERS
 static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
-
-// EMPLOYEE
-static $SP_SELECT_ALL_MANAGERS = "exec sp_select_manager_name";
-
-// OFFER
-static $SP_SELECT_ALL_OFFERS = "exec sp_select_offers_details";
-
-
-
-
-
 
 }

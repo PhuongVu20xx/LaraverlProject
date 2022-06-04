@@ -10,6 +10,12 @@
         <a class="text-decoration-none" href="/adminproduct">Product</a>
     </div>
     <div class="m-1">
+        <a class="text-decoration-none" href="/adminoffer">Promotion</a>
+    </div>
+    <div class="m-1">
+        <a class="text-decoration-none" href="/adminpayment">Payment</a>
+    </div>  
+    <div class="m-1">
         <a class="text-decoration-none" href="/customer">Customer</a>
     </div>
     <div class="m-1">
