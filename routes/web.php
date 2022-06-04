@@ -67,8 +67,8 @@ Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 
-Route::get('/adminproduct',[AdminController::class,'ProductPage']);
-Route::get('/editproduct',[AdminController::class,'EditProduct']);
+Route::get('/adminproduct',[Product::class,'ProductPage']);
+Route::get('/editproduct',[Product::class,'EditProduct']);
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
