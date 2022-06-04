@@ -97,12 +97,12 @@ Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
 Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
+Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
 Route::post('/addpayment',[Payment::class,'AddPayment']);
 
 // ADMIN OFFER
 Route::get('/adminoffer',[Offer::class,'ShowAllOffer']);
 Route::get('/addoffer',[Offer::class,'ShowAllOffer']);
-
 Route::post('/addoffer',[Offer::class,'AddOffer']);
 
 Route::get('/adminprofile',[AdminController::class,'showAdminProfile']);

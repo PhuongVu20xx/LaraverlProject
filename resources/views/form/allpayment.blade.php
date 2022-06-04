@@ -38,30 +38,24 @@
                         <div class="card-header">Add Payment</div>
                         <div class="card-body">
                             <!-- Form Group-->
-                            <div class="row gx-3 mb-3">
-                                <div class="col-md-1"></div>
-                                <label class="col-md-3 small mb-1" for="payment_mode_id">Payment Mode Id</label>
-                                <input class="col-md-6" id="payment_mode_id" name="payment_mode_id" type="text">
-                            </div>
+                            
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
-                            <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="payment_mode_name">Payment Mode Name</label>
-                                <input class="col-md-6" id="payment_mode_name" name="payment_mode_name" type="text">
+                                <input class="col-md-6 form-control" id="payment_mode_name" name="payment_mode_name" type="text">
                             </div>
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
-                                <div class="col-md-1"></div>
-                                <label class="col-md-3 small mb-1" for="offer_id">Offer Id</label>
-                                <select class="col-md-6" name="offer_id" id="offer_id">
-                                    @foreach ($offer_id as $offer)
-                                        <option value="{{ $offer->offer_id }}">
-                                            {{ $offer->offer_id }}
+                                <label class="col-md-3 small mb-1" for="offer_name">Offer Name</label>
+                                <select class="col-md-6 form-control" name="offer_name" id="offer_name">
+                                    @foreach ($offer_name as $offer)
+                                        <option value="{{ $offer->offer_name }}">
+                                            {{ $offer->offer_name }}
                                         </option>
                                     @endforeach
                                 </select>
                             </div>
-
+                            
                             <!-- Save changes button-->
                             <div class="button">
                                 <button class="btn" type="submit">Save</button>
@@ -86,27 +80,23 @@
                         <tr>
                             <th class="text-light">ID</th>
                             <th class="text-light">Payment Name</th>
-                            <th class="text-light">Offer ID</th>
+                            <th class="text-light">Offer Name</th>
+                            <th class="text-light">Edit</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @foreach ($allpayment as $payment)
-                            <tr>
-                                <td>
-                                    <span name ="allpayment" id="allpayment">{{ $payment->payment_mode_id }}</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        id="edit_category" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                    </svg>
-                                </td>
-                                <td name ="allpaymentname" id="allpaymentname">{{ $payment->payment_mode_id_name  }}</td>
-                                <td name ="offerid" id="offerid">{{ $payment->offer_id  }}</td>
-                            </tr>
-                        @endforeach
+                        @if (count($allpayment)>0)
+                            <span hidden>{{$i=1}}</span>
+                            @foreach ($allpayment as $payment)
+                                <tr>
+                                    <td>{{ $i++ }}</td>
+                                    <td>{{ $payment->payment_mode_name  }}</td>
+                                    <td>{{ $payment->offer_name  }}</td>
+                                    <td><i class="fa-solid fa-pen-to-square" style="color:black"></i></td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>
