@@ -66,6 +66,11 @@ class ProductController extends AdminController
 
     }
 
+    public function AllStock()
+    {
+
+    }
+
     public function create()
     {
         //
