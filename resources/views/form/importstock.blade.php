@@ -80,14 +80,18 @@
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="Status">Product Supplier Status</label>
-                                <input class="form-control" id="Status" type="text">
+                                <label class="small mb-1" for="price">Price</label>
+                                <input class="form-control" id="price" name="price" type="email">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
-                        <div class="mb-3">
-                            <label class="small mb-1" for="price">Price</label>
-                            <input class="form-control" id="price" name="price" type="email">
+                        <div class="row gx-3 mb-3">
+                            <div class="col-md-4"></div>
+                            <label class="col-md-3 small mb-1" for="Status">Product Supplier Status</label>
+                            <div class="form-check form-switch col-md-1">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
                         </div>
                         <!-- Save changes button-->
                         <div class="button">
