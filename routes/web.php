@@ -76,6 +76,7 @@ Route::get('/allproduct',[Product::class,'AllProduct']);
 
 Route::get('/importstock',[Product::class,'ShowImportStock']);
 Route::post('/importstock',[Product::class,'ImportStock']);
+Route::post('/editstock',[Product::class,'EditStock']);
 
 Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
 
