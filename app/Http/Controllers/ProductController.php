@@ -61,12 +61,32 @@ class ProductController extends AdminController
 
     }
 
+    public function AllStock()
+    {
+
+    }
+
+    public function EditStock()
+    {
+
+    }
+
     public function showImportProduct()
     {
 
     }
 
     public function postImportProduct()
+    {
+
+    }
+
+    public function Allimportproduct()
+    {
+
+    }
+
+    public function Editimportproduct()
     {
 
     }
