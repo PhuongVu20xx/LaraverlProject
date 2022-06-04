@@ -66,7 +66,7 @@
                                     <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                 </div>
                             </div>
-                            
+
                             <!-- Save changes button-->
                             <div class="button">
                                 <button class="btn" type="submit">Save</button>
@@ -76,7 +76,7 @@
             </div>
         <div class="col-md-2"></div>
     </div>
-        
+
 
         <section class="bg-white p-5">
             <div id="no-more-tables" class="content">
@@ -92,6 +92,7 @@
                                     <th class="text-light">Category Name</th>
                                     <th class="text-light">Category Root</th>
                                     <th class="text-light">Status</th>
+                                    <th class="text-light">Action</th>
                                 </tr>
                             </thead>
 
@@ -106,6 +107,9 @@
                                         @else
                                             <td><input type="checkbox" id="category_status" class="category_status"name="category_status"data-id={{$category->category_id}}></td>
                                         @endif
+                                        <td><div class="button">
+                                            <button class="btn" type="submit">Update</button>
+                                        </div></td>
                                     </tr>
                                 @endforeach
                             </tbody>
