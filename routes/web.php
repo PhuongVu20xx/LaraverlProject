@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController as Home;
 use App\Http\Controllers\ProductController as Product;
 use App\Http\Controllers\CategoryController as Category;
 use App\Http\Controllers\PaymentController as Payment;
+use App\Http\Controllers\OfferController as Offer;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +100,11 @@ Route::get('/allcategory',[Category::class,'ShowAllCategory']);
 Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
 Route::post('/addpayment',[Payment::class,'AddPayment']);
 
+// ADMIN OFFER
+Route::get('/adminoffer',[Offer::class,'ShowAllOffer']);
+Route::get('/addoffer',[Offer::class,'ShowAllOffer']);
+
+Route::post('/addoffer',[Offer::class,'AddOffer']);
+
+Route::get('/adminprofile',[AdminController::class,'showAdminProfile']);
+Route::post('/adminprofile',[AdminController::class,'postAdminProfile']);

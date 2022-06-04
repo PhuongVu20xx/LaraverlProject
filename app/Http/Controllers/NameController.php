@@ -40,6 +40,7 @@ class NameController
  static $NAME = "name";
  static $NAVIGATOR = "navigator";
  //O
+ static $OFFER = "offer";
  //P
  static $PAYMENT = "payment";
  static $PRICE = "price";
@@ -90,6 +91,11 @@ static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "form.allpayment";
 static $SP_SELECT_PAYMENT_MODE = "exec sp_select_payment_mode";
 static $SP_INSERT_PAYMENT_MODE = "exec sp_insert_payment_mode";
 
+//OFFER
+static $ADMIN_CONTROLLERS_OFFER_PAGE = "form.alloffer";
+static $SP_SELECT_OFFERS_DETAILS = "exec sp_select_offers_details";
+static $SP_INSERT_OFFERS_DETAILS = "exec sp_insert_offers_details";
+
 
  //CUSTOMER
  static $ADMIN_CUSTOMER = "admin.customer";
@@ -111,4 +117,8 @@ static $ADMIN_FEEDBACK = "admin.feedback";
  //SUPPLIERS
 static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
 
+
+// PROFILE
+static $ADMIN_CONTROLLERS_ADD_PROFILE = "admin.adminprofile";
+static $SP_SELECT_ALL_MANAGERS = "exec sp_select_manager_name";
 }

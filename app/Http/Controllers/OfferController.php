@@ -8,10 +8,25 @@ use Illuminate\Support\Facades\DB;
 
 class OfferController extends AdminController
 {
-    public function ShowAlOffer()
+    public function ShowAllOffer()
     {
-        $alloffer = DB::select(NameController::$SP_SELECT_PAYMENT_MODE);
-        return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment]);
+        $alloffer = DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
+        return view(NameController::$ADMIN_CONTROLLERS_OFFER_PAGE,['alloffer' => $alloffer]);
+    }
+
+    public function AddOffer(Request $request)
+    {
+        $offer_id = $request->offer_id;
+        $offer_name = $request->offer_name;
+        $offer_detail = $request->offer_details;
+        $offer_price = $request->offer_price;
+        $offer_start_date = $request->offer_start_date;
+        $offer_end_date = $request->offer_end_date;
+
+        $note = '';
+
+        DB::insert("exec sp_insert_offers_details '$offer_id','$offer_name','$offer_detail',$offer_price,'$offer_start_date','$offer_end_date','$note'");
+        return redirect()->action([OfferController::class,'ShowAllOffer']);
     }
 
     public function index()

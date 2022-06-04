@@ -34,5 +34,11 @@ class AdminController extends BaseController
         return view(NameController::$ADMIN_CONTROLLERS_PRODUCT_PAGE);
     }
 
+    public function showAdminProfile(){
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_PROFILE);
+    }
+    public function postAdminProfile(){
+     
+ }
    
 }

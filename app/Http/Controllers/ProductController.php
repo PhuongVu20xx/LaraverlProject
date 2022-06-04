@@ -76,7 +76,7 @@ class ProductController extends AdminController
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
         $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
         $select_manager=DB::select(NameController::$SP_SELECT_ALL_MANAGERS);
-        $select_offer=DB::select(NameController::$SP_SELECT_ALL_OFFERS);
+        $select_offer=DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
 
         return view(NameController::$ADMIN_CONTROLLERS_IMPORT_PRODUCT,[
             'select_product'=>$select_product,
