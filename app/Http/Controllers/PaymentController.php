@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\NameController;
+use Illuminate\Support\Facades\DB;
 
 class PaymentController extends AdminController
 {
     public function ShowAllPayment()
     {
         $allpayment = DB::select(NameController::$SP_SELECT_PAYMENT_MODE);
-        return view(NameController::$ADMIN_CONTROLLERS_ALL_CATEGORY,['allpayment' => $allpayment]);
+        return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment]);
     }
 
     public function index()

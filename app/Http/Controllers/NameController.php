@@ -85,8 +85,8 @@ class NameController
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
 //PAYMENT
-static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "admin.payment";
-static $SP_SELECT_PAYMENT_MODE = "form.allpayment";
+static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "form.allpayment";
+static $SP_SELECT_PAYMENT_MODE = "exec sp_select_payment_mode";
 
 
  //CUSTOMER

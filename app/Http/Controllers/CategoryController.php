@@ -17,9 +17,16 @@ class CategoryController extends AdminController
 
         $note = '';
 
-        DB::insert("exec sp_insert_category'$category_name','$category_root',$st,'$note'");
+        DB::insert("exec sp_insert_category '$category_name','$category_root',$st,'$note'");
 
         return redirect()->action([CategoryController::class,'ShowAllCategory']);
+    }
+
+    public function ShowaddCategory()
+    {
+        $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
+        $allcategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_CATEGORY,['categories'=>$categories,'allcategories' => $allcategories]);
     }
 
     public function ChangeCategoryStatus(request $request)

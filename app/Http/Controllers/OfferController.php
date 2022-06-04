@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\NameController;
+use Illuminate\Support\Facades\DB;
 
-class OfferController extends Controller
+class OfferController extends AdminController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function ShowAlOffer()
+    {
+        $alloffer = DB::select(NameController::$SP_SELECT_PAYMENT_MODE);
+        return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment]);
+    }
+
     public function index()
     {
         //

@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController as Home;
 use App\Http\Controllers\ProductController as Product;
 use App\Http\Controllers\CategoryController as Category;
+use App\Http\Controllers\PaymentController as Payment;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,11 +88,11 @@ Route::post('/editimportproduct',[Product::class, 'Editimportproduct']);
 
 // ADMIN CATEGORY
 Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
-Route::get('/addcategory',[Category::class,'ShowCategory']);
+Route::get('/addcategory',[Category::class,'ShowaddCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 Route::post('/addcategory',[Category::class, 'ChangeCategoryStatus']);
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
-Route::get('/adminpayment',[AdminController::class,'PaymentPage'])->name('payment');
+Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);

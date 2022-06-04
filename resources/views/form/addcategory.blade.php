@@ -77,6 +77,49 @@
             </div>
         <div class="col-md-2"></div>
     </div>
+
+    <section class="bg-white p-5">
+        <div id="no-more-tables" class="content">
+            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
+            <div class="table-responsive ">
+                <table id="myTable" class="table bg-white">
+                    <thead class="bg-dark">
+                        <tr>
+                            <th class="text-light">ID</th>
+                            <th class="text-light">Category Name</th>
+                            <th class="text-light">Category Root</th>
+                            <th class="text-light">Status</th>-
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (count($allcategories) > 0)
+                            <span hidden> {{ $i = 1 }}</span>
+                            @foreach ($allcategories as $category)
+                                @for ($i = 0; $i <= 100; $i++)
+                                    <tr>
+                                        <td>{{ $i++ }}</td>
+                                        <td>{{ $category->category_name }}</td>
+                                        <td>{{ $category->category_root }}</td>
+                                        
+                                        @if ($category->category_status == 1)
+                                                <td><input type="checkbox" id="category_status" class="category_status"
+                                                        name="category_status" data-id={{ $category->category_id }} checked></td>
+                                            @else
+                                                <td><input type="checkbox" id="category_status" class="category_status"
+                                                        name="category_status" data-id={{ $category->category_id }}></td>
+                                        @endif
+                                        
+                                    </tr>
+                                @endfor
+                            @foreach
+                        @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </Section>
 @endsection
 
 @section('footer')
