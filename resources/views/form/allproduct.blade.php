@@ -25,15 +25,7 @@
 @endsection
 
 @section('bodynav')
-    <div class="col-sm-12">
-        <ul class="nav nav-tabs">
-            <li><a class="text-decoration-none" href="/addproduct" data-toggle="tab">Add Product</a></li>
-            <li><a class="text-decoration-none" href="/editproduct" data-toggle="tab">Edit Product</a></li>
-            <li><a class="text-decoration-none" href="/allproduct" data-toggle="tab">All Product</a></li>
-            <li><a class="text-decoration-none" href="/importproduct" data-toggle="tab">Import Product</a></li>
-            <li><a class="text-decoration-none" href="/importstock" data-toggle="tab">Import Stock</a></li>
-        </ul>
-    </div>
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
@@ -57,13 +49,14 @@
                     <tbody>
                         @if (count($allproduct) > 0)
                             <span hidden> {{ $i = 1 }}</span>
-                            @foreach($allproduct as $product)
+                            @foreach ($allproduct as $product)
                                 <tr>
                                     <td>{{ $i++ }} </td>
                                     <td>{{ $product->category_id }}</td>
                                     <td>{{ $product->product_name }}</td>
                                     <td>{{ $product->information }}</td>
-                                    <td><img src="{{asset('upload.product')}}/{{ $product->img_name }}" id="img_product" alt=""></td>
+                                    <td><img src="{{ asset('upload.product') }}/{{ $product->img_name }}" id="img_product"
+                                            alt=""></td>
                                 </tr>
                             @endforeach
                         @endif
