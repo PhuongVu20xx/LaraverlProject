@@ -22,7 +22,7 @@ class CategoryController extends AdminController
         return redirect()->action([CategoryController::class,'ShowAllCategory']);
     }
 
-    public function ShowaddCategory()
+    public function ShowAddCategory()
     {
         $categories = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME);
         $allcategories = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);

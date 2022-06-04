@@ -14,6 +14,18 @@ class PaymentController extends AdminController
         return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment]);
     }
 
+    public function AddPayment()
+    {
+        $payment_name = $request->payment_mode_id_name;
+        $offer_id = $request->offer_id;
+
+        $note = '';
+
+        DB::insert("exec sp_insert_category '$payment_name','$offer_id','$note'");
+
+        return redirect()->action([PaymentController::class,'ShowAllPayment']);
+    }
+
     public function index()
     {
         //
