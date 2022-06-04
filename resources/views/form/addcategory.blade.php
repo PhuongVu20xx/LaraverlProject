@@ -25,7 +25,8 @@
     <div class="col-sm-12">
         <ul class="nav nav-tabs">
             <li><a class="text-decoration-none" href="/addcategory" data-toggle="tab">Add Category</a></li>
-            <li><a class="text-decoration-none" href="/allproduct" data-toggle="tab">All Category</a></li>
+            <li><a class="text-decoration-none" href="/allcategory" data-toggle="tab">All Category</a></li>
+            <li><a class="text-decoration-none" href="/editcategory" data-toggle="tab">Edit Category</a></li>
         </ul>
     </div>
 @endsection
@@ -76,54 +77,9 @@
             </div>
         <div class="col-md-2"></div>
     </div>
-
-
-        <section class="bg-white p-5">
-            <div id="no-more-tables" class="content">
-                <div class="clearfix"> </div>
-                <div class="clearfix"></div>
-                @if (count($allcategories) > 0)
-                    <span hidden> {{ $i = 1 }}</span>
-                    <div class="table-responsive ">
-                        <table id="myTable" class="table bg-white">
-                            <thead class="bg-dark">
-                                <tr>
-                                    <th class="text-light">ID</th>
-                                    <th class="text-light">Category Name</th>
-                                    <th class="text-light">Category Root</th>
-                                    <th class="text-light">Status</th>
-                                    <th class="text-light">Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                @foreach ($allcategories as $category)
-                                    <tr>
-                                        <th>{{ $i++ }}</th>
-                                        <td>{{ $category->category_name }}</td>
-                                        <td>{{ $category->category_root_name }}</td>
-                                        @if ($category->category_status == 1)
-                                            <td><input type="checkbox" id="category_status"class="category_status"name="category_status" data-id={{$category->category_id}} checked></td>
-                                        @else
-                                            <td><input type="checkbox" id="category_status" class="category_status"name="category_status"data-id={{$category->category_id}}></td>
-                                        @endif
-                                        <td><div class="button">
-                                            <button class="btn" type="submit">Update</button>
-                                        </div></td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                @endif
-            </div>
-        </section>
 @endsection
 
 @section('footer')
     @include('layouts.footer')
 @endsection
 
-@section('scripts')
-    <script src="{{ asset('js/admin/category_controller.js') }}"></script>
-@endsection

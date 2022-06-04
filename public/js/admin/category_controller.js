@@ -6,18 +6,41 @@ $(document).ready(() =>{
     });
 
 
-    $('#category_status').change(function(){
-    //$('$category_status').change(function(){
+    // $('#category_status').change(function(){
+    // //$('$category_status').change(function(){
+    //     var category_id = $('#category_status').attr('data-id');
+    //     var category_status = $('#category_status').prop('checked') == true ? 1:0;
+    //     //var category_status = $(this).is(':checked');
+    //     //var category_status = $("checkbox").is(":checked")
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "addcategory",
+    //         data:{
+    //             id : category_id,
+    //             status : category_status
+    //         },
+    //         success:function(data){
+    //             alert(data.success)}
+    //     })
+    //     .done(function()
+    //     {
+    //         arlet("Data saved")
+    //     })
+    // });
+
+    $('#edit_category').addEventListener('click', function () {
         var category_id = $('#category_status').attr('data-id');
-        var category_status = $('#category_status').prop('checked') == true ? 1:0;
+        //var category_status = $('#category_status').prop('checked') == true ? 1:0;
         //var category_status = $(this).is(':checked');
-        //var category_status = $("checkbox").is(":checked")
+        var category_status = $("checkbox").is(":checked");
+        var category_name = $('#category_name').val;
         $.ajax({
             method: "POST",
-            url: "addcategory",
+            url:  '/allcategory',
             data:{
                 id : category_id,
-                status : category_status
+                status : category_status,
+                name : category_name
             },
             success:function(data){
                 alert(data.success)}
@@ -28,73 +51,51 @@ $(document).ready(() =>{
         })
     });
 
-    $('#update_category').addEventListener('click', function (event) {
-        event.preventDefault();
-        var category_id = $('#category_status').attr('data-id');
-        //var category_status = $('#category_status').prop('checked') == true ? 1:0;
-        //var category_status = $(this).is(':checked');
-        var category_status = $("checkbox").is(":checked")
-        $.ajax({
-            method: "POST",
-            url:  "{{ url('/addcategory') }}",
-            data:{
-                id : category_id,
-                status : category_status
-            },
-            success:function(data){
-                alert(data.success)}
-        })
-        .done(function()
-        {
-            arlet("Data saved")
-        })
-    });
+    // $(".update_category").click(function(e){
 
-    $(".update_category").click(function(e){
+    //     e.preventDefault();
+    //     var category_id = $('#category_status').attr('data-id');
+    //     //var category_status = $('#category_status').prop('checked') == true ? 1:0;
+    //     //var category_status = $(this).is(':checked');
+    //     var category_status = $("checkbox").is(":checked")
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "addcategory",
+    //         data:{
+    //             id : category_id,
+    //             status : category_status
+    //         },
+    //         success:function(data){
+    //             alert(data.success)}
+    //     })
+    //     .done(function()
+    //     {
+    //         arlet("Data saved")
+    //     })
+    // })
 
-        e.preventDefault();
-        var category_id = $('#category_status').attr('data-id');
-        //var category_status = $('#category_status').prop('checked') == true ? 1:0;
-        //var category_status = $(this).is(':checked');
-        var category_status = $("checkbox").is(":checked")
-        $.ajax({
-            method: "POST",
-            url: "addcategory",
-            data:{
-                id : category_id,
-                status : category_status
-            },
-            success:function(data){
-                alert(data.success)}
-        })
-        .done(function()
-        {
-            arlet("Data saved")
-        })
-    })
+    // $("#update_category").on('submit', function(e){
 
-    $("#update_category").on('submit', function(e){
-
-        e.preventDefault();
-        var category_id = $('#category_status').attr('data-id');
-        //var category_status = $('#category_status').prop('checked') == true ? 1:0;
-        //var category_status = $(this).is(':checked');
-        var category_status = $("checkbox").is(":checked")
-        $.ajax({
-            method: "POST",
-            url: "addcategory",
-            data:{
-                id : category_id,
-                status : category_status
-            },
-            success:function(data){
-                alert(data.success)}
-        })
-        .done(function()
-        {
-            arlet("Data saved")
-        })
-    })
+    //     e.preventDefault();
+    //     var category_id = $('#category_status').attr('data-id');
+    //     //var category_status = $('#category_status').prop('checked') == true ? 1:0;
+    //     //var category_status = $(this).is(':checked');
+    //     var category_status = $("checkbox").is(":checked")
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "addcategory",
+    //         data:{
+    //             id : category_id,
+    //             status : category_status
+    //         },
+    //         success:function(data){
+    //             alert(data.success)}
+    //     })
+    //     .done(function()
+    //     {
+    //         arlet("Data saved")
+    //     })
+    // })
 })
 
 
