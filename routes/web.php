@@ -79,7 +79,9 @@ Route::post('/importstock',[Product::class,'ImportStock']);
 Route::post('/editstock',[Product::class,'EditStock']);
 Route::post('/allstock',[Product::class,'AllStock']);
 
-Route::post('/importproduct',[RegisterController::class, 'ImportProductInput']);
+//  PRODUCT
+Route::get('/importproduct',[Product::class, 'showImportProduct']);
+Route::post('/importproduct',[Product::class, 'postImportProduct']);
 
 Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
 Route::get('/addcategory',[Category::class,'ShowCategory']);
