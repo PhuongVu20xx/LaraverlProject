@@ -37,6 +37,11 @@ class HomeController extends AdminController
     {
         return view('pages/needhelp');
     }
+
+    public function product()
+    {
+        return view('products/product');
+    }
  
     /**
      * Display the specified resource.

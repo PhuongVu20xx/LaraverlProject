@@ -76,6 +76,7 @@ class NameController
 
 
  //PRODUCT
+ 
  static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";

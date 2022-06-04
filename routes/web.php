@@ -34,7 +34,7 @@ Route::get('/shipping',[Home::class,'shipping']);
 Route::get('/neaoedhelp',[Home::class,'needhelp']);
 
 // PRODUCT
-Route::get('/product',[Product::class,'product']);
+Route::get('/product',[Home::class,'product']);
 Route::get('/product/sweet-grocery',[Product::class,'product_sweetgrocery']);
 
 // CART
