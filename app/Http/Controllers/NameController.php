@@ -66,7 +66,6 @@ class NameController
  static $ADMIN_CONTROLLERS_ADMIN_HOME_PAGE = "admin.adminhome";
 
  //CATEGORY
- static $ADMIN_CONTROLLERS_CATEGORY_PAGE = "admin.category";
  static $ADMIN_CONTROLLERS_ADD_CATEGORY = "form.addcategory";
  static $ADMIN_CONTROLLERS_ALL_CATEGORY = "form.allcategory";
  static $ADMIN_CONTROLLERS_Edit_CATEGORY = "form.editcategory";
@@ -77,8 +76,6 @@ class NameController
 
 
  //PRODUCT
- 
- static $ADMIN_CONTROLLERS_PRODUCT_PAGE = "admin.product";
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
  static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";

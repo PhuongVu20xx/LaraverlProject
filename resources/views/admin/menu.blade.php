@@ -4,10 +4,10 @@
         <a class="text-decoration-none" href="/home">Home</a>
     </div>
     <div class="m-1">
-        <a class="text-decoration-none" href="/category">Category</a>
+        <a class="text-decoration-none" href="/addcategory">Category</a>
     </div>
     <div class="m-1">
-        <a class="text-decoration-none" href="/adminproduct">Product</a>
+        <a class="text-decoration-none" href="/addproduct">Product</a>
     </div>
     <div class="m-1">
         <a class="text-decoration-none" href="/adminoffer">Promotion</a>

@@ -2,7 +2,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/form/allpayment.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form/alloffer.css') }}">
     <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
