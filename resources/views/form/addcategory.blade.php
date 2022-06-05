@@ -38,7 +38,7 @@
                              <div class="row gx-3 mb-3">
                                 <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="category-root">Category Root</label>
-                                <select class="col-md-6" name="category_root" id="category">
+                                <select class="col-md-6" name="category_root" id="category_root">
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->category_name }}" placeholder="Choose category">
                                             {{ $category->category_name }}
@@ -49,22 +49,22 @@
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
                             <div class="col-md-1"></div>
-                                <label class="col-md-3 small mb-1" for="category-name">Category Name</label>
-                                <input class="col-md-6" id="category-name" name="category-name" type="text">
+                                <label class="col-md-3 small mb-1" for="category_name">Category Name</label>
+                                <input class="col-md-6" id="category_name" name="category_name" type="text">
                             </div>
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
                                 <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="status-category">Status Category</label>
                                 <div class="form-check form-switch col-md-6">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
                                     <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                 </div>
                             </div>
 
                             <!-- Save changes button-->
-                            <div class="button">
-                                <button class="btn" type="submit">Save</button>
+                            <div id="submit_buttom"class="button">
+                                <button id="btn_submit"class="btn" >Save</button>
                             </div>
                         </div>
                 </form>
@@ -78,3 +78,6 @@
     @include('layouts.footer')
 @endsection
 
+@section('scripts')
+<script src="{{ asset('js/admin/addcategory.js') }}"></script>
+@endsection
