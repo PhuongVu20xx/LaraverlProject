@@ -1,13 +1,29 @@
-<div class="col-sm-12">
-    <ul class="nav nav-tabs">
-        <li><a class="text-decoration-none" href="/addproduct" data-toggle="tab">Add Product</a></li>
-        <li><a class="text-decoration-none" href="/allproduct" data-toggle="tab">All Product</a></li>
-        <li><a class="text-decoration-none" href="/editproduct" data-toggle="tab">Edit Product</a></li>
-        <li><a class="text-decoration-none" href="/importstock" data-toggle="tab">Import Stock</a></li>
-        <li><a class="text-decoration-none" href="/allstock" data-toggle="tab">All Stock</a></li>
-        <li><a class="text-decoration-none" href="/editstock" data-toggle="tab">Edit Stock</a></li>
-        <li><a class="text-decoration-none" href="/importproduct" data-toggle="tab">Add Import Product</a></li>
-        <li><a class="text-decoration-none" href="/allimportproduct" data-toggle="tab">All Import Product</a></li>
-        <li><a class="text-decoration-none" href="/editimportproduct" data-toggle="tab">Edit Import Product</a></li>
-    </ul>
+    <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
+<div class=" dropdown">
+    <button class="nut_dropdown">PRODUCT</button>
+    <div class="noidung_dropdown">
+        <a href="/addproduct">Add Product</a>
+        <a href="/allproduct">All Product</a>
+        <a href="/editproduct">Edit Product</a>
+        <a href="/importproduct">Add Import Product</a>
+        <a href="/allimportproduct">All Import Product</a>
+        <a href="/editimportproduct">Edit Import Product</a>
+    </div>
+</div>
+<div class=" dropdown">
+    <button class="nut_dropdown">STOCK</button>
+    <div class="noidung_dropdown">
+        <a href="/importstock">Import Stock</a>
+        <a href="/allstock">All Stock</a>
+        <a href="/editstock">Edit Stock</a>
+    </div>
+</div>
+<div class=" dropdown">
+    <button class="nut_dropdown">CATEGORY</button>
+    <div class="noidung_dropdown">
+        <a href="/allcategory">All Category</a>
+        <a href="/addcategory">Add Category</a>
+        <a href="/editcategory">Edit Category</a>
+
+    </div>
 </div>

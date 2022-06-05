@@ -21,7 +21,7 @@
 @endsection
 
 @section('bodynav')
-    
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')

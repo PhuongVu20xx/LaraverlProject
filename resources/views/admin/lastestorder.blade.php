@@ -25,6 +25,10 @@
     </div>
 @endsection
 
+@section('bodynav')
+    @include('form.formNavigator')
+@endsection
+
 @section('bodycontent')
     <section class="bg-white p-5">
         <div id="no-more-tables" class="content">

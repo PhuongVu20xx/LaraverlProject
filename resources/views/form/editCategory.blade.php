@@ -22,13 +22,7 @@
 @endsection
 
 @section('bodynav')
-    <div class="col-sm-12">
-        <ul class="nav nav-tabs">
-            <li><a class="text-decoration-none" href="/addcategory" data-toggle="tab">Add Category</a></li>
-            <li><a class="text-decoration-none" href="/allcategory" data-toggle="tab">All Category</a></li>
-            <li><a class="text-decoration-none" href="/editcategory" data-toggle="tab">Edit Category</a></li>
-        </ul>
-    </div>
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
