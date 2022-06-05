@@ -85,7 +85,6 @@ Route::post('/allstock',[Product::class,'AllStock']);
 
 Route::get('/importproduct',[Product::class, 'showImportProduct']);
 Route::post('/importproduct',[Product::class, 'postImportProduct']);
-Route::post('/allimportproduct',[Product::class, 'Allimportproduct']);
 Route::post('/editimportproduct',[Product::class, 'Editimportproduct']);
 
 // ADMIN CATEGORY

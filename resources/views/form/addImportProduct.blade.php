@@ -35,7 +35,8 @@
         <div class="col-md-8" id="insertstock-form">
             <!-- Account details card-->
             <div class="card mb-4">
-                <form action="">
+                <form action="/importproduct" method="POST">
+                    {{csrf_field()}}
                     <div class="card-header">Import Product</div>
                     <div class="card-body">
                         <!-- Form Row-->
