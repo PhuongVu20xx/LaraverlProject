@@ -28,10 +28,11 @@ i{
     color: #fff;
     cursor: pointer;
 }
+
 .logo{
-    width: 4%;
-    height: 60%;
-    margin-left: 50px;
+    width: 55px;
+    height: 55px;
+    margin-left: 55px;
     border-radius: 1000px;
 }
 header ul{

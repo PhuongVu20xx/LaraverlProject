@@ -56,7 +56,7 @@
                                     <label class="small mb-1" for="gender">Gender</label>
                                     <input class="form-control" id="gender" type="text"  >
                                 </div>
-                                <!-- Form Group (first name)-->
+                                <!-- Form Group (Birthday)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="birthday">Birthday</label>
                                     <input class="form-control" id="birthday" type="date" name="birthday" placeholder="Enter your birthday" value="">
@@ -65,12 +65,12 @@
                             </div>
                             <!-- Form Row-->
                             <div class="row gx-3 mb-3">
-                                <!-- Form Group (organization name)-->
+                                <!-- Form Group (Position)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="position">Position</label>
                                     <input class="form-control" id="position" type="text"  value="" disabled>
                                 </div>
-                                <!-- Form Group (location)-->
+                                <!-- Form Group (Depatment)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="depatment">Depatment</label>
                                     <input class="form-control" id="depatment" type="text"  disabled>
@@ -88,7 +88,7 @@
                                     <label class="small mb-1" for="phonenumber">Phone number</label>
                                     <input class="form-control" id="phonenumber" type="tel"  value="">
                                 </div>
-                                <!-- Form Group (birthday)-->
+                                <!-- Form Group (Addrees)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="addrees">Addrees</label>
                                     <input class="form-control" id="addrees" type="text" name="addrees" >
