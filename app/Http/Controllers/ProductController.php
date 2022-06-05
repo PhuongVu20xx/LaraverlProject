@@ -61,6 +61,9 @@ class ProductController extends AdminController
         $extension  = $request->file('img')->extension(); // Cắt đuôi file img
         $img_name= time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
         $img->move(public_path('upload.product'), $img_name);
+        $note = 'abc';
+
+        DB::insert("exec sp_insert_product '$pro_name','$cate_name','$unit','$information','$img_name','$note'");
 
     }
 
@@ -118,11 +121,6 @@ class ProductController extends AdminController
 
         DB::insert("exec sp_insert_import_product '$productname','$supplier','$quantity','$price',
                                         '$importdate','$offer','$totalpayment','$employee','$note','','','0','$output'");
-
-    }
-
-    public function Allimportproduct()
-    {
 
     }
 
