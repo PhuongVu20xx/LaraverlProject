@@ -29,7 +29,8 @@
 .nut_dropdown {
   background-color: #2c2c2c;
   color: white;
-  padding: 16px;
+  height: 50px;
+  padding: 12px;
   font-size: 16px;
   border: none;
 }
@@ -60,13 +61,13 @@
 }
 
 /* thay đổi màu background khi hover vào đường dẫn */
-.noidung_dropdown a:hover {background-color: #ddd;}
+.noidung_dropdown a:hover {background-color: #ccc;}
 
 /* hiển thị nội dung dropdown khi hover */
 .dropdown:hover .noidung_dropdown {display: block;}
 
 /* Thay đổi màu background cho nút khi được hover */
-.dropdown:hover .nut_dropdown {background-color: #00bfff;}
+.dropdown:hover .nut_dropdown {background-color: #6a6565;}
 
 /*Dùng Để hiển thị nội dung*/
 .hienThi {display:block;}

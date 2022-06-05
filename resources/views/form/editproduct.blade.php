@@ -1,6 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('css/form/importstock.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
@@ -30,20 +31,21 @@
 @section('bodycontent')
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-xl-8" id="addproduct-form">
+        <div class="col-xl-8" id="editproduct-form">
             <!-- Account details card-->
             <div class="card mb-4">
-                <div class="card-header">Add Product</div>
+                <form action="/editproduct" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                <div class="card-header">Edit Product</div>
                 <div class="card-body">
-
                     <!-- Form Row-->
                     <div class="row gx-3 mb-3">
                         <!-- Form Group (first name)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputFirstName">Category Root</label>
-                            <select name="category_root" id="category_root" class="form-control">
-                                @foreach ($category_root as $category)
-                                    <option value="{{ $category->category_name }}" placeholder="Choose Category">
+                            <label class="small mb-1" for="category_name">Category Name</label>
+                            <select name="category_name" id="category_name" class="form-control ">
+                                @foreach ($category_name as $category)
+                                    <option value="{{ $category->category_name }}">
                                         {{ $category->category_name }}
                                     </option>
                                 @endforeach
@@ -51,31 +53,17 @@
                         </div>
                         <!-- Form Group (last name)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputLastName">Category Name</label>
-                            <select name="category_name" id="category_name" class="form-control ">
-                                @foreach ($category_name as $category)
-                                    <option value="{{ $category->category_name }}" placeholder="Choose Category">
-                                        {{ $category->category_name }}
-                                    </option>
-                                @endforeach
-                            </select>
+                            <label class="small mb-1" for="product_name">Product Name</label>
+                            <input class="form-control" id="product_name" type="text" name="product_name">
                         </div>
                     </div>
                     <!-- Form Row-->
                     <div class="row gx-3 mb-3">
                         <!-- Form Group-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="product_name">Product Name</label>
-                            <input class="form-control" id="product_name" type="text" placeholder="Enter Product Name">
-                        </div>
-                        <!-- Form Group -->
-                        <div class="col-md-6">
                             <label class="small mb-1" for="information">Information</label>
-                            <input class="form-control" id="information" type="text" placeholder="Enter Information">
+                            <input class="form-control" id="information" type="text" name="information" >
                         </div>
-                    </div>
-                    <!-- Form Row-->
-                    <div class="row gx-3 mb-3">
                         <!-- Form Group -->
                         <div class="col-md-6">
                             <label class="small mb-1" for="unit_name">Unit</label>
@@ -87,11 +75,15 @@
                                 @endforeach
                             </select>
                         </div>
-                        <!-- Form Group-->
-                        <div class="col-md-6">
+                    </div>
+                    <!-- Form Row-->
+                    <div class=" gx-3 mb-3">
+                        <!-- Form Group -->
+                        <div class="">
                             <label class="small mb-1" for="img">Image</label>
                             <input type="file" name="img" id="img" class="form-control">
                         </div>
+
                     </div>
                     <!-- Save changes button-->
                     <div class="button">

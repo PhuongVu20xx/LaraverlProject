@@ -44,7 +44,24 @@ class ProductController extends AdminController
     }
     public function EditProduct()
     {
-        return view(NameController::$ADMIN_CONTROLLERS_EDIT_PRODUCT);
+        $category_root  = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME) ;
+        $category_name  = DB::select(NameController::$SP_SELECT_ALL_CATEGORY);
+        $unit_name      = DB::select(NameController::$SP_SELECT_ALL_UNIT);
+
+        return view(NameController::$ADMIN_CONTROLLERS_EDIT_PRODUCT,['category_root'=>$category_root,
+                                                                     'category_name'=>$category_name,
+                                                                     'unit_name'    =>$unit_name]);
+    }
+    public function PostEditProduct(Request $request){
+        $cate_name = $request->category_name;
+        $pro_name = $request->product_name;
+        $information = $request->information;
+        $unit = $request->unit_name;
+        $img     = $request->file('img');
+        $extension  = $request->file('img')->extension(); // Cắt đuôi file img
+        $img_name= time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
+        $img->move(public_path('upload.product'), $img_name);
+
     }
 
     public function ShowImportStock()
