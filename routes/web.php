@@ -32,7 +32,7 @@ Route::get('/', [Home::class,'landingpage'])->name('landingpage');
 Route::get('/about',[Home::class,'about']);
 Route::get('/contact',[Home::class,'contact']);
 Route::get('/shipping',[Home::class,'shipping']);
-Route::get('/neaoedhelp',[Home::class,'needhelp']);
+Route::get('/needhelp',[Home::class,'needhelp']);
 
 // PRODUCT
 Route::get('/product',[Home::class,'product']);

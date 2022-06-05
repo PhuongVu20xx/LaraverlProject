@@ -1,9 +1,48 @@
-$(document).ready(() =>{
+$(document).ready(() => {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+});
+
+function edit(event) {
+    var item = event.target;
+    var category_id = $(item).attr("data-id");
+    var category_status = $("input[id='category_status'][data-id=" + category_id + "]").prop('checked') == true ? 1 : 0;
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: "POST",
+        url: '/allcategory',
+        data: {
+            id: category_id,
+            status: category_status
+        },
+        success: function () {
+            //window.open('/editcategory', '_blank');
+            //loadDoc();
+        }
+    })
+}
+
+
+
+
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "editcategory");
+    xhttp.send();
+  }
+// $(document).ready(() => {
+//     $.ajaxSetup({
+//         headers: {
+//             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//         }
+//     });
 
 
     // $('#category_status').change(function(){
@@ -28,28 +67,27 @@ $(document).ready(() =>{
     //     })
     // });
 
-    $('#edit_category').addEventListener('click', function () {
-        var category_id = $('#category_status').attr('data-id');
-        //var category_status = $('#category_status').prop('checked') == true ? 1:0;
-        //var category_status = $(this).is(':checked');
-        var category_status = $("checkbox").is(":checked");
-        var category_name = $('#category_name').val;
-        $.ajax({
-            method: "POST",
-            url:  '/allcategory',
-            data:{
-                id : category_id,
-                status : category_status,
-                name : category_name
-            },
-            success:function(data){
-                alert(data.success)}
-        })
-        .done(function()
-        {
-            arlet("Data saved")
-        })
-    });
+    // $('#edit_category').click(function (event) {
+    //     var item = event.target;
+    //     var idc = $(item).parent("svg").attr("data-id");
+
+    //     var category_status = $("input[id='category_status'][data-id=" + idc + "]").prop('checked') == true ? 1 : 0;
+    //     $.ajax({
+    //         method: "POST",
+    //         url: '/allcategory',
+    //         data: {
+    //             id: idc,
+    //             status: category_status,
+    //             name: category_name
+    //         },
+    //         success: function (data) {
+    //             alert(data.success)
+    //         }
+    //     })
+    //         .done(function () {
+    //             arlet("Data saved")
+    //         })
+    // });
 
     // $(".update_category").click(function(e){
 
@@ -96,7 +134,7 @@ $(document).ready(() =>{
     //         arlet("Data saved")
     //     })
     // })
-})
+//})
 
 
 // function attachEventsFid2() {
