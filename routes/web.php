@@ -74,7 +74,7 @@ Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
 Route::get('/editproduct',[Product::class,'EditProduct']);
-
+Route::post('/editproduct',[Product::class,'PostEditProduct']);
 
 
 Route::get('/importstock',[Product::class,'ShowImportStock']);
@@ -93,7 +93,7 @@ Route::get('/addcategory',[Category::class, 'ShowAddCategory']);
 Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
-Route::post('/allcategory',[Category::class,'EditCategory']);
+Route::post('/allcategory',[Category::class,'RequestEditCategory'])->name('allcategory');
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
