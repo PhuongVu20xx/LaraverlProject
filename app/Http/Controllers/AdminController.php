@@ -26,10 +26,21 @@ class AdminController extends BaseController
 
 
     public function showAdminProfile(){
-        return view(NameController::$ADMIN_CONTROLLERS_ADD_PROFILE);
+        $admins = DB::select(NameController::$SP_SELECT_ALL_MANAGERS);
+
+        return view(NameController::$ADMIN_CONTROLLERS_ADD_PROFILE, ['admins'=>$admins]);
     }
-    public function postAdminProfile(){
-     
+    public function postAdminProfile(Request $request){
+     $fullname = $request->fullname;
+     $gendder = $request->gender;
+     $birthday = $request->birthday;
+     $position = $request->position;
+     $depament = $request->depament;
+     $emailaddress = $request->email;
+     $phonenumber = $request->phonenumber;
+     $address = $request->address;
+
+    
  }
    
 }
