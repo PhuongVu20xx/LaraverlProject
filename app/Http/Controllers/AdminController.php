@@ -24,15 +24,6 @@ class AdminController extends BaseController
         return view(NameController::$ADMIN_CONTROLLERS_ADMIN_HOME_PAGE);
     }
 
-    public function CategoryPage()
-    {
-        return view(NameController::$ADMIN_CONTROLLERS_CATEGORY_PAGE);
-    }
-
-    public function ProductPage()
-    {
-        return view(NameController::$ADMIN_CONTROLLERS_PRODUCT_PAGE);
-    }
 
     public function showAdminProfile(){
         return view(NameController::$ADMIN_CONTROLLERS_ADD_PROFILE);

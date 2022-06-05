@@ -18,7 +18,7 @@ class OfferController extends AdminController
     {
         $offer_id = $request->offer_id;
         $offer_name = $request->offer_name;
-        $offer_detail = $request->offer_details;
+        $offer_detail = $request->offer_detail;
         $offer_price = $request->offer_price;
         $offer_start_date = $request->offer_start_date;
         $offer_end_date = $request->offer_end_date;

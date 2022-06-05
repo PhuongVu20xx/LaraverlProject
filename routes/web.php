@@ -69,11 +69,12 @@ Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 
-Route::get('/adminproduct',[Product::class,'ProductPage']);
-Route::get('/editproduct',[Product::class,'EditProduct']);
+// ADMIN PRODUCT
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
+Route::get('/editproduct',[Product::class,'EditProduct']);
+
 
 
 Route::get('/importstock',[Product::class,'ShowImportStock']);
@@ -81,28 +82,28 @@ Route::post('/importstock',[Product::class,'ImportStock']);
 Route::post('/editstock',[Product::class,'EditStock']);
 Route::post('/allstock',[Product::class,'AllStock']);
 
-// ADMIN PRODUCT
+
 Route::get('/importproduct',[Product::class, 'showImportProduct']);
 Route::post('/importproduct',[Product::class, 'postImportProduct']);
 Route::post('/allimportproduct',[Product::class, 'Allimportproduct']);
 Route::post('/editimportproduct',[Product::class, 'Editimportproduct']);
 
 // ADMIN CATEGORY
-Route::get('/category',[AdminController::class,'CategoryPage'])->name('category');
-Route::post('/addcategory',[Category::class, 'AddNewCategory']);
 Route::get('/addcategory',[Category::class, 'ShowAddCategory']);
+Route::post('/addcategory',[Category::class, 'AddNewCategory']);
+
 Route::get('/allcategory',[Category::class,'ShowAllCategory']);
 Route::post('/allcategory',[Category::class,'EditCategory']);
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
 Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
+Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
 Route::post('/addpayment',[Payment::class,'AddPayment']);
 
 // ADMIN OFFER
 Route::get('/adminoffer',[Offer::class,'ShowAllOffer']);
 Route::get('/addoffer',[Offer::class,'ShowAllOffer']);
-
 Route::post('/addoffer',[Offer::class,'AddOffer']);
 
 Route::get('/adminprofile',[AdminController::class,'showAdminProfile']);

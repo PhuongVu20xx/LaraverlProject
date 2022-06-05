@@ -2,7 +2,8 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/form/allpayment.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form/alloffer.css') }}">
+    <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
@@ -98,6 +99,7 @@
                             <th class="text-light">Offer Price</th>
                             <th class="text-light">Start Date</th>
                             <th class="text-light">End Date</th>
+                            <th class="text-light">Edit</th>
                         </tr>
                     </thead>
 
@@ -105,20 +107,26 @@
                         @foreach ($alloffer as $offer)
                             <tr>
                                 <td>
-                                    <span name ="offer_id" id="offer_id">{{ $offer->offer_id }}</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        id="edit_category" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                    </svg>
+                                    {{ $offer->offer_id }}
                                 </td>
-                                <td name ="offer_name" id="offer_name">{{ $offer->offer_name }}</td>
-                                <td name ="offer_details" id="offer_details">{{ $offer->offer_details  }}</td>
-                                <td name ="offer_price" id="offer_price">{{ $offer->offer_price  }}</td>
-                                <td name ="offer_start_date" id="offer_start_date">{{ $offer->offer_start_date  }}</td>
-                                <td name ="offer_end_date " id="offer_end_date ">{{ $offer->offer_end_date  }}</td>
+                                <td>
+                                    {{ $offer->offer_name }}
+                                </td>
+                                <td>
+                                    {{ $offer->offer_details  }}
+                                </td>
+                                <td>
+                                    {{ $offer->offer_price  }}
+                                </td>
+                                <td>
+                                    {{ $offer->offer_start_date  }}
+                                </td>
+                                <td>
+                                    {{ $offer->offer_end_date  }}
+                                </td>
+                                <td>
+                                    <i class="fa-solid fa-pen-to-square" style="color:black"></i>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
