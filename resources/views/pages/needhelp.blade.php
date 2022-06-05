@@ -7,6 +7,7 @@
 
 @section('body')
 <link rel="stylesheet" href="{{asset('css/needhelp.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
 <section class="needhelp">
     <div class="menu-container">
@@ -44,10 +45,10 @@
     </div>
 
     <div class="content-container">
-        <h1>VHHP'S HELP</h1>
+        <h1>HELP CENTER</h1>
         <div id="services">
             <div class="title">Services</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><h5>Door-To-Door Delivery</h5></li>
                     <li><p>We offer great customer services to make your shopping experience more enjoyable and convenient. Free delivery for a bill from 1,000,000 VND with shipping distance of 10km and below.</p></li>
@@ -64,7 +65,7 @@
 
         <div id="payment-methods">
             <div class="title">Payment Methods</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
@@ -78,7 +79,7 @@
 
         <div id="return-refund">
             <div class="title">Return & Refund Policy</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
@@ -92,7 +93,7 @@
 
         <div id="delivery">
             <div class="title">Delivery Policy</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
@@ -106,7 +107,7 @@
 
         <div id="faq">
             <div class="title">FAQ</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
@@ -120,7 +121,7 @@
 
         <div id="terms-conditions">
             <div class="title">Terms & Conditions</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
@@ -134,7 +135,7 @@
 
         <div id="privacy">
             <div class="title">Privacy Policy</div>
-            <div>
+            <div class="content">
                 <ul>
                     <li><p>- Step 1:  Select the product you want to buy => Click cart icon or “Add to cart”.</p></li>
                     <li><p>- Step 2: After choosing items, please check price and quantity of items carefully before clicking “Process to check out”.</p></li>
