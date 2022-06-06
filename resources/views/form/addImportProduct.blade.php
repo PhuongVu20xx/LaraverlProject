@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="{{ asset('css/form/importstock.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
-@endsection
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}"> -->
+@endsection         
 
 @section('header')
     @include('layouts.header')
@@ -80,13 +80,13 @@
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="quantity">Quantity</label>
-                                <input class="form-control" name="quantity" id="quantity" type="number" value="0" step="100">
+                                <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="100">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="price">Price</label>
-                            <input class="form-control" id="price" name="price" type="text">
+                            <input class="form-control" onchange="sum()" id="price" name="price" step="10000" type="number">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
@@ -175,4 +175,5 @@
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/tableadminfeedback.js') }}"></script>
+    <script src="{{ asset('js/admin/importproduct.js') }}"></script>
 @endsection
