@@ -68,8 +68,8 @@
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="offersname">Offers Name</label>
-                                <select name="offersname" id="offersname" class="form-control">
+                                <label class="small mb-1" for="offers_name">Offers Name</label>
+                                <select name="offers_name" id="offers_name" class="form-control">
                                     @foreach ($select_offer as $offers)
                                         <option value="{{ $offers->offer_name }}" >
                                             {{ $offers->offer_name }}
@@ -80,13 +80,13 @@
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="quantity">Quantity</label>
-                                <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="100">
+                                <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="1">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="price">Price</label>
-                            <input class="form-control" onchange="sum()" id="price" name="price" step="10000" type="number">
+                            <input class="form-control" onchange="sum()" id="price" name="price" step="500" type="text">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
@@ -98,8 +98,8 @@
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="employee">Employee</label>
-                                <select name="employee" id="employee" class="form-control">
+                                <label class="small mb-1" for="emp_name">Employee</label>
+                                <select name="emp_name" id="emp_name" class="form-control">
                                     @foreach ($select_manager as $manager)
                                         <option value="{{ $manager->emp_name }}" >
                                             {{ $manager->emp_name }}
@@ -113,7 +113,7 @@
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="totalpayment">Total Payment</label>
-                                <input class="form-control" id="totalpayment" name="totalpayment" type="text" disabled>
+                                <input class="form-control" id="totalpayment" name="totalpayment" type="decimal" disabled >
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">

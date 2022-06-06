@@ -67,6 +67,29 @@ class ProductController extends AdminController
 
     }
 
+    public function SubmitImportProduct(Request $request)
+    {
+        $product_name=$request->select_product;
+        $supplier=$request->select_suppliers;
+        $quantity=$request->quantity;
+        $price=$request->price;
+        $importdate=$request->importdate; 
+        $offer_name=$request->offer_sname;
+        $totalpayment->$request->totalpayment;
+        $emp_name=$request->emp_name;      
+        $note=$request->note;
+        $return_date='';
+        $return_cause='';
+        $return_status='';
+        $note_admin='';
+
+
+        DB::insert("exec sp_insert_import_product '$select_product','$select_suppliers',$quantity,$price,'$importdate','$offers_name','$totalpayment','$emp_name','$note','$return_date','$return_cause','$return_status','$note_admin'");
+
+        return redirect()->action([ProductController::class,'AllProduct']);
+
+    }
+
     public function ShowImportStock()
     {
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
