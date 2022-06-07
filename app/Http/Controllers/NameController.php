@@ -79,11 +79,15 @@ class NameController
  static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
  static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
+ static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
+
  static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.addImportProduct";
  static $ADMIN_CONTROLLERS_EDIT_IMPORT = "form.editImportProduct";
 
-
- static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
+ static $ADMIN_CONTROLLERS_IMPORT_STOCK = "form.importstock";
+ static $SP_SELECT_ALL_STOCK = "exec sp_select_stock";
+ static $SP_INSERT_STOCK = "exec sp_insert_stock";
+ 
 
 //PAYMENT
 static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "form.allpayment";
@@ -107,11 +111,6 @@ static $ADMIN_FEEDBACK = "admin.feedback";
 
  //UNIT
  static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
-
- //STOCK
- static $ADMIN_CONTROLLERS_IMPORT_STOCK = "form.importstock";
- static $SP_SELECT_ALL_STOCK = "exec sp_select_stock";
- static $SP_INSERT_STOCK = "exec sp_insert_stock";
 
  //SUPPLIERS
 static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";

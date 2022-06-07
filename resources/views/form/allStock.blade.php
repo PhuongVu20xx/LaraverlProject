@@ -29,42 +29,49 @@
 @endsection
 
 @section('bodycontent')
-    <section class="bg-white p-5">
-        <div id="no-more-tables" class="content">
-            <div class="clearfix"> </div>
-            <div class="clearfix"></div>
+<section class="bg-white p-5">
+    <div id="no-more-tables" class="content">
 
-            <div class="table-responsive ">
-                <table id="myTable" class="table bg-white">
-                    <thead class="bg-dark">
-                        <tr>
-                            <th class="text-light">ID</th>
-                            <th class="text-light">Category Name</th>
-                            <th class="text-light">Product Name</th>
-                            <th class="text-light">Information</th>
-                            <th class="text-light">Image</th>
-                        </tr>
-                    </thead>
+        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
 
-                    {{-- <tbody>
-                        @if (count($allproduct) > 0)
-                            <span hidden> {{ $i = 1 }}</span>
-                            @foreach ($allproduct as $product)
-                                <tr>
-                                    <td>{{ $i++ }} </td>
-                                    <td>{{ $product->category_id }}</td>
-                                    <td>{{ $product->product_name }}</td>
-                                    <td>{{ $product->information }}</td>
-                                    <td><img src="{{ asset('upload.product') }}/{{ $product->img_name }}" id="img_product"
-                                            alt=""></td>
-                                </tr>
-                            @endforeach
-                        @endif
-                    </tbody> --}}
-                </table>
-            </div>
+        <div class="table-responsive ">
+            <table id="myTable" class="table bg-white">
+                <thead class="bg-dark">
+                    <tr>
+                        <th class="text-light">ID</th>
+                        <th class="text-light">Product Name</th>
+                        <th class="text-light">Suppliers</th>
+                        <th class="text-light">Quantity</th>
+                        <th class="text-light">Status</th>
+                        <th class="text-light">Edit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (count($allstock) > 0)
+                        <span hidden> {{ $i = 1 }}</span>
+                        @foreach ($allstock as $stock)
+                            <tr>
+                                <td>{{ $i++ }} </td>
+                                <td>{{ $stock->select_product }}</td>
+                                <td>{{ $stock->select_suppliers }}</td>
+                                @if ($category->products_suppliers_status == 1)
+                                    <td><input type="checkbox" id="stock_status" class="stock_status"name="stock_status" data-id={{ $stock->product_name }} checked></td>
+                                @else
+                                    <td>
+                                        <input type="checkbox" id="stock_status" class="stock_status" name="stock_status" data-id={{ $stock->product_name }}>
+                                    </td>
+                                @endif
+                                <td><i id="edit_stock" onclick="edit(event)"  data-id={{ $stock->select_product }} class="fa-solid fa-pen-to-square" style="color:black"></i></td>
+                            </tr>
+                        @endforeach
+                    @endif
+                </tbody>
+            </table>
         </div>
-    </section>
+    </div>
+</section>
 @endsection
 
 @section('footer')

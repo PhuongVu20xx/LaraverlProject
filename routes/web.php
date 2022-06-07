@@ -77,10 +77,11 @@ Route::get('/editproduct',[Product::class,'EditProduct']);
 Route::post('/editproduct',[Product::class,'PostEditProduct']);
 
 
-Route::get('/importstock',[Product::class,'ShowImportStock']);
-Route::post('/importstock',[Product::class,'ImportStock']);
+Route::get('/importstock',[Product::class,'ImportStock']);
+Route::post('/importstock',[Product::class,'SubmitImportStock']);
+Route::get('/allstock',[Product::class,'AllStock']);
 Route::post('/editstock',[Product::class,'EditStock']);
-Route::post('/allstock',[Product::class,'AllStock']);
+
 
 
 Route::get('/importproduct',[Product::class, 'showImportProduct']);

@@ -35,17 +35,17 @@
         <div class="col-md-8" id="insertstock-form">
             <!-- Account details card-->
             <div class="card mb-4">
-                <form action="">
+                <form action="/importstock" method="post">
                     <div class="card-header">Insert Stock</div>
                     <div class="card-body">
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Product Name</label>
+                                <label class="small mb-1" for="select_product">Product Name</label>
                                 <select name="select_product" id="select_product" class="form-control">
                                     @foreach ($select_product as $products)
-                                        <option value="{{ $products->product_name }}" placeholder="Choose Category">
+                                        <option value="{{ $products->product_name }}">
                                             {{ $products->product_name }}
                                         </option>
                                     @endforeach
@@ -53,39 +53,46 @@
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Supplier</label>
+                                <label class="small mb-1" for="select_suppliers">Supplier</label>
                                 <select name="select_suppliers" id="select_suppliers" class="form-control">
                                     @foreach ($select_suppliers as $suppliers)
-                                        <option value="{{ $suppliers->supplier_name }}" placeholder="Choose Category">
+                                        <option value="{{ $suppliers->supplier_name }}">
                                             {{ $suppliers->supplier_name }}
                                         </option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
-                        <!-- Form Row-->
+                            <!-- Form Row-->
                         <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="offersname">Offers Name</label>
-                                <input class="form-control" id="offersname" name="offersname" type="text" value="NULL">
-                            </div>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="price">Price</label>
-                                <input class="form-control" id="price" name="price" type="email">
-                            </div>
+                            <!-- Form Group (offers_name)-->
+                            {{-- <div class="col-md-6">
+                                <label class="small mb-1" for="offers_name">Offers Name</label>
+                                <select name="offers_name" id="offers_name" class="form-control">
+                                    @foreach ($offers_name as $offer)
+                                        <option value="{{ $offer->offer_name }}">
+                                            {{ $offer->offer_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div> --}}
+
+                            
+                            <label class="small mb-1" for="quantity">Quantity</label>
+                            <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="1">
+                            
+                          
                         </div>
-                        <!-- Form Group (email address)-->
+                            <!-- Form Group (stock status)-->
                         <div class="row gx-3 mb-3">
                             <div class="col-md-4"></div>
-                            <label class="col-md-3 small mb-1" for="Status">Product Supplier Status</label>
+                            <label class="col-md-3 small mb-1" for="status">Status</label>
                             <div class="form-check form-switch col-md-1">
                                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                                 <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                             </div>
                         </div>
-                        <!-- Save changes button-->
+                            <!-- Save changes button-->
                         <div class="button">
                             <button class="btn" type="submit">Save</button>
                         </div>
@@ -93,39 +100,6 @@
             </div>
         </div>
         <div class="col-md-2"></div>
-    </div>
-    <section class="bg-white p-5">
-        <div id="no-more-tables" class="content">
-            <div class="clearfix"> </div>
-            <div class="clearfix"></div>
-            <div class="table-responsive ">
-                <table id="myTable" class="table bg-white">
-                    <thead class="bg-dark">
-                        <tr>
-                            <th class="text-light">ID</th>
-                            <th class="text-light">Name Product</th>
-                            <th class="text-light">Producer</th>
-                            <th class="text-light">Quantity</th>
-                            <th class="text-light">Price</th>
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @for ($i = 0; $i <= 100; $i++)
-                            <tr>
-                                <td data-title="Id">ID {{ $i }} </td>
-                                <td data-title="Name">Name Product {{ $i }}</td>
-                                <td data-title="Producer">Producer {{ $i }}</td>
-                                <td data-title="Quantity">Quantity {{ $i }}</td>
-                                <td data-title="Price">Price {{ $i }}</td>
-                            </tr>
-                        @endfor
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </Section>
     </div>
 @endsection
 

@@ -71,23 +71,41 @@ class ProductController extends AdminController
     }
 
 // IMPORT STOCK 
-    public function ShowImportStock()
+    public function ImportStock()
     {
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
         $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
+        $offers_name=DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
 
-        return view(NameController::$ADMIN_CONTROLLERS_IMPORT_STOCK,['select_product'=>$select_product,'select_suppliers'=>$select_suppliers]);
+        return view(NameController::$ADMIN_CONTROLLERS_IMPORT_STOCK,['select_product'=>$select_product,'select_suppliers'=>$select_suppliers,'offers_name'=>$offers_name]);
+        
     }
 
-    public function ImportStock()
+    public function ShowImportStock()
     {
+        $productname    = $request->select_product;
+        $supplier       = $request->select_suppliers;
+        $offer          = $request->offers_name;
+        $quantity       = $request->quantity;
+        $status = $request->stock_status;
 
+        $st=0;
+        if($status == "on") $st=1;
+
+        $price          = $request->price;
+        $note           = '';
+
+        DB::insert("exec sp_insert_stock '$productname','$supplier','$offer','$quantity','$st','$price','$note'");
+
+        return redirect()->action([ProductController::class,'AllStock']);
     }
 
     public function AllStock()
     {
-
+        $allstock = DB::select('exec sp_select_stock');
+        return view(NameController::$SP_SELECT_ALL_STOCK, ['allstock'=>$allstock]);
     }
+ 
 
     public function EditStock()
     {
