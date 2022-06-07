@@ -80,13 +80,13 @@
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="quantity">Quantity</label>
-                                <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="1">
+                                <input class="form-control" onchange="sum()" name="quantity" id="quantity" type="number" value="0" step="10">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="price">Price</label>
-                            <input class="form-control" onchange="sum()" id="price" name="price" step="500" type="text">
+                            <input class="form-control" onchange="sum()" id="price" name="price" step="500" type="number">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">

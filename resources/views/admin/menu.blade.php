@@ -10,7 +10,7 @@
         <a class="text-decoration-none" href="/addproduct">Product</a>
     </div>
     <div class="m-1">
-        <a class="text-decoration-none" href="/adminoffer">Promotion</a>
+        <a class="text-decoration-none" href="/addoffer">Promotion</a>
     </div>
     <div class="m-1">
         <a class="text-decoration-none" href="/adminpayment">Payment</a>

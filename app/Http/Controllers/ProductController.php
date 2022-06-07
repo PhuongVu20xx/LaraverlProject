@@ -27,13 +27,13 @@ class ProductController extends AdminController
 
     public function SubmitProduct(Request $request)
     {
-        $product_name=$request->product_name;
-        $category_name=$request->category_name;
-        $unit_name=$request->unit_name;
-        $information=$request->information;
-        $img     = $request->file('img');
-        $extension  = $request->file('img')->extension(); // Cắt đuôi file img
-        $img_name= time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
+        $product_name       =$request->product_name;
+        $category_name      =$request->category_name;
+        $unit_name          =$request->unit_name;
+        $information        =$request->information;
+        $img                = $request->file('img');
+        $extension          = $request->file('img')->extension(); // Cắt đuôi file img
+        $img_name           = time().'-'.'product.'.$extension;       // Nối đuôi file img vào tên mới của img
         $img->move(public_path('upload.product'), $img_name);
 
         $note='abc';
@@ -116,12 +116,12 @@ class ProductController extends AdminController
     {   
         $productname    = $request->select_product;
         $supplier       = $request->select_suppliers;
-        $offer          = $request->offersname;
+        $offer          = $request->offers_name;
         $quantity       = $request->quantity;
-        $price          = $request->quantity;
+        $price          = $request->price;
         $importdate     = $request->importdate;
-        $employee       = $request->employee;
-        $totalpayment   = $request->totalpayment;
+        $employee       = $request->emp_name;
+        $totalpayment   = $request->totalpayment;   
         $note           = $request->note;
         $output = '';
 

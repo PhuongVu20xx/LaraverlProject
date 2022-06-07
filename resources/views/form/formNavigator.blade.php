@@ -4,7 +4,6 @@
     <div class="noidung_dropdown">
         <a href="/addproduct">Add Product</a>
         <a href="/allproduct">All Product</a>
-        <a href="/editproduct">Edit Product</a>
         <a href="/importproduct">Add Import Product</a>
         <a href="/editimportproduct">Edit Import Product</a>
     </div>
