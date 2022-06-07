@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends AdminController
 {
+    
+//PRODUCT
     public function AllProduct()
     {
         $allproduct = DB::select('exec sp_select_all_product');
@@ -40,8 +42,9 @@ class ProductController extends AdminController
         DB::insert("exec sp_insert_product '$product_name','$category_name','$unit_name','$information','$img_name','$note'");
 
         return redirect()->action([ProductController::class,'AllProduct']);
-
     }
+
+//EDIT PRODUCT
     public function EditProduct()
     {
         $category_root  = DB::select(NameController::$SP_SELECT_ROOT_CATEGORY_NAME) ;
@@ -67,36 +70,13 @@ class ProductController extends AdminController
 
     }
 
-    public function SubmitImportProduct(Request $request)
-    {
-        $product_name=$request->select_product;
-        $supplier=$request->select_suppliers;
-        $quantity=$request->quantity;
-        $price=$request->price;
-        $importdate=$request->importdate; 
-        $offer_name=$request->offer_sname;
-        $totalpayment->$request->totalpayment;
-        $emp_name=$request->emp_name;      
-        $note=$request->note;
-        $return_date='';
-        $return_cause='';
-        $return_status='';
-        $note_admin='';
-
-
-        DB::insert("exec sp_insert_import_product '$select_product','$select_suppliers',$quantity,$price,'$importdate','$offers_name','$totalpayment','$emp_name','$note','$return_date','$return_cause','$return_status','$note_admin'");
-
-        return redirect()->action([ProductController::class,'AllProduct']);
-
-    }
-
+// IMPORT STOCK 
     public function ShowImportStock()
     {
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
         $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
 
         return view(NameController::$ADMIN_CONTROLLERS_IMPORT_STOCK,['select_product'=>$select_product,'select_suppliers'=>$select_suppliers]);
-
     }
 
     public function ImportStock()
@@ -114,6 +94,9 @@ class ProductController extends AdminController
 
     }
 
+
+
+// IMPORT PRODUCT 
     public function showImportProduct()
     {
         $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
@@ -145,6 +128,7 @@ class ProductController extends AdminController
         DB::insert("exec sp_insert_import_product '$productname','$supplier','$quantity','$price',
                                         '$importdate','$offer','$totalpayment','$employee','$note','','','0','$output'");
 
+        return redirect()->action([ProductController::class,'AllProduct']);
     }
 
     public function showEditimportproduct()
@@ -161,11 +145,8 @@ class ProductController extends AdminController
             'select_offer'=>$select_offer
         ]);
     }
-    
-    public function Editimportproduct()
-    {
 
-    }
+ 
 
     public function create()
     {
