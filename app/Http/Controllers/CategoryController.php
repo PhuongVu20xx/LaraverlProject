@@ -12,14 +12,14 @@ class CategoryController extends AdminController
     {
         $category_name = $request->category_name;
         $category_root = $request->category_root;
-        $status = $request->flexSwitchCheckChecked;
+        $status = $request->category_status;
         $st=0;
         if($status == "on") $st=1;
 
         $note = '';
 
         DB::insert("exec sp_insert_category '$category_name','$category_root',$st,'$note'");
-        return redirect()->action([CategoryController::class,'ShowAddCategory']);
+        return 1;
     }
 
     public function ShowAddCategory()

@@ -30,7 +30,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8" id="addcateform">
             <div class="card mb-4">
-                <form action="/addcategory" method="post">
+
                     {{ csrf_field() }}
                         <div class="card-header">Add Category</div>
                         <div class="card-body">
@@ -64,10 +64,10 @@
 
                             <!-- Save changes button-->
                             <div id="submit_buttom"class="button">
-                                <button id="btn_submit"class="btn" >Save</button>
+                                <span id="btn_submit"class="btn" >Save</span>
                             </div>
                         </div>
-                </form>
+
             </div>
         <div class="col-md-2"></div>
     </div>
