@@ -54,7 +54,7 @@
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Supplier</label>
+                                <label class="small mb-1" for="select_suppliers">Supplier</label>
                                 <select name="select_suppliers" id="select_suppliers" class="form-control">
                                     @foreach ($select_suppliers as $suppliers)
                                         <option value="{{ $suppliers->supplier_name }}" >

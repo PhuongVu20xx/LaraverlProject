@@ -147,6 +147,21 @@ class ProductController extends AdminController
 
     }
 
+    public function showEditimportproduct()
+    {
+        $select_product=DB::select(NameController::$SP_SELECT_ALL_PRODUCT);
+        $select_suppliers=DB::select(NameController::$SP_SELECT_ALL_SUPPLIER);
+        $select_manager=DB::select(NameController::$SP_SELECT_ALL_MANAGERS);
+        $select_offer=DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
+
+        return view(NameController::$ADMIN_CONTROLLERS_EDIT_IMPORT,[
+            'select_product'=>$select_product,
+            'select_suppliers'=>$select_suppliers,
+            'select_manager'=>$select_manager,
+            'select_offer'=>$select_offer
+        ]);
+    }
+    
     public function Editimportproduct()
     {
 

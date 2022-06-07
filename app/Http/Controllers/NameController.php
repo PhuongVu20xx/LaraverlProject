@@ -80,6 +80,8 @@ class NameController
  static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
  static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
  static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.addImportProduct";
+ static $ADMIN_CONTROLLERS_EDIT_IMPORT = "form.editImportProduct";
+
 
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
