@@ -73,6 +73,7 @@ Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);
 Route::get('/allproduct',[Product::class,'AllProduct']);
+Route::Post('/allproduct',[Product::class,'RequestEditCategory']);
 Route::get('/editproduct',[Product::class,'EditProduct']);
 Route::post('/editproduct',[Product::class,'PostEditProduct']);
 
