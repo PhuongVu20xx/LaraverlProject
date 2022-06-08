@@ -10,37 +10,37 @@ class HomeController extends AdminController
   
     public function landingpage()
     {
-        return view('pages/landingpage');
+        return view('user/pages/landingpage');
     }
 
     public function about()
     {
-        return view('pages/about');
+        return view('user/pages/about');
     }
 
     public function blog()
     {
-        return view('pages/blog');
+        return view('user/pages/blog');
     }
 
     public function contact()
     {
-        return view('pages/contact');
+        return view('user/pages/contact');
     }
     
     public function shipping()
     {
-        return view('pages/shipping');
+        return view('user/pages/shipping');
     }
 
     public function needhelp()
     {
-        return view('pages/needhelp');
+        return view('user/pages/needhelp');
     }
 
     public function product()
     {
-        return view('products/product');
+        return view('user/products/product');
     }
  
     /**

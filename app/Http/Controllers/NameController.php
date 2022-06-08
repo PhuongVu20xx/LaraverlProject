@@ -69,7 +69,7 @@ class NameController
  //CATEGORY
  static $ADMIN_CONTROLLERS_ADD_CATEGORY = "admin.form.addcategory";
  static $ADMIN_CONTROLLERS_ALL_CATEGORY = "admin.form.allcategory";
- static $ADMIN_CONTROLLERS_Edit_CATEGORY = "adminform.editcategory";
+ static $ADMIN_CONTROLLERS_Edit_CATEGORY = "admin.form.editcategory";
 
  static $SP_SELECT_ROOT_CATEGORY_NAME = "exec sp_select_root_category_name";
  static $SP_SELECT_ALL_CATEGORY = "exec sp_select_all_category";
