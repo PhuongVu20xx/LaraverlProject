@@ -81,3 +81,4 @@
 @section('scripts')
 <script src="{{ asset('js/admin/addcategory.js') }}"></script>
 @endsection
+

@@ -5,7 +5,6 @@ $(document).ready(() => {
         }
     });
     $("#btn_submit").click(function () {
-
         $.ajax({
             type: "POST",
             url: "/addcategory",
@@ -16,7 +15,7 @@ $(document).ready(() => {
             }, success: function () {
                 alert("Success");
             }
-
         })
     });
 })
+
