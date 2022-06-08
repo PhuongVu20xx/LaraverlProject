@@ -6,23 +6,9 @@
 @endsection
 
 @section('header')
-    @include('layouts.header')
-    <div class="backgroundheader"></div>
 @endsection
 
 @section('menu')
-    @include('admin.menu')
-@endsection
-
-@section('bodyheader')
-    <div>
-        <h3>Controller / Category / Edit Category</h3>
-        <hr>
-    </div>
-@endsection
-
-@section('bodynav')
-    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
@@ -83,15 +69,14 @@
                         </div>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-2"></div>
+            </div>  
         </div>
-    @endsection
-
-    @section('footer')
-        @include('layouts.footer')
-    @endsection
+        <div class="col-md-2"></div>
+    </div>
 
     @section('scripts')
         <script src="{{ asset('js/admin/category_controller.js') }}"></script>
     @endsection
+@endsection
+
+    

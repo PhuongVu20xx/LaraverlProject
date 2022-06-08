@@ -69,6 +69,7 @@ Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
 Route::get('/lastestorder',[AdminController::class,'LatestOrderPage']);
 
+
 // ADMIN PRODUCT
 Route::get('/addproduct',[Product::class,'AddProduct']);
 Route::post('/addproduct',[Product::class,'SubmitProduct']);

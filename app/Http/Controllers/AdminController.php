@@ -30,6 +30,7 @@ class AdminController extends BaseController
 
         return view(NameController::$ADMIN_CONTROLLERS_ADD_PROFILE, ['admins'=>$admins]);
     }
+    
     public function postAdminProfile(Request $request){
      $fullname = $request->fullname;
      $gendder = $request->gender;
@@ -39,8 +40,7 @@ class AdminController extends BaseController
      $emailaddress = $request->email;
      $phonenumber = $request->phonenumber;
      $address = $request->address;
+    }
 
-    
- }
    
 }

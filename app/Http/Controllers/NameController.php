@@ -65,6 +65,7 @@ class NameController
  //CONTROLLER
  static $ADMIN_CONTROLLERS_ADMIN_HOME_PAGE = "admin.adminhome";
 
+
  //CATEGORY
  static $ADMIN_CONTROLLERS_ADD_CATEGORY = "form.addcategory";
  static $ADMIN_CONTROLLERS_ALL_CATEGORY = "form.allcategory";
