@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class HomeController extends AdminController
 {
   
     public function landingpage()
@@ -36,6 +36,11 @@ class HomeController extends Controller
     public function needhelp()
     {
         return view('pages/needhelp');
+    }
+
+    public function product()
+    {
+        return view('products/product');
     }
  
     /**

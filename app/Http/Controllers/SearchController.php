@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\DB;
 
-class SearchController extends Controller
+class SearchController extends AdminController
 {
     /**
      * Display a listing of the resource.

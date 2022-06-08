@@ -1,10 +1,11 @@
 @extends('layouts.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form/allproduct.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/respose-tableadminfeedback.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
 @endsection
 
 @section('header')
@@ -13,18 +14,18 @@
 @endsection
 
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')
     <div>
-        <h3>All Product</h3>
+        <h3>Controller / Product / All Product</h3>
         <hr>
     </div>
 @endsection
 
 @section('bodynav')
-    @include('admin.controllers.navigator')
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
@@ -38,29 +39,32 @@
                     <thead class="bg-dark">
                         <tr>
                             <th class="text-light">ID</th>
-                            <th class="text-light">Name Product</th>
-                            <th class="text-light">Producer</th>
-                            <th class="text-light">Price</th>
-                            <th class="text-light">Total Quantity</th>
-
+                            <th class="text-light">Category Name</th>
+                            <th class="text-light">Product Name</th>
+                            <th class="text-light">Information</th>
+                            <th class="text-light">Image</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @for ($i = 0; $i <= 100; $i++)
-                            <tr>
-                                <td data-title="Id">ID {{ $i }} </td>
-                                <td data-title="Name">Name Product {{ $i }}</td>
-                                <td data-title="Producer">Producer {{ $i }}</td>
-                                <td data-title="Price">Price {{ $i }}</td>
-                                <td data-title="TotalQuantity">Total Quantity {{ $i }}</td>
-                            </tr>
-                        @endfor
+                        @if (count($allproduct) > 0)
+                            <span hidden> {{ $i = 1 }}</span>
+                            @foreach ($allproduct as $product)
+                                <tr>
+                                    <td>{{ $i++ }} </td>
+                                    <td>{{ $product->category_id }}</td>
+                                    <td>{{ $product->product_name }}</td>
+                                    <td>{{ $product->information }}</td>
+                                    <td><img src="{{ asset('upload.product') }}/{{ $product->img_name }}" id="img_product"
+                                            alt=""></td>
+                                </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>
         </div>
-    </Section>
+    </section>
 @endsection
 
 @section('footer')

@@ -4,7 +4,7 @@
 <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
 <header>
     <input type="checkbox" name="" id="chk1">
-    <img src="{{asset('img/logo.jpg')}}" class="logo">
+    <a href="/"><img src="{{asset('img/logo.jpg')}}" class="logo"></a> 
     <ul>
         <li><a href="../about">About</a></li>
         <li><a href="../blog">Blog</a></li>

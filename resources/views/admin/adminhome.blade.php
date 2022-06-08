@@ -1,7 +1,7 @@
 @extends('layouts.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/adminnavigatortab.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/adminnavigatortab.css') }}">
 @endsection
 
 @section('header')
@@ -10,22 +10,22 @@
 @endsection
 
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')
     <div>
-        <h3>Controller</h3>
+        <h3>Home Controller</h3>
         <hr>
     </div>
 @endsection
 
 @section('bodynav')
-    @include('admin.controllers.navigator')
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
-    
+    abcd xyz gì gì đó nha
 @endsection
 
 @section('footer')

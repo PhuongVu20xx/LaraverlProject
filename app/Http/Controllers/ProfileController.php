@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class ProfileController extends AdminController
 {
     public function getProfileForm(){
         return view('user.profile');

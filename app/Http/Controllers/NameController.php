@@ -24,6 +24,7 @@ class NameController
  static $FEEDBACK = "feedback";
  //G
  //H
+ static $HOME = "home";
  //I
  static $INFOMATION = "infomation";
  static $IMPORT_DAY = "importday";
@@ -39,7 +40,9 @@ class NameController
  static $NAME = "name";
  static $NAVIGATOR = "navigator";
  //O
+ static $OFFER = "offer";
  //P
+ static $PAYMENT = "payment";
  static $PRICE = "price";
  static $PRODUCER = "producer";
  static $PRODUCT = "product";
@@ -59,27 +62,61 @@ class NameController
  static $IMPORT_FAIL = "Import Fail";
  static $IMPORT_SUCCESS = "Import Success!";
 
- //Views
- static $ADMIN_CONTROLLER = "admin.controller";
- static $ADMIN_CONTROLLERS_ADD_CATEGORY = "admin.controllers.addcategory";
- static $ADMIN_CONTROLLERS_ADD_PRODUCT = "admin.controllers.addproduct";
- static $ADMIN_CONTROLLERS_ALL_PRODUCT = "admin.controllers.allproduct";
- static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "admin.controllers.editproduct";
- static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "admin.controllers.importproduct";
- static $ADMIN_CUSTOMER = "admin.customer";
- static $ADMIN_FEEDBACK = "admin.feedback";
- static $ADMIN_LATEST_ORDER = "admin.lastestorder";
+ //CONTROLLER
+ static $ADMIN_CONTROLLERS_ADMIN_HOME_PAGE = "admin.adminhome";
 
+ //CATEGORY
+ static $ADMIN_CONTROLLERS_ADD_CATEGORY = "form.addcategory";
+ static $ADMIN_CONTROLLERS_ALL_CATEGORY = "form.allcategory";
+ static $ADMIN_CONTROLLERS_Edit_CATEGORY = "form.editcategory";
 
- //Store producer
-
- //category
  static $SP_SELECT_ROOT_CATEGORY_NAME = "exec sp_select_root_category_name";
  static $SP_SELECT_ALL_CATEGORY = "exec sp_select_all_category";
  static $SP_UPDATE_CATEGORY_STATUS = "exec sp_update_category_status";
- //Product
+
+
+ //PRODUCT
+ static $ADMIN_CONTROLLERS_ADD_PRODUCT = "form.addproduct";
+ static $ADMIN_CONTROLLERS_ALL_PRODUCT = "form.allproduct";
+ static $ADMIN_CONTROLLERS_EDIT_PRODUCT = "form.editproduct";
  static $SP_SELECT_ALL_PRODUCT = "exec sp_select_all_product";
 
+ static $ADMIN_CONTROLLERS_IMPORT_PRODUCT = "form.addImportProduct";
+ static $ADMIN_CONTROLLERS_EDIT_IMPORT = "form.editImportProduct";
+
+ static $ADMIN_CONTROLLERS_IMPORT_STOCK = "form.importstock";
+ static $SP_SELECT_ALL_STOCK = "exec sp_select_stock";
+ static $SP_INSERT_STOCK = "exec sp_insert_stock";
  
 
+//PAYMENT
+static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "form.allpayment";
+static $SP_SELECT_PAYMENT_MODE = "exec sp_select_payment_mode";
+static $SP_INSERT_PAYMENT_MODE = "exec sp_insert_payment_mode";
+
+//OFFER
+static $ADMIN_CONTROLLERS_OFFER_PAGE = "form.alloffer";
+static $SP_SELECT_OFFERS_DETAILS = "exec sp_select_offers_details";
+static $SP_INSERT_OFFERS_DETAILS = "exec sp_insert_offers_details";
+
+
+ //CUSTOMER
+ static $ADMIN_CUSTOMER = "admin.customer";
+
+//FEEDBACK
+static $ADMIN_FEEDBACK = "admin.feedback";
+
+//LATEST_ORDER
+ static $ADMIN_LATEST_ORDER = "admin.lastestorder";
+
+ //UNIT
+ static $SP_SELECT_ALL_UNIT="exec sp_select_unit";
+
+ //SUPPLIERS
+static $SP_SELECT_ALL_SUPPLIER = "exec sp_select_suppliers";
+
+
+// PROFILE
+static $ADMIN_CONTROLLERS_ADD_PROFILE = "admin.adminprofile";
+static $SP_SELECT_ALL_MANAGERS = "exec sp_select_manager_name";
 }

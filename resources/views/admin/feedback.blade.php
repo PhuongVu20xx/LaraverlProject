@@ -13,7 +13,7 @@
 @endsection
 
 @section('menu')
-    @include('admin.navigator')
+    @include('admin.menu')
 @endsection
 
 @section('bodyheader')
@@ -21,6 +21,10 @@
         <h3>Feed Back</h3>
         <hr>
     </div>
+@endsection
+
+@section('bodynav')
+    @include('form.formNavigator')
 @endsection
 
 @section('bodycontent')
