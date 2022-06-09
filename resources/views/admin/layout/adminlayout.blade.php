@@ -16,26 +16,26 @@
     @yield('css')
     <!-- Vendor CSS -->
 		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/bootstrap/css/bootstrap.css')}}>
-		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/font-awesome/css/font-awesome.css')}}>
-		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/magnific-popup/magnific-popup.css')}}>
-		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css')}}>
+		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/font-awesome/css/font-awesome.css')}}> 
+		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/magnific-popup/magnific-popup.css')}}> 
+		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css')}}> 
 
 		<!-- Specific Page Vendor CSS -->
 		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css')}}>
 		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css')}}>
-		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/morris/morris.css')}}>
+		<link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/morris/morris.css')}}> 
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href={{asset('octopus/octopus/assets/stylesheets/theme.css')}}>
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href={{asset('octopus/octopus/assets/stylesheets/skins/default.css')}}>
+		<link rel="stylesheet" href={{asset('octopus/octopus/assets/stylesheets/skins/default.css')}}> 
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href={{asset('octopus/octopus/assets/stylesheets/theme-custom.css')}}>
 
 		<!-- Head Libs -->
-		<script src={{asset('octopus/octopus/assets/vendor/modernizr/modernizr.js')}}></script>
+		<script src={{asset('octopus/octopus/assets/vendor/modernizr/modernizr.js')}}></script> 
 </head>
 <body>
     <div>
@@ -440,7 +440,7 @@
 <!-- Vendor -->
 <script src={{asset('octopus/octopus/assets/vendor/jquery/jquery.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/bootstrap/js/bootstrap.js')}}></script>
+<script src={{asset('js/bootstrap.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/nanoscroller/nanoscroller.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/magnific-popup/magnific-popup.js')}}></script>
@@ -451,10 +451,6 @@
 <script src={{asset('octopus/octopus/assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jquery-appear/jquery.appear.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jquery-easypiechart/jquery.easypiechart.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/flot-tooltip/jquery.flot.tooltip.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.pie.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.categories.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.resize.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jquery-sparkline/jquery.sparkline.js')}}></script>
@@ -462,7 +458,6 @@
 <script src={{asset('octopus/octopus/assets/vendor/morris/morris.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/gauge/gauge.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/snap-svg/snap.svg.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/liquid-meter/liquid.meter.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js')}}></script>
 
 <!-- Theme Base, Components and Settings -->

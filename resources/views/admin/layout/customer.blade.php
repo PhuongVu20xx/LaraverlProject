@@ -2,8 +2,6 @@
 
 @section('css')
 
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/form/respose-tableadminfeedback.css') }}">
 
 @endsection
@@ -49,9 +47,6 @@
     </section>
 
     @section('scripts')
-        {{-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script> --}}
         <script src="{{ asset('js/admin/tableadminfeedback.js') }}"></script>
     @endsection
 @endsection

@@ -2,7 +2,12 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin/form/addcategory.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
+    <style>
+        #insertstock-form{
+            margin-top: 30px;
+        }
+    </style>
 @endsection
 
 @section('header')
@@ -42,6 +47,7 @@
                             <div class="row gx-3 mb-3">
                                 <div class="col-md-1"></div>
                                 <label class="col-md-3 small mb-1" for="status-category">Status Category</label>
+                                
                                 <div class="form-check form-switch col-md-6">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
                                     <label class="form-check-label" for="flexSwitchCheckChecked"></label>

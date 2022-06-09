@@ -2,7 +2,12 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin/form/addcategory.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
+    <style>
+        #insertstock-form{
+            margin-top: 30px;
+        }
+    </style>
 @endsection
 
 @section('header')

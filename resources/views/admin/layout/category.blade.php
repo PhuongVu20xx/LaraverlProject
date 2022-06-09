@@ -2,7 +2,6 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
-    {{-- <link rel="stylesheet" href="{{asset('css/admin/form/category.css')}}"> --}}
 @endsection
 
 @section('header')
