@@ -102,7 +102,7 @@ Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
 Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
-Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
+Route::get('/addpayment',[Payment::class,'AddPayment']);
 Route::post('/addpayment',[Payment::class,'AddPayment']);
 
 // ADMIN OFFER
