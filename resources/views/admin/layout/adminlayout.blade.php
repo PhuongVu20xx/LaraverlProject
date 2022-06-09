@@ -324,53 +324,6 @@
                                                 User Profile
                                             </a>
                                         </li>
-                                        
-                                        <li>
-                                            <a href="pages-calendar.html">
-                                                Calendar
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="pages-timeline.html">
-                                                Timeline
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-media-gallery.html">
-                                                Media Gallery
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-invoice.html">
-                                                Invoice
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-blank.html">
-                                                Blank Page
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-404.html">
-                                                404
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-500.html">
-                                                500
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-log-viewer.html">
-                                                Log Viewer
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-search-results.html">
-                                                Search Results
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
                 
@@ -510,15 +463,7 @@
 <script src={{asset('octopus/octopus/assets/vendor/gauge/gauge.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/snap-svg/snap.svg.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/liquid-meter/liquid.meter.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/jquery.vmap.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/data/jquery.vmap.sampledata.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/jquery.vmap.world.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js')}}></script>
 
 <!-- Theme Base, Components and Settings -->
 <script src={{asset('octopus/octopus/assets/javascripts/theme.js')}}></script>
