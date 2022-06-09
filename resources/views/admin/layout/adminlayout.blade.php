@@ -287,6 +287,7 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
+
                                 <li>
                                     <a href="mailbox-folder.html">
                                         <span class="pull-right label label-primary">182</span>
@@ -294,6 +295,7 @@
                                         <span>Mailbox</span>
                                     </a>
                                 </li>
+
                                 <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-copy" aria-hidden="true"></i>
@@ -301,13 +303,13 @@
                                     </a>
                                     <ul class="nav nav-children">
                                         <li>
-                                            <a href="pages-signup.html">
+                                            <a href="/register1">
                                                 Sign Up
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="pages-signin.html">
-                                                Sign In
+                                            <a href="/login1">
+                                                Log In
                                             </a>
                                         </li>
                                         <li>

@@ -1,4 +1,4 @@
-@extends('admin.layout.layout')
+@extends('user.layout.layout')
 <!-- HEADER -->
 @section('header')
     @include('user.layout.header')
@@ -10,7 +10,7 @@
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
-    <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"> -->
+    {{-- <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"> --}}
 @endsection
 
 <!-- REGISTER-FORM -->

@@ -1,6 +1,9 @@
-@extends('admin.layout.layout')
+@extends('user.layout.layout')
 
-
+@section('header')
+    @include('user.layout.header')
+    <div class="backgroundheader"></div>
+@endsection
 <!-- CSS -->
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
@@ -53,5 +56,5 @@
 @endsection
 <!-- FOOTER -->
 @section('footer')
-    @include('layouts.footer')
+    @include('user.layout.footer')
 @endsection

@@ -56,11 +56,11 @@ Route::post('/changepwd',[ProfileController::class, 'postNewPassword']);
 
 
 // LOGIN
-Route::get('/login',[LoginController::class, 'getLoginform']);
-Route::post('/login',[LoginController::class, 'postLoginform']);
+Route::get('/login1',[LoginController::class, 'getLoginform']);
+Route::post('/login1',[LoginController::class, 'postLoginform']);
 // REGISTER
-Route::get('/register',[RegisterController::class, 'getRegisterform']);
-Route::post('/register',[RegisterController::class, 'postRegisterform']);
+Route::get('/register1',[RegisterController::class, 'getRegisterform']);
+Route::post('/register1',[RegisterController::class, 'postRegisterform']);
 
 // ADMIN
 Route::get('/adminhome',[AdminController::class,'AdminControllerPage'])->name('adminhome');

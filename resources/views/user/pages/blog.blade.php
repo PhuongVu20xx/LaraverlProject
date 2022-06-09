@@ -1,7 +1,8 @@
 @extends('user.layout.userlayout')
 
 @section('header')
-@include('user.layout.header')
+    @include('user.layout.header')
+    <div class="backgroundheader"></div>
 @endsection
 
 <!-- css -->

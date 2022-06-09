@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\AdminController;
 
 class RegisterController extends AdminController
 {
     public function getRegisterform(){
-        return view('form.registerform');
+        return view('admin.form.registerform');
     }
     public function postRegisterform(Request $request){
         $this->validate($request,[

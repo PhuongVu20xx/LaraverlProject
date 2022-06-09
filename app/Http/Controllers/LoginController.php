@@ -11,7 +11,7 @@ class LoginController extends AdminController
 {
 
     public function getLoginform(){
-        return view('form.loginform');
+        return view('admin.form.loginform');
     }
 
     public function postLoginform(Request $request){
@@ -41,7 +41,7 @@ class LoginController extends AdminController
         if(count($SQLuser)>0){ 
             return redirect()->route('landingpage',['SQLuser'=>$SQLuser]);
         }elseif(count($SQLadmin)>0){
-            return redirect()->route('controller',['SQLadmin'=>$SQLadmin]);
+            return redirect()->route('adminhome',['SQLadmin'=>$SQLadmin]);
         }else{  
             return redirect()->back()->withInput()->with('thongbao','Sai email hoặc mật khẩu !');  
         }
