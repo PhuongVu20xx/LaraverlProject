@@ -451,14 +451,11 @@
 <script src={{asset('octopus/octopus/assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jquery-appear/jquery.appear.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.categories.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/flot/jquery.flot.resize.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/jquery-sparkline/jquery.sparkline.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/raphael/raphael.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/morris/morris.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/gauge/gauge.js')}}></script>
 <script src={{asset('octopus/octopus/assets/vendor/snap-svg/snap.svg.js')}}></script>
-<script src={{asset('octopus/octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js')}}></script>
 
 <!-- Theme Base, Components and Settings -->
 <script src={{asset('octopus/octopus/assets/javascripts/theme.js')}}></script>
@@ -470,7 +467,5 @@
 <script src={{asset('octopus/octopus/assets/javascripts/theme.init.js')}}></script>
 
 
-<!-- Examples -->
-<script src={{asset('octopus/octopus/assets/javascripts/dashboard/examples.dashboard.js')}}></script>
 </body>
 </html>
