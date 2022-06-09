@@ -63,7 +63,7 @@ Route::get('/register',[RegisterController::class, 'getRegisterform']);
 Route::post('/register',[RegisterController::class, 'postRegisterform']);
 
 // ADMIN
-Route::get('/home',[AdminController::class,'AdminControllerPage'])->name('adminhome');
+Route::get('/adminhome',[AdminController::class,'AdminControllerPage'])->name('adminhome');
 Route::get('/admin',[AdminController::class,'LoginSuccess']);
 Route::get('/feedback',[AdminController::class,'FeedbackPage']);
 Route::get('/customer',[AdminController::class,'CustomerPage']);
@@ -112,3 +112,7 @@ Route::post('/addoffer',[Offer::class,'AddOffer']);
 
 Route::get('/adminprofile',[AdminController::class,'showAdminProfile']);
 Route::post('/adminprofile',[AdminController::class,'postAdminProfile']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
