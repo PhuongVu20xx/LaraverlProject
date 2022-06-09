@@ -48,7 +48,7 @@
             <p id="welcome">WELCOME</p>
             <p id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At rerum accusamus voluptas facilis delectus sequi ad veritatis ut illo temporibus, ab fuga culpa quaerat nemo debitis atque sed repellat voluptatem.</p>
             <br>
-            <a href="/about">OUR STORY</a>
+            <a href="#">OUR STORY</a>
         </div>
         <div class="about-img">
             <img src="{{asset('img/landingpage5.jpg')}}" alt="Grocery Store's Corner">
@@ -64,45 +64,29 @@
             </div>
         </div>
         <div class="shopping-category">
-            <div class="sweetgrocery">
-                <img src="{{asset('img/landingpage7.jpg')}}" alt="Sweet Grocery">
-                <div class="desc"><a href="#">Sweet Grocery</a></div>
+            <div class="veggies">
+                <img src="{{asset('img/landingpage7.jpg')}}" alt="Veggies Category">
+                <div class="desc"><a href="#">Veggies</a></div>
             </div>
-            <div class="saltedgrocery">
-                <img src="{{asset('img/landingpage10.jpg')}}" alt="Salted Grocery">
-                <div class="desc"><a href="#">Salted Grocery</a></div>
+            <div class="fruits">
+                <img src="{{asset('img/landingpage10.jpg')}}" alt="Fruits Category">
+                <div class="desc"><a href="#">Fruits</a></div>
             </div>
-            <div class="freshfood">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Fresh Food">
-                <div class="desc"><a href="#">Fresh Food</a></div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
             </div>
-            <div class="frozenfood">
-                <img src="{{asset('img/landingpage3.jpg')}}" alt="Frozen Food">
-                <div class="desc"><a href="#">Frozen Food</a></div>
+            <div class="spicies">
+                <img src="{{asset('img/landingpage3.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Spicies</a></div>
             </div>
-            <div class="bakery_pastry">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Bakery & Pastry">
-                <div class="desc"><a href="#">Bakery & Pastry</a></div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
             </div>
-            <div class="beverage">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Beverage">
-                <div class="desc"><a href="#">Beverage</a></div>
-            </div>
-            <div class="baby">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Baby">
-                <div class="desc"><a href="#">Baby</a></div>
-            </div>
-            <div class="pet">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pet">
-                <div class="desc"><a href="#">Pet</a></div>
-            </div>
-            <div class="beauty_cosmetic">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Beauty & Cosmetic">
-                <div class="desc"><a href="#">Beauty & Cosmetic</a></div>
-            </div>
-            <div class="household">
-                <img src="{{asset('img/landingpage9.jpg')}}" alt="Household">
-                <div class="desc"><a href="#">Household</a></div>
+            <div class="pastry">
+                <img src="{{asset('img/landingpage9.jpg')}}" alt="Pastry Category">
+                <div class="desc"><a href="#">Pastry</a></div>
             </div>
         </div>
     </div>
