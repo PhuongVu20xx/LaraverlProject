@@ -96,7 +96,7 @@
 
         </div>
         <!-- right -->
-        @include('layouts.sidebar')
+        @include('user.layout.sidebar')
         <!-- <div class="number">
             <div> <a href="#">1</a></div>
           <div> <a href="#">2</a></div>
