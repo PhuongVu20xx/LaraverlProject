@@ -42,7 +42,7 @@
             <header class="header">
                 <div class="logo-container">
                     <a href="../" class="logo">
-                        <img src="assets/images/logo.png" height="35" alt="JSOFT Admin" />
+                        <img src="#" height="35" alt="JSOFT Admin" />
                     </a>
                     <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
                         <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
@@ -128,7 +128,7 @@
                                         <li>
                                             <a href="#" class="clearfix">
                                                 <figure class="image">
-                                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
+                                                    <img src="#" alt="Joseph Doe Junior" class="img-circle" />
                                                 </figure>
                                                 <span class="title">Joseph Doe</span>
                                                 <span class="message">Lorem ipsum dolor sit.</span>
