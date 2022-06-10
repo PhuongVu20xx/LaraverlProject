@@ -466,7 +466,6 @@
 <!-- Theme Initialization Files -->
 <script src={{asset('octopus/octopus/assets/javascripts/theme.init.js')}}></script>
 
-<!-- Example -->
-<script src={{asset('octopus/octopus/assets/javascripts/dashboard/examples.dashboard.js')}}></script>
+
 </body>
 </html>
