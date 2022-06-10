@@ -37,9 +37,9 @@
                             <div class="row gx-3 mb-3">
                                 <label class="col-md-3 small mb-1" for="offer_id">Promotion ID</label>
                                 <select class="col-md-6 form-control" name="offer_id" id="offer_id">
-                                    @foreach ($offers_id as $offer)
-                                        <option value="{{ $offer->offer_name }}">
-                                            {{ $offer->offer_name }}
+                                    @foreach ($offer_id as $offer)
+                                        <option value="{{ $offer->offer_id }}">
+                                            {{ $offer->offer_id }}
                                         </option>
                                     @endforeach
                                 </select>
@@ -78,7 +78,7 @@
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td>{{ $payment->payment_mode_name  }}</td>
-                                    <td>{{ $payment->offers_name  }}</td>
+                                    <td>{{ $payment->offers_id  }}</td>
                                     <td><i class="fa-solid fa-pen-to-square" style="color:black"></i></td>
                                 </tr>
                             @endforeach
