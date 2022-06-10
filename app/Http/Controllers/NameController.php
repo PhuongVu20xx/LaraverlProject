@@ -88,7 +88,7 @@ class NameController
  static $ADMIN_CONTROLLERS_IMPORT_STOCK = "admin.form.importstock";
  static $SP_SELECT_ALL_STOCK = "exec sp_select_stock";
  static $SP_INSERT_STOCK = "exec sp_insert_stock";
- 
+
 
 //PAYMENT
 static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "admin.form.payment";

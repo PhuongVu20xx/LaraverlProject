@@ -27,7 +27,7 @@
                         <div class="card-header">Add Payment</div>
                         <div class="card-body">
                             <!-- Form Group-->
-                            
+
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
                                 <label class="col-md-3 small mb-1" for="payment_mode_name">Payment Mode Name</label>
@@ -44,7 +44,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            
+
                             <!-- Save changes button-->
                             <div class="button">
                                 <button class="btn" type="submit">Save</button>
@@ -78,7 +78,7 @@
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td>{{ $payment->payment_mode_name  }}</td>
-                                    <td>{{ $payment->offers_id  }}</td>
+                                    <td>{{ $payment->offer_id  }}</td>
                                     <td><i class="fa-solid fa-pen-to-square" style="color:black"></i></td>
                                 </tr>
                             @endforeach
@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-    
+
     @section('scripts')
         <script src="{{ asset('js/admin/tableadminfeedback.js') }}"></script>
         <script src="{{ asset('js/admin/category_controller.js') }}"></script>
