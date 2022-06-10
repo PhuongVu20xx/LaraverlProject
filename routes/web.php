@@ -106,9 +106,8 @@ Route::get('/addpayment',[Payment::class,'AddPayment']);
 Route::post('/addpayment',[Payment::class,'AddPayment']);
 
 // ADMIN OFFER
-Route::get('/adminoffer',[Offer::class,'ShowAllOffer']);
-Route::get('/addoffer',[Offer::class,'ShowAllOffer']);
-Route::post('/addoffer',[Offer::class,'AddOffer']);
+Route::get('/offer',[Offer::class,'ShowAllOffer']);
+Route::post('/offer',[Offer::class,'AddOffer']);
 
 Route::get('/adminprofile',[AdminController::class,'showAdminProfile']);
 Route::post('/adminprofile',[AdminController::class,'postAdminProfile']);

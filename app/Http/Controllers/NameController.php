@@ -96,7 +96,7 @@ static $SP_SELECT_PAYMENT_MODE = "exec sp_select_payment_mode";
 static $SP_INSERT_PAYMENT_MODE = "exec sp_insert_payment_mode";
 
 //OFFER
-static $ADMIN_CONTROLLERS_OFFER_PAGE = "admin.form.alloffer";
+static $ADMIN_CONTROLLERS_OFFER_PAGE = "admin.form.offer";
 static $SP_SELECT_OFFERS_DETAILS = "exec sp_select_offers_details";
 static $SP_INSERT_OFFERS_DETAILS = "exec sp_insert_offers_details";
 

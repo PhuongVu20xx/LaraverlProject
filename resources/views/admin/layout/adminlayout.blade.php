@@ -408,10 +408,7 @@
                                             <a href="#">Promotion</a>
                                             <ul class="nav nav-children">
                                                 <li>
-                                                    <a href="/addoffer">Add Promotion</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/adminoffer">All Promotion</a>
+                                                    <a href="/offer">All Promotion</a>
                                                 </li>
                                             </ul>
                                         </li>

@@ -123,11 +123,8 @@
             </div>
         </div>
     </section>
-
     @section('scripts')
         <script src="{{ asset('js/admin/tableadminfeedback.js') }}"></script>
         <script src="{{ asset('js/admin/category_controller.js') }}"></script>
     @endsection
 @endsection
-
-
