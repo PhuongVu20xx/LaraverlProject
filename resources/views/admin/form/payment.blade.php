@@ -38,8 +38,8 @@
                                 <label class="col-md-3 small mb-1" for="offer_id">Promotion ID</label>
                                 <select class="col-md-6 form-control" name="offer_id" id="offer_id">
                                     @foreach ($offer_id as $offer)
-                                        <option value="{{ $offer->offer_id }}">
-                                            {{ $offer->offer_id }}
+                                        <option value="{{ $offer->offer_name }}">
+                                            {{ $offer->offer_name }}
                                         </option>
                                     @endforeach
                                 </select>

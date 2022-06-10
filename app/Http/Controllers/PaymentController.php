@@ -18,7 +18,7 @@ class PaymentController extends AdminController
     public function AddPayment(Request $request)
     {
         $payment_name = $request->payment_mode_name;
-        $offers_id = $request->offers_id;
+        $offers_id = $request->offer_id;
 
         $note = '';
 
