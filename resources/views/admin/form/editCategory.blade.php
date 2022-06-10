@@ -1,7 +1,6 @@
 @extends('admin.layout.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
     <style>
         #insertstock-form{

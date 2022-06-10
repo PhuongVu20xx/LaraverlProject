@@ -2,7 +2,6 @@
 
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
     <style>

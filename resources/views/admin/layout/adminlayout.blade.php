@@ -41,7 +41,7 @@
             <!-- start: header -->
             <header class="header">
                 <div class="logo-container">
-                    <a href="../" class="logo">
+                    <a href="#" class="logo">
                         <img src="#" height="35" alt="JSOFT Admin" />
                     </a>
                     <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
@@ -137,7 +137,7 @@
                                         <li>
                                             <a href="#" class="clearfix">
                                                 <figure class="image">
-                                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                                    <img src="#" alt="Joseph Junior" class="img-circle" />
                                                 </figure>
                                                 <span class="title">Joseph Junior</span>
                                                 <span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
@@ -146,7 +146,7 @@
                                         <li>
                                             <a href="#" class="clearfix">
                                                 <figure class="image">
-                                                    <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+                                                    <img src="#" alt="Joe Junior" class="img-circle" />
                                                 </figure>
                                                 <span class="title">Joe Junior</span>
                                                 <span class="message">Lorem ipsum dolor sit.</span>
@@ -155,7 +155,7 @@
                                         <li>
                                             <a href="#" class="clearfix">
                                                 <figure class="image">
-                                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                                    <img src="#" alt="Joseph Junior" class="img-circle" />
                                                 </figure>
                                                 <span class="title">Joseph Junior</span>
                                                 <span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
@@ -229,7 +229,7 @@
                     <div id="userbox" class="userbox">
                         <a href="#" data-toggle="dropdown">
                             <figure class="profile-picture">
-                                <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                                <img src="#" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
                             </figure>
                             <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
                                 <span class="name">John Doe Junior</span>
@@ -243,13 +243,10 @@
                             <ul class="list-unstyled">
                                 <li class="divider"></li>
                                 <li>
-                                    <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user"></i> My Profile</a>
                                 </li>
                                 <li>
-                                    <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
-                                </li>
-                                <li>
-                                    <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+                                    <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-power-off"></i> Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -261,169 +258,172 @@
         </div>
 
         <div>
-            @yield('menu')
-            <!-- start: sidebar -->
-            <aside id="sidebar-left" class="sidebar-left">
-                <div class="sidebar-header">
-                    <div class="sidebar-title">
-                        Navigation
+            <div class="col-md-3">
+                @yield('menu')
+                <!-- start: sidebar -->
+                <aside id="sidebar-left" class="sidebar-left">
+                    <div class="sidebar-header">
+                        <div class="sidebar-title">
+                            Navigation
+                        </div>
+                        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                        </div>
                     </div>
-                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
-                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
-                    </div>
-                </div>
-
-                <div class="sidebar">
-                    <div class="sidebar-content">
-                        <nav id="menu" class="nav-main" role="navigation">
-                            <ul class="nav nav-main">
-                                <li class="nav-active">
-                                    <a href="index.html">
-                                        <i class="fa fa-home" aria-hidden="true"></i>
-                                        <span>Dashboard</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="mailbox-folder.html">
-                                        <span class="pull-right label label-primary">182</span>
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <span>Mailbox</span>
-                                    </a>
-                                </li>
-
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-copy" aria-hidden="true"></i>
-                                        <span>Pages</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        <li>
-                                            <a href="/register">
-                                                Sign Up
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="/login">
-                                                Log In
-                                            </a>
-                                        </li>
-
-                                        <li>                                            
-                                            <a href="pages-recover-password.html">
-                                                Recover Password
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="pages-user-profile.html">
-                                                User Profile
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-                                        <span>Forms</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        <li class="nav-parent">
-                                            <a>Category</a>
-                                            <ul class="nav nav-children">
-                                                <li>
-                                                    <a href="/addcategory">Add Category</a>
-                                                </li>
-                                                <li>
-                                                    <a href="allcategory">All Category</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/editcategory">Edit Category</a>
-                                                </li>
-                                            
-                                            </ul>
-                                        </li>
-
-                                        <li class="nav-parent">
-                                            <a href="#">Product</a>
-                                            <ul class="nav nav-children">
-
-                                                <li class="nav-parent">
-                                                    <a href="#">Product</a>
-                                                    <ul class="nav nav-children">
-                                                        <li>
-                                                            <a href="/addproduct">Add product</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="/allproduct">All Product</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="/editproduct">Edit Product</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li class="nav-parent">
-                                                    <a href="#">Import Product</a>
-                                                    <ul class="nav nav-children">
-                                                        <li>
-                                                            <a href="/importproduct">Add Import Product</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="editimportproduct">Edit Import Product</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li class="nav-parent">
-                                                    <a href="#">Stock</a>
-                                                    <ul class="nav nav-children">
-                                                        <li>
-                                                            <a href="/importstock">Add Stock</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="/allstock">Edit Stock</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                               
-                                            </ul>
-                                        </li>
-
-                                        <li class="nav-parent">
-                                            <a href="#">Payment</a>
-                                            <ul class="nav nav-children">
-                                                <li>
-                                                    <a href="/payment">All Payment</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="nav-parent">
-                                            <a href="#">Promotion</a>
-                                            <ul class="nav nav-children">
-                                                <li>
-                                                    <a href="/offer">All Promotion</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+    
+                    <div class="sidebar">
+                        <div class="sidebar-content">
+                            <nav id="menu" class="nav-main" role="navigation">
+                                <ul class="nav nav-main">
+                                    <li class="nav-active">
+                                        <a href="index.html">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="mailbox-folder.html">
+                                            <span class="pull-right label label-primary">182</span>
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Mailbox</span>
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-parent">
+                                        <a>
+                                            <i class="fa fa-copy" aria-hidden="true"></i>
+                                            <span>Pages</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li>
+                                                <a href="/register">
+                                                    Sign Up
+                                                </a>
+                                            </li>
+    
+                                            <li>
+                                                <a href="/login">
+                                                    Log In
+                                                </a>
+                                            </li>
+    
+                                            <li>                                            
+                                                <a href="pages-recover-password.html">
+                                                    Recover Password
+                                                </a>
+                                            </li>
                                         
-                                    </ul>
-                                </li>
-                                
-                            </ul>
-                        </nav>
+                                            <li>
+                                                <a href="pages-user-profile.html">
+                                                    User Profile
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li class="nav-parent">
+                                        <a>
+                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                            <span>Forms</span>
+                                        </a>
+                                        <ul class="nav nav-children">
+                                            <li class="nav-parent">
+                                                <a>Category</a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="/addcategory">Add Category</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="allcategory">All Category</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/editcategory">Edit Category</a>
+                                                    </li>
+                                                
+                                                </ul>
+                                            </li>
+    
+                                            <li class="nav-parent">
+                                                <a href="#">Product</a>
+                                                <ul class="nav nav-children">
+    
+                                                    <li class="nav-parent">
+                                                        <a href="#">Product</a>
+                                                        <ul class="nav nav-children">
+                                                            <li>
+                                                                <a href="/addproduct">Add product</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/allproduct">All Product</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/editproduct">Edit Product</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+    
+                                                    <li class="nav-parent">
+                                                        <a href="#">Import Product</a>
+                                                        <ul class="nav nav-children">
+                                                            <li>
+                                                                <a href="/importproduct">Add Import Product</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="editimportproduct">Edit Import Product</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+    
+                                                    <li class="nav-parent">
+                                                        <a href="#">Stock</a>
+                                                        <ul class="nav nav-children">
+                                                            <li>
+                                                                <a href="/importstock">Add Stock</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/allstock">Edit Stock</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                   
+                                                </ul>
+                                            </li>
+    
+                                            <li class="nav-parent">
+                                                <a href="#">Payment</a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="/payment">All Payment</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+    
+                                            <li class="nav-parent">
+                                                <a href="#">Promotion</a>
+                                                <ul class="nav nav-children">
+                                                    <li>
+                                                        <a href="/offer">All Promotion</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>
-            </aside>
-            <!-- end: sidebar -->
+                </aside>
+                <!-- end: sidebar -->
+            </div>
+    
+            <div class="col-md-6">
+                @yield('bodycontent')
+            </div>
         </div>
-
-        <div>
-            @yield('bodycontent')
-        </div>
+       
 
     </div>
 
@@ -441,7 +441,6 @@
 <script src={{asset('js/admin/jquery.ui.touch-punch.js')}}></script>
 <script src={{asset('js/admin/jquery.appear.js')}}></script>
 <script src={{asset('js/admin/bootstrap-multiselect.js')}}></script>
-<script src={{asset('js/admin/jquery.sparkline.js')}}></script>
 <script src={{asset('js/admin/raphael.js')}}></script>
 <script src={{asset('js/admin/morris.js')}}></script>
 <script src={{asset('js/admin/gauge.js')}}></script>
