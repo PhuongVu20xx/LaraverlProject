@@ -83,7 +83,6 @@ window.theme = {};
 		initialize: function() {
 			this
 				.setVars()
-				.build()
 				.events();
 		},
 
@@ -116,11 +115,6 @@ window.theme = {};
 			}
 
 			$html.addClass( 'custom-scroll' );
-			if ( this.customScroll ) {
-				this.buildSidebarLeft();
-				this.buildContentMenu();
-			}
-
 			this.buildSidebarRight();
 
 			return this;
@@ -148,17 +142,6 @@ window.theme = {};
 				.on( 'sidebar-left-opened sidebar-right-toggle', function( e, data ) {
 					_self.preventBodyScrollToggle( data.added );
 				});
-		},
-
-		buildSidebarLeft: function() {
-			this.sidebars.left.$nano = this.sidebars.left.$el.find( '.nano' );
-
-			this.sidebars.left.$nano.nanoScroller({
-				alwaysVisible: true,
-				preventPageScrolling: true
-			});
-
-			return this;
 		},
 
 		eventsSidebarLeft: function() {
@@ -201,11 +184,6 @@ window.theme = {};
 
 			if ( this.customScroll ) {
 				this.sidebars.right.$nano = this.sidebars.right.$el.find( '.nano' );
-
-				this.sidebars.right.$nano.nanoScroller({
-					alwaysVisible: true,
-					preventPageScrolling: true
-				});
 			}
 
 			return this;
@@ -404,8 +382,6 @@ window.theme = {};
 	'use strict';
 
 	theme = theme || {};
-
-	theme.Skeleton.initialize();
 
 }).apply(this, [ window.theme, jQuery ]);
 

@@ -273,8 +273,8 @@
                     </div>
                 </div>
 
-                <div class="nano">
-                    <div class="nano-content">
+                <div class="sidebar">
+                    <div class="sidebar-content">
                         <nav id="menu" class="nav-main" role="navigation">
                             <ul class="nav nav-main">
                                 <li class="nav-active">
@@ -453,7 +453,6 @@
 <!-- Theme Initialization Files -->
 <script src={{asset('js/admin/theme.init.js')}}></script>
 
-<!-- Example -->
-<script src={{asset('js/admin/examples.dashboard.js')}}></script>
+
 </body>
 </html>
