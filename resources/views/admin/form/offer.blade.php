@@ -23,7 +23,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8" id="addofferform">
             <div class="card mb-4">
-                <form action="/addoffer" method="post">
+                <form action="/offer" method="post">
                     {{ csrf_field() }}
                         <div class="card-header">Add Offer</div>
                         <div class="card-body">
@@ -34,7 +34,7 @@
                                     <input class=" form-control" id="offer_id" name="offer_id" type="text">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class=" small mb-1" for="offer_name">Offer Name</label>
+                                    <label class=" small mb-1" for="offer_name">Promotion Name</label>
                                     <input class="form-control" id="offer_name" name="offer_name" type="text">
                                 </div>
                             </div>
@@ -42,11 +42,11 @@
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">
                                 <div class="col-md-6">
-                                    <label class=" small mb-1" for="offer_detail">Offer Detail</label>
+                                    <label class=" small mb-1" for="offer_detail">Promotion Detail</label>
                                     <input class=" form-control" id="offer_detail" name="offer_detail" type="text">
                                 </div>
                                 <div class="col-md-6">
-                                    <label class=" small mb-1" for="offer_price">Offer Price</label>
+                                    <label class=" small mb-1" for="offer_price">Promotion Price</label>
                                     <input class=" form-control" id="offer_price" name="offer_price" type="text">
                                 </div>
                             </div>
@@ -82,10 +82,10 @@
                 <table id="myTable" class="table bg-white">
                     <thead class="bg-dark">
                         <tr>
-                            <th class="text-light">Offer ID</th>
-                            <th class="text-light">Offer Name</th>
-                            <th class="text-light">Offer Details</th>
-                            <th class="text-light">Offer Price</th>
+                            <th class="text-light">Promotion ID</th>
+                            <th class="text-light">Promotion Name</th>
+                            <th class="text-light">Promotion Details</th>
+                            <th class="text-light">Promotion Price</th>
                             <th class="text-light">Start Date</th>
                             <th class="text-light">End Date</th>
                             <th class="text-light">Edit</th>
