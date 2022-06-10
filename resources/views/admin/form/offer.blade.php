@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/8b058784b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/form/respose-tableadminfeedback.css') }}">
     <style>
-        #addofferform{
+        #offerform{
             margin-top: 50px;
         }
     </style>
@@ -21,11 +21,11 @@
 @section('bodycontent')
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8" id="addofferform">
+        <div class="col-md-8" id="offerform">
             <div class="card mb-4">
                 <form action="/offer" method="post">
                     {{ csrf_field() }}
-                        <div class="card-header">Add Offer</div>
+                        <div class="card-header">Add Promotion</div>
                         <div class="card-body">
                             <!-- Form Group-->
                             <div class="row gx-3 mb-3">

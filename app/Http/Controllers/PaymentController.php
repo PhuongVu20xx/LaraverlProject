@@ -10,19 +10,19 @@ class PaymentController extends AdminController
 {
     public function ShowAllPayment()
     {
-        $offer_name = DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
+        $offer_id = DB::select(NameController::$SP_SELECT_OFFERS_DETAILS);
         $allpayment = DB::select(NameController::$SP_SELECT_PAYMENT_MODE);
-        return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment, 'offer_name'=>$offer_name]);
+        return view(NameController::$ADMIN_CONTROLLERS_PAYMENT_PAGE,['allpayment' => $allpayment, 'offers_id'=>$offer_id]);
     }
 
     public function AddPayment(Request $request)
     {
         $payment_name = $request->payment_mode_name;
-        $offer_name = $request->offer_name;
+        $offer_id = $request->offer_id;
 
         $note = '';
 
-        DB::insert("exec sp_insert_payment_mode '$payment_name','$offer_name','$note'");
+        DB::insert("exec sp_insert_payment_mode '$payment_name','$offer_id','$note'");
 
         return redirect()->action([PaymentController::class,'ShowAllPayment']);
     }

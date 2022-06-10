@@ -91,7 +91,7 @@ class NameController
  
 
 //PAYMENT
-static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "admin.form.allpayment";
+static $ADMIN_CONTROLLERS_PAYMENT_PAGE = "admin.form.payment";
 static $SP_SELECT_PAYMENT_MODE = "exec sp_select_payment_mode";
 static $SP_INSERT_PAYMENT_MODE = "exec sp_insert_payment_mode";
 

@@ -396,10 +396,7 @@
                                             <a href="#">Payment</a>
                                             <ul class="nav nav-children">
                                                 <li>
-                                                    <a href="/addpayment">Add Payment</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/adminpayment">All Payment</a>
+                                                    <a href="/payment">All Payment</a>
                                                 </li>
                                             </ul>
                                         </li>

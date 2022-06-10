@@ -101,9 +101,8 @@ Route::post('/allcategory',[Category::class,'RequestEditCategory'])->name('allca
 Route::get('/editcategory',[Category::class,'EditCategory']);
 
 // ADMIN PAYMENT
-Route::get('/adminpayment',[Payment::class,'ShowAllPayment']);
-Route::get('/addpayment',[Payment::class,'AddPayment']);
-Route::post('/addpayment',[Payment::class,'AddPayment']);
+Route::get('/payment',[Payment::class,'ShowAllPayment']);
+Route::post('/payment',[Payment::class,'AddPayment']);
 
 // ADMIN OFFER
 Route::get('/offer',[Offer::class,'ShowAllOffer']);
