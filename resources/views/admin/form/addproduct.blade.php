@@ -1,8 +1,8 @@
-@extends('admin.layout.adminlayout')
+@extends('admin.layout.index1')
 
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
     <style>
@@ -12,14 +12,16 @@
     </style>
 @endsection
 
-@section('header')
+@section('slidebar')
+    @include('admin.layout.slidebar')
 @endsection
 
 
-@section('menu')
+@section('topbar')
+    @include('admin.layout.topbar')
 @endsection
 
-@section('bodycontent')
+@section('body')
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-xl-8" id="addproduct-form">
