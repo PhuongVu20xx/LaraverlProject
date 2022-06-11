@@ -9,7 +9,6 @@
 <!-- CSS -->    
 @section('css')
     <link rel="stylesheet" href="{{asset('css/register-form.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
     <link rel="stylesheet" href={{asset('octopus/octopus/assets/vendor/bootstrap/css/bootstrap.css')}}>
 @endsection
 

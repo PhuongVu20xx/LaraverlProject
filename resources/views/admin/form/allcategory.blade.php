@@ -1,8 +1,7 @@
 @extends('admin.layout.adminlayout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/form/response-tableadminfeedback.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/form/response-tableadminfeedback.css') }}"> --}}
 @endsection
 
 @section('header')
@@ -58,8 +57,8 @@
     </section>
 
     @section('scripts')
-        <script src="{{ asset('js/admin/tableadminfeedback.js') }}"></script>
-        <script src="{{ asset('js/admin/category_controller.js') }}"></script>
+         {{-- <script src="{{ asset('js/admin/tableadminfeedback.js') }}"></script> --}}
+        <script src="{{ asset('js/admin/all_category.js') }}"></script>
     @endsection
 @endsection
 

@@ -1,10 +1,10 @@
-$(document).ready(function() {
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-});
+// $(document).ready(function() {
+//     $.ajaxSetup({
+//         headers: {
+//             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//         }
+//     });
+// });
 
 function edit(event) {
     $.ajaxSetup({
@@ -27,7 +27,7 @@ function edit(event) {
         success: function () {
             //window.location.href = '/addcategory';
             window.open("/addcategory", "_self");
-            alert("Success");
+            //alert("Success");
         }
     })
 }

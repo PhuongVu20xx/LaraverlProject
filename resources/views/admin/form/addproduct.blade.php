@@ -2,7 +2,10 @@
 
 
 @section('css')
+<<<<<<< HEAD
     <!-- <link rel="stylesheet" href="{{ asset('css/admin/layout/adminnavigatortab.css') }}"> -->
+=======
+>>>>>>> 611f505d865cbabc95ff3b9c9f82945494160ac3
     <link rel="stylesheet" href="{{ asset('css/admin/form/form.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/form/respose-tableadminfeedback.css') }}">
     <style>
