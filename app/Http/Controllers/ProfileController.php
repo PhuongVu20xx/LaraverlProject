@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ProfileController extends AdminController
 {
     public function getProfileForm(){
-        return view('user.profile');
+        return view('user.layout.profile');
     }
 
     public function postProfileForm(Request $request){

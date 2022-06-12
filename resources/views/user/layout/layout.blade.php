@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @yield('css')
-    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/css/bootstrap.css')}}">
 
 </head>
 <body>
@@ -15,16 +15,8 @@
             @yield('header')
             @yield('landingnav')
         </div>
-        <div class="row">
+        <div >
             @yield('body')
-            <div class="col">
-                @yield('menu')
-            </div>
-            <div class="col-10">
-                <div>@yield('bodyheader')</div>
-                <div>@yield('bodynav')</div>
-                <div>@yield('bodycontent')</div>
-            </div>
         </div>
         <div id="footer">
             @yield('footer')

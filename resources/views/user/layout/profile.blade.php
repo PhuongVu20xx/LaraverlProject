@@ -1,4 +1,4 @@
-@extends('admin.layout.layout')
+@extends('user.layout.layout')
 
 <!-- HEADER -->
 @section('header')
@@ -11,7 +11,6 @@
 @endsection
 <!-- BODY -->
 @section('body')
-<div>
     <div class="container-xl px-4 mt-4">
         <hr class="mt-0 mb-4">
         <div class="row">
@@ -135,7 +134,6 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 
