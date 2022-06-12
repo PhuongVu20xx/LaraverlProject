@@ -22,7 +22,7 @@
     <ul>
         <li>
             <div class="imh">
-               <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+               <div class="imh1"><a href="#"><img src="{{asset('img/blog5.jpg')}}" alt="Garlic"></a></div> 
                 <div class="imh2">
                     <a href="#">BEST PLACES FOR WINE</a>
                     <p>3 days ago</p>
@@ -31,7 +31,7 @@
         </li>
         <li>
         <div class="imh">
-               <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+               <div class="imh1"><a href="#"><img src="{{asset('img/blog6.jpg')}}" alt="Garlic"></a></div> 
                 <div class="imh2">
                     <a href="#">BEST PLACES FOR WINE</a>
                     <p>3 days ago</p>
@@ -40,7 +40,7 @@
         </li>
         <li>
         <div class="imh">
-               <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+               <div class="imh1"><a href="#"><img src="{{asset('img/blog7.jpg')}}" alt="Garlic"></a></div> 
                 <div class="imh2">
                     <a href="#">BEST PLACES FOR WINE</a>
                     <p>3 days ago</p>
@@ -49,7 +49,7 @@
         </li>
         <li>
         <div class="imh">
-               <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+               <div class="imh1"><a href="#"><img src="{{asset('img/blog8.jpg')}}" alt="Garlic"></a></div> 
                 <div class="imh2">
                     <a href="#">BEST PLACES FOR WINE</a>
                     <p>3 days ago</p>
@@ -58,7 +58,7 @@
         </li>
         <li>
         <div class="imh">
-               <div class="imh1"><a href="#"><img src="{{asset('img/image-1.jpg')}}" alt="Garlic"></a></div> 
+               <div class="imh1"><a href="#"><img src="{{asset('img/blog9.jpg')}}" alt="Garlic"></a></div> 
                 <div class="imh2">
                     <a href="#">BEST PLACES FOR WINE</a>
                     <p>3 days ago</p>
@@ -105,5 +105,4 @@
             
         </li>
     </ul>
-</div>
 </div>

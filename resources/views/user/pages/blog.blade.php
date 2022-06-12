@@ -1,19 +1,20 @@
 @extends('user.layout.userlayout')
 
-@section('header')
-    @include('user.layout.header')
-    <div class="backgroundheader"></div>
-@endsection
-
 <!-- css -->
 @section('css')
     <link rel="stylesheet" href="{{asset('css/user/pages/blog.css')}}">
 @endsection
 
+@section('header')
+    @include('user.layout.header')
+    <div class="backgroundheader"></div>
+@endsection
+
 @section('body')
 <div class="blog">
     <div class="blog-thumbnail">
-         <img src="{{asset('img/landingpage6.jpg')}}" alt="thumbnail">
+         
+        <figure><img src="{{asset('img/landingpage6.jpg')}}" alt="thumbnail"></figure>
          <div class="desc">Blog</div>
     </div>          
     <!--  -->
@@ -28,7 +29,7 @@
         <div class="col-md-8 main">
             <div class="blog-items">
                 <div>
-                    <img src="{{asset('img/landingpage5.jpg')}}" alt="Garlic">
+                    <img src="{{asset('img/blog1.jpg')}}" alt="Garlic">
                 </div>
                 <!-- <div>
                          <p>28</p>
@@ -49,7 +50,7 @@
             </div>
 
             <div class="blog-items">
-                <div><img src="{{asset('img/landingpage5.jpg')}}" alt="Garlic"></div>
+                <div><img src="{{asset('img/blog2.jpg')}}" alt="Garlic"></div>
                 <div class="blog-item">
                     <h4><a href="#">PIZZA IS PREPARED FRESH</a> </h4>
                     <ul>
@@ -64,7 +65,7 @@
                 </div>
             </div>
             <div class="blog-items">
-                <div><img src="{{asset('img/landingpage5.jpg')}}" alt="Garlic"></div>
+                <div><img src="{{asset('img/blog3.jpg')}}" alt="Garlic"></div>
                 <div class="blog-item">
                     <h4><a href="#">STYLE THE WEDDING PARTY</a> </h4>
                     <ul>
@@ -79,7 +80,22 @@
                 </div>
             </div>
             <div class="blog-items">
-                <div><img src="{{asset('img/landingpage5.jpg')}}" alt="Garlic"></div>
+                <div><img src="{{asset('img/blog4.jpg')}}" alt="Garlic"></div>
+                <div class="blog-item">
+                    <h4><a href="#"> BEST PLACES FOR WINE</a></h4>
+                    <ul>
+                        <li>by Admin |</li>
+                        <li>28 December,2022 |</li>
+                        <li>Cooking, Food |</li>
+                        <li>8 Comments</li>
+                    </ul>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                    <h5><a href="#">Continue Reading</a></h5>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="blog-items">
+                <div><img src="{{asset('img/blog5.jpg')}}" alt="Garlic"></div>
                 <div class="blog-item">
                     <h4><a href="#"> BEST PLACES FOR WINE</a></h4>
                     <ul>
